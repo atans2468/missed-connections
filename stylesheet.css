@@ -1,4 +1,5 @@
 /* this is the drop down list elements */
+
 #header {
 	margin: 0;
 	padding: 0;
@@ -31,6 +32,11 @@
 
 #header ul li:hover ul {
 	position: absolute; /* now the child lists will appear when you hover over the parent hence the li:hover element */
+}
+
+#navbar {
+	background-color: black;
+	color: red;
 }
 
 
@@ -74,9 +80,4 @@ h3 {
 	color: #000000;
 	text-decoration: underline;
 	font-size: .5em;
-}
-
-#navbar {
-	background-color: black;
-	color: red;
 }
