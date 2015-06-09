@@ -33,7 +33,7 @@
 }
 
 #header ul li:hover ul {
-	position: absolute; /* now the child lists will appear when you hover over the parent hence the li:hover element */
+	display: block; /* now the child lists will appear when you hover over the parent hence the li:hover element */
 }
 
 #navbar {
