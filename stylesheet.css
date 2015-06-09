@@ -1,3 +1,40 @@
+/* this is the drop down list elements */
+#header {
+	margin: 0;
+	padding: 0;
+}
+
+#header ul {
+	margin: 0;
+	padding: 0;
+}
+
+#header li {
+	list-style: none;
+	float: left;
+	position: relative;
+}
+
+#header ul li a {
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	width: 50px;
+	height: 30px;
+	display: block;
+}
+
+#header ul ul {
+	position: absolute; /*This positions child elements under the parent element */
+	display: none; /* This hides the child list items */
+}
+
+#header ul li:hover ul {
+	position: absolute; /* now the child lists will appear when you hover over the parent hence the li:hover element */
+}
+
+
+/* beginning of login page */
 /* this is the "Missed Connections" header */
 h1 {
 	text-align: center;
@@ -9,17 +46,6 @@ h3 {
 	text-align: center;
 	color: #000000;
 	font-size: 1.5em;
-}
-/* this is the header div */
-#header {
-	margin: 0;
-	padding: 0;
-}
-
-#header ul {
-	margin: 0;
-	padding: 0;
-}
 
 /* this is the login box */
 #loginbox {
