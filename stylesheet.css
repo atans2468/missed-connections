@@ -41,7 +41,7 @@ h3 {
 /* this is the "Forgot Password" link */
 #forgotpass {
 	text-align: center;
-	color: blue;
+	color: #000000;
 	text-decoration: underline;
 	font-size: .5em;
 }
