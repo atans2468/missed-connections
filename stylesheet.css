@@ -3,8 +3,10 @@
 #header {
 	margin: 0;
 	padding: 0;
-	width: 100%;
+	border: 1px solid #000000;
 	height: 50px;
+	width: 100%;
+	background-color: #000000;
 }
 
 #header ul {
@@ -16,10 +18,11 @@
 	list-style: none;
 	float: left;
 	position: relative;
+	margin-top: 17px;
 }
 
 #header ul li a {	/* This is the text within the dropdown list */
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	text-decoration: none;
 	font-size: 14px;
@@ -38,51 +41,58 @@
 }
 
 #navbar {
-	background-color: black;
-	color: red;
-	width: 100%;
-	height: 50px;
+	background-color: #ffffff;
 }
 
 
 /* beginning of login page */
-/* this is the "Missed Connections" header */
-h1 {
+.header { 			/* this is the "Missed Connections" header */
 	text-align: center;
 	color: #000000;
+	text-decoration: none;
 }
 
-/* this is the "Login" header */
-h3 {
+h3 {				/* this is the "Login" header */
 	text-align: center;
 	color: #000000;
 	font-size: 1.5em;
+}
 
-/* this is the login box */
-#loginbox {
+
+#loginbox {			/* this is the login box */
 	width: 150px;
 	height: 225px;
 	background-color: #ffffff;
 	margin-top: 45%;
 	margin: auto;
 }
-/* this is the "Login" and "Password" text fields */
-#login {
+
+#login {			/* this is the "Login" and "Password" text fields */
 	text-align: center; 
 	color: #000000;
 	border-radius: 5px;
 }
-/* this is the "Signup" link */
-#signup {
+
+#signup {			/* this is the "Signup" link */
 	text-align: center;
 	color: #000000;
 	text-decoration: underline;
 	font-size: .5em;
 }
-/* this is the "Forgot Password" link */
-#forgotpass {
+
+#forgotpass {		/* this is the "Forgot Password" link */
 	text-align: center;
 	color: #000000;
 	text-decoration: underline;
 	font-size: .5em;
+}
+
+
+/* beginning of "Sign Up" screen */
+#signupbox {		/* this is the signup box */
+	width: 150px;
+	height: 225px;
+	background-color: #ffffff;
+	margin-top: 45%;
+	margin: auto;
 }
