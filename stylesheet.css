@@ -14,7 +14,7 @@
 	padding: 0;
 }
 
-#header li {
+#header li { /* This is the "Menu" tag */
 	list-style: none;
 	float: left;
 	position: relative;
@@ -95,4 +95,22 @@ h3 {				/* this is the "Login" header */
 	background-color: #ffffff;
 	margin-top: 45%;
 	margin: auto;
+}
+
+
+/* beginning of "Thread" page */
+.container {
+	background-color: #ffffff;
+}
+
+.jumbotron {
+	background-color: #4D94FF;
+}
+
+#threadhead {
+	color: #ffffff;
+}
+
+#threadhead:hover {
+	text-decoration: none;
 }
