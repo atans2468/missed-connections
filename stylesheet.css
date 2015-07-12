@@ -1,116 +1,88 @@
-/* this is the drop down list elements */
-
-#header {
-	margin: 0;
-	padding: 0;
-	border: 1px solid #000000;
-	height: 50px;
+/* Header */
+.container-fluid{
+	height: 0px;
 	width: 100%;
-	background-color: #000000;
+	padding-top: 0px;
+	text-align: right;
+}
+.navbar-header {
+	height: 0px;
+	width: 100%;
 }
 
-#header ul {
-	margin: 0;
-	padding: 0;
-}
-
-#header li { /* This is the "Menu" tag */
-	list-style: none;
-	float: left;
-	position: relative;
-	margin-top: 17px;
-}
-
-#header ul li a {	/* This is the text within the dropdown list */
-	color: #000000;
+/* Login Page */
+#header-title{
 	text-align: center;
-	text-decoration: none;
-	font-size: 14px;
-	width: 50px;
-	height: 30px;
-	display: block;
 }
 
-#header ul ul {
-	position: absolute; /*This positions child elements under the parent element */
-	display: none; /* This hides the child list items */
+/* Login Box */
+.background{
+	background-color: #f1fcff;
 }
-
-#header ul li:hover ul {
-	display: block; /* now the child lists will appear when you hover over the parent hence the li:hover element */
-}
-
-#navbar {
-	background-color: #ffffff;
-}
-
-
-/* beginning of login page */
-.header { 			/* this is the "Missed Connections" header */
-	text-align: center;
-	color: #000000;
-	text-decoration: none;
-}
-
-h3 {				/* this is the "Login" header */
-	text-align: center;
-	color: #000000;
-	font-size: 1.5em;
-}
-
-
-#loginbox {			/* this is the login box */
-	width: 150px;
+#form-body {
+	margin-top: 25px;
 	height: 225px;
-	background-color: #ffffff;
-	margin-top: 45%;
-	margin: auto;
-}
-
-#login {			/* this is the "Login" and "Password" text fields */
-	text-align: center; 
-	color: #000000;
 	border-radius: 5px;
+	background-color: #14a3f5;
 }
-
-#signup {			/* this is the "Signup" link */
-	text-align: center;
-	color: #000000;
-	text-decoration: underline;
-	font-size: .5em;
-}
-
-#forgotpass {		/* this is the "Forgot Password" link */
-	text-align: center;
-	color: #000000;
-	text-decoration: underline;
-	font-size: .5em;
-}
-
-
-/* beginning of "Sign Up" screen */
-#signupbox {		/* this is the signup box */
-	width: 150px;
-	height: 225px;
-	background-color: #ffffff;
-	margin-top: 45%;
-	margin: auto;
-}
-
-
-/* beginning of "Thread" page */
-.container {
-	background-color: #ffffff;
-}
-
-.jumbotron {
-	background-color: #4D94FF;
-}
-
-#threadhead {
+.email-group {
 	color: #ffffff;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 25px;
+}
+.pwd-group {
+	color: #ffffff;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 15px;
+}
+.checkbox {
+	padding-left: 10px;
+	text-align: center;
+	color: #000000;
+}
+.form-actions {
+	margin: 0;
+	background-color: transparent;
+	text-align: center;	
+}
+.footer{
+	border: solid black 1px;
+	height: 25px;
 }
 
-#threadhead:hover {
-	text-decoration: none;
+/* Sign Up Page */
+#form-signup-body {
+	margin-top: 25px;
+	height: 300px;
+	border-radius: 5px;
+	background-color: #14a3f5;
+}
+.name-group {
+	color: #ffffff;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+.email-signup-group {
+	color: #ffffff;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+.pwd-signup-group {
+	color: #ffffff;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+#terms-link{
+	text-decoration: underline;
+	color: #000000;
+}
+
+/* Thread Page */
+.navbar-bottom{
+	text-align: left;
 }
