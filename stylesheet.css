@@ -1,26 +1,95 @@
-/* Header */
-.container-fluid{
-	height: 0px;
-	width: 100%;
-	padding-top: 0px;
-	text-align: right;
+/* Login Header */
+body { 
+	font-size: 1.05em;
+	line-height: 1.25em;
+	font-family: Helvetica Neue, Helvetica, Arial;
+	background: #f1fcff;
+	color: #555;
 }
-.navbar-header {
-	height: 0px;
+a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #ffffff;
+}
+header {
+	background: #14a3f5;
 	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #000000;
+	z-index: 100;
+	text-decoration: none;
+}
+nav {
+	float: right;
+	padding: 20px;	
+}
+#menu-icon {
+	display: hidden;
+	width: 60px;
+	height: 40px;
+}
+a:hover#menu-icon {
+	background-color: #444;
+	border-radius: 4px 4px 0 0;
+}
+header nav a#menu-icon{
+	color: #ffffff;
+	text-decoration: none;
 }
 
-/* Login Page */
-.header-title{
+/* Header MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+header {
+position: absolute;
+}
+#menu-icon {
+display:inline-block;
+}
+}
+
+/* Modal */
+
+/* Footer */
+footer {
+	background: #14a3f5;
+	width: 100%;
+	height: 40px;
+	position: fixed;;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #000000;
+	z-index: 100;
 	text-align: center;
+	color: #ffffff;
+}
+footer div{
+	padding-top: 5px;
 }
 
-/* Login Box */
+/* Footer MEDIA QUERY*/
+@media only screen and (min-width : 640px) {
+footer{
+	height: 70px;
+}
+}
+
+/* Login Page -- Login Box */
 .background{
 	background-color: #f1fcff;
 }
-#form-body {
+div h2.mc-header{
+	margin-top:90px;
+	text-align: center;
+}
+div div#form-body {
 	margin-top: 25px;
+	padding-top: 30px;
 	height: 225px;
 	border-radius: 5px;
 	background-color: #14a3f5;
@@ -29,16 +98,15 @@
 	color: #ffffff;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 25px;
+	padding-top: 5px;
 }
 .pwd-group {
 	color: #ffffff;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 15px;
+	padding-top: 20px;
 }
 .checkbox {
-	padding-left: 10px;
 	text-align: center;
 	color: #000000;
 }
@@ -47,17 +115,17 @@
 	background-color: transparent;
 	text-align: center;	
 }
-.footer{
-	border: solid black 1px;
-	height: 25px;
-}
 
 /* Sign Up Page */
 #form-signup-body {
-	margin-top: 25px;
+	margin-top: 15px;
 	height: 300px;
 	border-radius: 5px;
 	background-color: #14a3f5;
+}
+div h2.mc-header-signup{
+	margin-top:70px;
+	text-align: center;
 }
 .name-group {
 	color: #ffffff;
@@ -82,20 +150,38 @@
 	color: #000000;
 }
 
-/* Thread Page */
-
-/* Header */
-.page-header{
-	height: 10px;
-	padding: 0px;
-	margin: 0px;
-	font-size: 24px;
-}
-.header{
+/* Thread, Messages, Notifications and More Header */
+header div.main-header{
+	color: #ffffff;
 	text-align: center;
-	margin: 0;
+	font-size: 24px;
+	font-family: Helvetica Neue, Helvetica, Arial;
+	padding-top: 10px;
+}
+header div a{
+	color: #ffffff;
+	text-decoration: none;
+}
+header div a.active{
+	color: #ffffff;
+	background-color: #ffffff;
+	text-decoration: none;
 }
 
+/* Thread Page */
+header div#main-header{
+	position: fixed;
+}
+header div p#thread-logo{
+	text-align: center;
+	padding: 0px;
+	margin-left: 25px;
+}
+header div span{
+	float: right;
+	margin-top: 5px;
+	margin-right: 20px;
+}
 /* Bottom Navigation Menu */
 ul#navigation {
     height: 50px;
@@ -105,15 +191,15 @@ ul#navigation {
 	padding-left: 0px;
 	padding-right: 0px;
 	padding-bottom: 0px;
-    border: 1px solid #aaaaaa;
-    border-width: 1px 0;    
+    border-width: 1px 0;
+	border-top: 1px solid #000000;    
     text-align: center;
     font-size: 16px;
     font-family: 'Cham-WebFont', Arial, sans-serif;
-    background-color: #ffffff;
-    position: fixed;   /* new */
-    bottom: 0;  /* new */
-    width: 100%;  /* new */
+    background-color: #14a3f5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 ul#navigation li {
@@ -140,9 +226,16 @@ ul#navigation li.last {
 
 #navigation li:before {
 content: " | ";
-color: #aaaaaa;
+color: #ffffff;
 }
 
 #navigation li:first-child:before {
 content: none;
+}
+div ul#navigation li a{
+	color: #ffffff;
+}
+div ul#navigation li a.active{
+	color: #ffffff;
+	text-decoration: none;
 }
