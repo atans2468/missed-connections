@@ -11,7 +11,7 @@
 }
 
 /* Login Page */
-#header-title{
+.header-title{
 	text-align: center;
 }
 
@@ -83,6 +83,66 @@
 }
 
 /* Thread Page */
-.navbar-bottom{
-	text-align: left;
+
+/* Header */
+.page-header{
+	height: 10px;
+	padding: 0px;
+	margin: 0px;
+	font-size: 24px;
+}
+.header{
+	text-align: center;
+	margin: 0;
+}
+
+/* Bottom Navigation Menu */
+ul#navigation {
+    height: 50px;
+    list-style: none;
+    margin: 0;
+    padding-top: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+    border: 1px solid #aaaaaa;
+    border-width: 1px 0;    
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Cham-WebFont', Arial, sans-serif;
+    background-color: #ffffff;
+    position: fixed;   /* new */
+    bottom: 0;  /* new */
+    width: 100%;  /* new */
+}
+
+ul#navigation li {
+    display: inline;
+    margin-right: .75em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul#navigation li.last {
+    margin-right: 0;
+}
+#navigation ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+
+#navigation li:before {
+content: " | ";
+color: #aaaaaa;
+}
+
+#navigation li:first-child:before {
+content: none;
 }
