@@ -1,4 +1,4 @@
-/* Login Header */
+/* Login Header Starts Here */
 body { 
 	font-size: 1.05em;
 	line-height: 1.25em;
@@ -29,16 +29,12 @@ nav {
 	float: right;
 	padding: 20px;	
 }
-#menu-icon {
-	display: hidden;
-	width: 60px;
-	height: 40px;
-}
 a:hover#menu-icon {
-	background-color: #444;
+	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
 header nav a#menu-icon{
+	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -53,9 +49,9 @@ display:inline-block;
 }
 }
 
-/* Modal */
+/* Modal Starts Here */
 
-/* Footer */
+/* Footer Starts Here */
 footer {
 	background: #14a3f5;
 	width: 100%;
@@ -79,7 +75,7 @@ footer{
 }
 }
 
-/* Login Page -- Login Box */
+/* Login Page -- Login Box Starts Here */
 .background{
 	background-color: #f1fcff;
 }
@@ -116,7 +112,7 @@ div div#form-body {
 	text-align: center;	
 }
 
-/* Sign Up Page */
+/* Sign Up Page Starts Here */
 #form-signup-body {
 	margin-top: 15px;
 	height: 300px;
@@ -150,6 +146,8 @@ div h2.mc-header-signup{
 	color: #000000;
 }
 
+/* Thread Page Starts Here */
+
 /* Thread, Messages, Notifications and More Header */
 header div.main-header{
 	color: #ffffff;
@@ -167,12 +165,11 @@ header div a.active{
 	background-color: #ffffff;
 	text-decoration: none;
 }
-
-/* Thread Page */
 header div#main-header{
 	position: fixed;
 }
 header div p#thread-logo{
+	margin-top: 10px;
 	text-align: center;
 	padding: 0px;
 	margin-left: 25px;
@@ -182,6 +179,235 @@ header div span{
 	margin-top: 5px;
 	margin-right: 20px;
 }
+
+/* The next two segments of code remove the underline and
+visual of pressing the link -- This is still for all main pages */
+header div.main-header p#thread-logo a:hover {
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+header div.main-header p#thread-logo a{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* More Page Starts Here */
+
+/* Profile Button Starts Here */
+div#more-page button#profile{
+	margin-top: 85px;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+}
+div#more-page button#profile span#profile-glyph{
+	margin-right: 5px;
+}
+div#more-page button#profile span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#more-page a#profile-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#more-page a#profile-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* General Button Starts Here */
+div#more-page button#general{
+	margin-top: 15px;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+}
+div#more-page button#general span#general-glyph{
+	margin-right: 5px;
+	color: #606060;
+}
+div#more-page button#general span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#more-page a#general-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#more-page a#general-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Security Button Starts Here */
+div#more-page button#security{
+	margin-top: auto;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+}
+div#more-page button#security span#security-glyph{
+	margin-right: 5px;
+	color: #606060;
+}
+div#more-page button#security span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#more-page a#security-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#more-page a#security-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Privacy Button Starts Here */
+div#more-page button#privacy{
+	margin-top: 15px;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+}
+div#more-page button#privacy span#privacy-glyph{
+	margin-right: 5px;
+	color: #fec63d;
+}
+div#more-page button#privacy span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#more-page a#privacy-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#more-page a#privacy-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Location Button Starts Here */
+div#more-page button#location{
+	margin-top: auto;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+}
+div#more-page button#location span#location-glyph{
+	margin-right: 5px;
+	color: #14a3f5;
+}
+div#more-page button#location span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#more-page a#location-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#more-page a#location-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Blocking Button Starts Here */
+div#more-page button#blocking{
+	margin-top: auto;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+}
+div#more-page button#blocking span#blocking-glyph{
+	margin-right: 5px;
+	color: #ff3823;
+}
+div#more-page button#blocking span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#more-page a#blocking-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#more-page a#blocking-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Terms Button Starts Here */
+div#more-page button#terms{
+	margin-top: auto;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+}
+div#more-page button#terms span#terms-glyph{
+	margin-right: 5px;
+}
+div#more-page button#terms span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#more-page a#terms-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#more-page a#terms-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Log Out Button Starts Here */
+div#more-page button#logout{
+	margin-top: 15px;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+}
+div#more-page button#logout span#logout-glyph{
+	margin-right: 5px;
+	color: #ff3823;
+}
+div#more-page button#logout span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#more-page a#logout-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#more-page a#logout-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
 /* Bottom Navigation Menu */
 ul#navigation {
     height: 50px;
@@ -201,7 +427,15 @@ ul#navigation {
     bottom: 0;
     width: 100%;
 }
-
+div ul#navigation a:hover {
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div ul#navigation a{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
 ul#navigation li {
     display: inline;
     margin-right: .75em;
