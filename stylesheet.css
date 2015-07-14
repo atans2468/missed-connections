@@ -206,6 +206,133 @@ header div.main-header p#thread-logo a{
 	text-decoration: none;
 }
 
+/* The Messages Page Starts Here */
+html, body#messages-page{
+	padding-bottom: 40px;
+}
+/* This is the styling for the divs */
+div#messages-page-container{
+	margin: 0;
+	padding: 0;
+}
+div#messages-page-container button#messages{
+	width: 100%;
+	height: 50px;
+	margin-top: 60px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+	display: inline-block;
+}
+div#messages-page-container button#messages span#messages-glyph{
+	margin-right: 5px;
+}
+div#messages-page-container button#messages span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#messages-page-container a#messages-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#messages-page-container a#messages-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+/* This is the styling for all message divs except for the top one */
+div#messages-page-container button#more-messages{
+	width: 100%;
+	height: 50px;
+	margin-top: auto;
+	margin-left: 0px;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+	display: block;
+}
+div#messages-page-container button#more-messages span#more-messages-glyph{
+	margin-right: 5px;
+}
+div#messages-page-container button#more-messages span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
+}
+div#messages-page-container a#more-messages-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#messages-page-container a#more-messages-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* The Notifications Page Starts Here */
+html, body#messages-page{
+	padding-bottom: 40px;
+}
+/* This is the styling for the divs */
+div#notifications-page-container{
+	margin: 0;
+	padding: 0;
+}
+div#notifications-page-container button#notifications{
+	width: 100%;
+	height: 50px;
+	margin-top: 60px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+	display: inline-block;
+}
+div#notifications-page-container button#notifications span#notifications-glyph{
+	margin-right: 5px;
+}
+div#notifications-page-container a#notifications-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#notifications-page-container a#notifications-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+/* This is the styling for all notifications divs except for the top one */
+div#notifications-page-container button#more-notifications{
+	width: 100%;
+	height: 50px;
+	margin-top: auto;
+	margin-left: 0px;
+	text-align: left;
+	border: 1px solid #aaaaaa;
+	border-radius: 0px;
+	outline: 0;
+	display: block;
+}
+div#notifications-page-container button#more-notifications span#more-notifications-glyph{
+	margin-right: 5px;
+}
+div#notifications-page-container a#more-notifications-link:hover{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div#notifications-page-container a#more-notifications-link{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
 /* "More" Page Starts Here */
 
 /* Profile Button Starts Here */
