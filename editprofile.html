@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Missed Connections</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+	</head>
+	<body class="background" id="profile-page">
+		
+		<!-- Header -->
+			<header>
+					<div class="main-header">
+						<p id="thread-logo"><a href="thread.html">MC</a><span class="glyphicon glyphicon-search"></span></p>
+					</div>
+			</header>
+			
+			<!-- Page Contents -->	
+				
+				<!-- This is the Profile Image and First Name Form -->
+				<div class="container-fluid">
+					<img id="profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png">
+					<form id="name-container">
+						<input type="text" name="firstname" value="Name" id="first-name" disabled>
+					</form>
+					
+					
+				<!-- This is the Age and Gender Form, all forms have been disabled as the user shouldn't be editing
+				 the forms in this page, they will edit forms in the edit profile page which will have these same forms but the forms will be active. -->
+					<form class="form-horizontal">
+   						<div class="form-group">
+        					<label class="col-sm-6 h3" id="age-label">Age:</label>
+        						<div class="col-sm-6">
+            						<input type="text" id="age" value="21">
+        						</div>
+							<label class="col-sm-6 h3" id="gender-label">Gender:</label>
+        						<div class="col-sm-6">
+            						<input type="text" id="gender" value="Female">
+        						</div>
+    					</div>
+					</form>
+					
+					<!-- Second Part of Profile Page, The Bio Sarts Here -->
+					<form class="form-vertical">
+   						<div class="form-group">
+        					<label class="col-sm-6 h3" id="bio-label">Bio:</label>
+        						<span class="col-sm-6">
+            						<p contenteditable="true" id="bio">This is an Example....This is an Example....This is an Example....
+										This is an Example....This is an Example....</p>
+        						</span>
+							<label class="col-sm-6 h3" id="facts-label">Interesting Facts:</label>
+        						<div class="col-sm-6">
+            						<input type="text" id="facts" value="&#8226 Example 1"><br>
+        							<input type="text" id="facts" value="&#8226 Example 2">
+								</div>
+    					</div>
+					</form>
+					
+					<!-- Third Part of Profile Page, this contains the favorite quote and the occupation -->
+					<form class="form-vertical">
+   						<div class="form-group">
+        					<label class="col-sm-6 h3" id="quote-label">Favorite Quote:</label>
+        						<div class="col-sm-6">
+            						<input type="text" id="quote" value="&#8226 This is my favorite Quote">
+        						</div>
+							<label class="col-sm-6 h3" id="occupation-label">Occupation:</label>
+        						<div class="col-sm-6">
+            						<input type="text" id="occupation" value="&#8226 This is my occupation"><br>
+								</div>
+    					</div>
+					</form>
+					<img id="profile-pic2" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png">
+					<img id="profile-pic3" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png">
+				</div>
+				
+		
+		<!-- Bottom Nav Bar -->
+		<div id="MenuContainer">
+            <ul id="navigation">
+                <li class="x"><a title="1" href="thread.html" >Thread</a></li>
+                <li class="active"><a title="2" href="messages.html">Messages</a></li>
+                <li class="x"><a title="3" href="notifications.html" >Notifications</a></li>
+                <li class="contact" class="last"><a title="4" href="more.html" >More</a></li>
+            </ul>
+        </div> 
+		<!-- End of Bottom Nav Bar -->
+	</body>
+</html>

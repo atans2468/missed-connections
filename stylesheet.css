@@ -51,6 +51,7 @@ display:inline-block;
 
 /* Modal Starts Here */
 
+
 /* Footer Starts Here */
 footer {
 	background: #14a3f5;
@@ -192,7 +193,7 @@ header div.main-header p#thread-logo a{
 	text-decoration: none;
 }
 
-/* More Page Starts Here */
+/* "More" Page Starts Here */
 
 /* Profile Button Starts Here */
 div#more-page button#profile{
@@ -408,6 +409,238 @@ div#more-page a#logout-link{
 	text-decoration: none;
 }
 
+/* Profile Page Starts Here */
+html, body#profile-page{
+	padding-bottom: 40px;
+}
+/* This is the Profile Pic */
+div.container-fluid img#profile-pic{
+	height: auto;
+	width: auto;
+	max-width: 100px;
+	max-height: 100px;
+	margin-top: 75px;
+	margin-left: 5px;
+	margin-right: 0;
+	margin-bottom: 0px;
+	float: left;
+}
+
+/* This is the First Name form with glyph */
+div.container-fluid form#name-container input#first-name{
+	width: 80px;
+	height: 30px;
+	margin-top: 75px;
+	margin-bottom: 0px;
+	margin-right: 0;
+	padding-left: 10px;
+	font-size: 24px;
+	background-color: #f1fcff;
+	border: 0;
+	display: inline;
+}
+div.container-fluid form#name-container input#first-name span#profile-edit-glyph{
+	float: right;
+}
+div.container-fluid form#name-container input#first-name a:hover {
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div.container-fluid form#name-container input#first-name a{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* This is the Age form with label */
+div.container-fluid form.form-horizontal label#age-label{
+	width: 10px;
+	height: 10px;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	display: inline;
+	float: left;
+	
+
+}
+div.container-fluid form.form-horizontal div.form-group input#age{
+	width: 25px;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-right: 0;
+	margin-bottom: 0;
+	font-size: 14px;
+	background-color: #f1fcff;
+	border: 0;
+	display: inline;
+
+}
+
+/* This is the Gender form with label */
+div.container-fluid form.form-horizontal label#gender-label{
+	width: 10px;
+	height: 10px;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	display: inline;
+	float: left;
+}
+div.container-fluid form.form-horizontal div.form-group input#gender{
+	width: 50px;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-right: 0;
+	margin-bottom: 0;
+	font-size: 14px;
+	background-color: #f1fcff;
+	border: 0;
+	display: inline;
+
+}
+
+/* This is the Bio form with label */
+div.container-fluid form.form-vertical label#bio-label{
+	width: 10px;
+	height: 10px;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	display: inline;
+	float: left;
+}
+div.container-fluid form.form-vertical div.form-group p#bio{
+	width: 100%;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	font-size: 14px;
+	background-color: #f1fcff;
+	border: 0;
+	display: inline-block;
+
+}
+
+/* This is the Intesting Facts form with label */
+div.container-fluid form.form-vertical label#facts-label{
+	width: 100%;
+	height: 10px;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	display: inline;
+	float: left;
+}
+div.container-fluid form.form-vertical div.form-group input#facts{
+	width: 100%;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	font-size: 14px;
+	background-color: #f1fcff;
+	border: 0;
+	display: inline;
+
+}
+
+/* This is the Favorite Quotes form with label */
+div.container-fluid form.form-vertical label#quote-label{
+	width: 100%;
+	height: 10px;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	display: inline;
+	float: left;
+}
+div.container-fluid form.form-vertical div.form-group input#quote{
+	width: 100%;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	font-size: 14px;
+	background-color: #f1fcff;
+	border: 0;
+	display: inline;
+
+}
+
+/* This is the Occupation form with label */
+div.container-fluid form.form-vertical label#occupation-label{
+	width: 100%;
+	height: 10px;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	display: inline;
+	float: left;
+}
+div.container-fluid form.form-vertical div.form-group input#occupation{
+	width: 100%;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding-left: 10px;
+	font-size: 14px;
+	background-color: #f1fcff;
+	border: 0;
+	display: inline;
+}
+
+/* This is the Second Profile Pic */
+div.container-fluid img#profile-pic2{
+	height: auto;
+	width: auto;
+	max-width: 100px;
+	max-height: 100px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 0;
+	margin-bottom: 0px;
+	float: left;
+}
+
+/* This is the Third Profile Pic */
+div.container-fluid img#profile-pic3{
+	height: auto;
+	width: auto;
+	max-width: 100px;
+	max-height: 100px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 15px;
+	margin-bottom: 0px;
+	float: right;
+}
+
 /* Bottom Navigation Menu */
 ul#navigation {
     height: 50px;
@@ -424,8 +657,9 @@ ul#navigation {
     font-family: 'Cham-WebFont', Arial, sans-serif;
     background-color: #14a3f5;
     position: fixed;
-    bottom: 0;
+	bottom: 0;
     width: 100%;
+	float: bottom;
 }
 div ul#navigation a:hover {
 	background-color: #14a3f5;
