@@ -14,7 +14,7 @@ a {
 a:hover {
 	color: #ffffff;
 }
-header {
+header nav div.main-header {
 	background: #14a3f5;
 	width: 100%;
 	height: 60px;
@@ -23,19 +23,6 @@ header {
 	left: 0;
 	border-bottom: 1px solid #000000;
 	z-index: 100;
-	text-decoration: none;
-}
-nav {
-	float: right;
-	padding: 20px;	
-}
-a:hover#menu-icon {
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-header nav a#menu-icon{
-	margin-top: 10px;
-	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -428,16 +415,16 @@ div.container-fluid img#profile-pic{
 
 /* This is the First Name form with glyph */
 div.container-fluid form#name-container input#first-name{
-	width: 80px;
+	width: 100px;
 	height: 30px;
 	margin-top: 75px;
 	margin-bottom: 0px;
 	margin-right: 0;
 	padding-left: 10px;
 	font-size: 24px;
+	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
-	display: inline;
 }
 div.container-fluid form#name-container input#first-name span#profile-edit-glyph{
 	float: right;
@@ -461,22 +448,19 @@ div.container-fluid form.form-horizontal label#age-label{
 	margin-right: 0;
 	margin-bottom: 0;
 	padding-left: 10px;
-	display: inline;
 	float: left;
-	
-
 }
 div.container-fluid form.form-horizontal div.form-group input#age{
-	width: 25px;
+	width: 100px;
 	height: 20px;
 	margin-top: 10px;
 	margin-left: 25px;
 	margin-right: 0;
 	margin-bottom: 0;
 	font-size: 14px;
+	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
-	display: inline;
 
 }
 
@@ -489,20 +473,19 @@ div.container-fluid form.form-horizontal label#gender-label{
 	margin-right: 0;
 	margin-bottom: 0;
 	padding-left: 10px;
-	display: inline;
 	float: left;
 }
 div.container-fluid form.form-horizontal div.form-group input#gender{
-	width: 50px;
+	width: 100px;
 	height: 20px;
 	margin-top: 10px;
 	margin-left: 50px;
 	margin-right: 0;
 	margin-bottom: 0;
 	font-size: 14px;
+	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
-	display: inline;
 
 }
 
@@ -537,7 +520,7 @@ div.container-fluid form.form-vertical label#facts-label{
 	width: 100%;
 	height: 10px;
 	font-size: 16px;
-	margin-top: 10px;
+	margin-top: 50px;
 	margin-left: 0px;
 	margin-right: 0;
 	margin-bottom: 0;
@@ -554,10 +537,10 @@ div.container-fluid form.form-vertical div.form-group input#facts{
 	margin-bottom: 0;
 	padding-left: 10px;
 	font-size: 14px;
+	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
 	display: inline;
-
 }
 
 /* This is the Favorite Quotes form with label */
@@ -582,6 +565,7 @@ div.container-fluid form.form-vertical div.form-group input#quote{
 	margin-bottom: 0;
 	padding-left: 10px;
 	font-size: 14px;
+	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
 	display: inline;
@@ -610,6 +594,7 @@ div.container-fluid form.form-vertical div.form-group input#occupation{
 	margin-bottom: 0;
 	padding-left: 10px;
 	font-size: 14px;
+	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
 	display: inline;
