@@ -19,6 +19,7 @@
   		<header>
 			<div class="container">	  
 				<a href="#openModal" id="modal-link">Signup</a>
+				<a href="#openModal" id="modal-link-large">Signup</a>
 				<div id="openModal" class="modalDialog">
 					<div>
 						<a href="#close" title="Close" class="close">X</a>
@@ -51,15 +52,19 @@
 			</div>
 		</header>
 	<!-- This is the login form -->
+		<!-- Form for smaller screens -->
 	<div class="container-fluid">
 		<h2 class="mc-header">Missed Connections</h2>
 		<div id="form-body">
+			<div id="login-header">
+				<h3>Login:</h3>
+			</div>
 			<form role="form">
 				<div class="email-group">
-					<input type="email" class="form-control" id="email" placeholder="Email Address">
+					<input type="email" class="form-control" id="email" placeholder="Email Address" required>
 				</div>
 				<div class="pwd-group">
-					<input type="password" class="form-control" id="pwd" placeholder="Password">
+					<input type="password" class="form-control" id="pwd" placeholder="Password" required>
 				</div>
 				<div class="checkbox">
 					<label><input type="checkbox">Remember Me</label>
@@ -70,10 +75,38 @@
 				</div>
 			</form>
 		</div>
+		
+		<!-- Form for larger Screens -->
+		<h2 class="mc-header-large">Missed Connections</h2>
+		<div id="form-body-large">
+			<div id="login-header-large">
+				<h1>Login:</h1>
+			</div>
+			<form role="form">
+				<div class="email-group-large">
+					<input type="email" class="form-control" id="email-large" placeholder="Email Address" required>
+				</div>
+				<div class="pwd-group-large">
+					<input type="password" class="form-control" id="pwd-large" placeholder="Password" required>
+				</div>
+				<div class="checkbox-large">
+					<label><input type="checkbox">Remember Me</label>
+				</div>
+				<div class="form-actions-large">
+					<a href="thread.html" 
+					class="btn btn-info btn-lg" role="button">Login</a>
+				</div>
+			</form>
+		</div>
 	</div>
 	
 	<!-- Footer -->
-	<footer>
+	<footer id="login-footer">
+		<div>
+			<p class="mc-footer">Missed Connections &mdash; A Hive Production</p>
+		</div>
+	</footer>
+	<footer id="login-footer-large">
 		<div>
 			<p class="mc-footer">Missed Connections &mdash; A Hive Production</p>
 		</div>
