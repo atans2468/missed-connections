@@ -14,6 +14,7 @@ a {
 a:hover {
 	color: #ffffff;
 }
+
 header{
 	background: #14a3f5;
 	width: 100%;
@@ -52,6 +53,7 @@ header nav a#menu-icon{
 	text-decoration: none;
 }
 
+
 /* Header MEDIA QUERY*/
 @media only screen and (max-width : 640px) {
 header {
@@ -63,7 +65,84 @@ display:inline-block;
 }
 
 /* Modal Starts Here */
+header a#modal-link{
+	margin-top: 30px;
+	margin-right: 15px;
+	float: right;
+	color: #ffffff
+}
+header div div.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 20px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
 
+.modalDialog > div {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { 
+	background: #00d9ff; 
+}
+header div.modalDialog div.checkbox{
+	margin-top: 10px;
+	margin-left: 15px;
+	padding-top: 10px;
+	font-size: 14px;
+	display: inline;
+}
+header div.modalDialog div.checkbox a{
+	font-size: 14px;
+	display: inline;
+}
+header div.container div.modalDialog form button#signup-button{
+	margin-top: 10px;
+	margin-left: 80px;
+	border-radius: 7px;
+	width: 100px;
+	background-color: #14a3f5;
+	color: #ffffff;
+}
 
 /* Footer Starts Here */
 footer {
@@ -98,17 +177,19 @@ div h2.mc-header{
 	text-align: center;
 }
 div div#form-body {
+	left: 0;
 	margin-top: 25px;
 	padding-top: 30px;
-	height: 225px;
-	border-radius: 5px;
+	height: 250px;
 	background-color: #14a3f5;
+	position: absolute;
+	width: 100%;
 }
 .email-group {
 	color: #ffffff;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 5px;
+	padding-top: 15px;
 }
 .pwd-group {
 	color: #ffffff;
@@ -128,13 +209,15 @@ div div#form-body {
 
 /* Sign Up Page Starts Here */
 #form-signup-body {
-	margin-top: 15px;
+	left: 0;
+	width: 100%;
+	margin-top: 5px;
 	height: 300px;
-	border-radius: 5px;
 	background-color: #14a3f5;
+	position: absolute;
 }
 div h2.mc-header-signup{
-	margin-top:70px;
+	margin-top:75px;
 	text-align: center;
 }
 .name-group {
@@ -336,8 +419,12 @@ div#notifications-page-container a#more-notifications-link{
 /* "More" Page Starts Here */
 
 /* Profile Button Starts Here */
+html, body#more-page{
+	padding-bottom: 20px;
+}
 div#more-page button#profile{
-	margin-top: 85px;
+	height: 45px;
+	margin-top: 95px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -363,7 +450,8 @@ div#more-page a#profile-link{
 
 /* General Button Starts Here */
 div#more-page button#general{
-	margin-top: 15px;
+	height: 45px;
+	margin-top: 25px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -390,7 +478,8 @@ div#more-page a#general-link{
 
 /* Security Button Starts Here */
 div#more-page button#security{
-	margin-top: auto;
+	height: 45px;
+	margin-top: 5px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -417,7 +506,8 @@ div#more-page a#security-link{
 
 /* Privacy Button Starts Here */
 div#more-page button#privacy{
-	margin-top: 15px;
+	height: 45px;
+	margin-top: 25px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -444,7 +534,8 @@ div#more-page a#privacy-link{
 
 /* Location Button Starts Here */
 div#more-page button#location{
-	margin-top: auto;
+	height: 45px;
+	margin-top: 5px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -471,7 +562,8 @@ div#more-page a#location-link{
 
 /* Blocking Button Starts Here */
 div#more-page button#blocking{
-	margin-top: auto;
+	height: 45px;
+	margin-top: 5px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -498,7 +590,8 @@ div#more-page a#blocking-link{
 
 /* Terms Button Starts Here */
 div#more-page button#terms{
-	margin-top: auto;
+	height: 45px;
+	margin-top: 5px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -524,7 +617,8 @@ div#more-page a#terms-link{
 
 /* Log Out Button Starts Here */
 div#more-page button#logout{
-	margin-top: 15px;
+	height: 45px;
+	margin-top: 30px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -654,9 +748,12 @@ div.container-fluid form.form-vertical label#bio-label{
 	display: inline;
 	float: left;
 }
+/* !!!! Make sure max height on bio is set, set max character limits
+in input fields, lock the bullets, look up how to lock footer
+when keyboard is off !!!!*/
 div.container-fluid form.form-vertical div.form-group p#bio{
 	width: 100%;
-	height: 20px;
+	max-height: 30px;
 	margin-top: 10px;
 	margin-left: 0px;
 	margin-right: 0;
@@ -665,7 +762,6 @@ div.container-fluid form.form-vertical div.form-group p#bio{
 	background-color: #f1fcff;
 	border: 0;
 	display: inline-block;
-
 }
 
 /* This is the Intesting Facts form with label */
@@ -831,12 +927,12 @@ ul#navigation li.last {
 }
 
 #navigation li:before {
-content: " | ";
-color: #ffffff;
+	content: " | ";
+	color: #ffffff;
 }
 
 #navigation li:first-child:before {
-content: none;
+	content: none;
 }
 div ul#navigation li a{
 	color: #ffffff;
@@ -844,4 +940,7 @@ div ul#navigation li a{
 div ul#navigation li a.active{
 	color: #ffffff;
 	text-decoration: none;
+}
+div ul#navigation li.active{
+	
 }

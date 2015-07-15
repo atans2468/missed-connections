@@ -8,13 +8,13 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="jquery-1.11.3.min.js"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
 		<![endif]-->
 	</head>
 	<body class="background" id="profile-page">
-		
 		<!-- Header -->
 			<header>
 				<nav class="nav navbar-fixed-top" id="fixed-header">
@@ -53,10 +53,10 @@
 					<form class="form-vertical">
    						<div class="form-group">
         					<label class="col-sm-6 h3" id="bio-label">Bio:</label>
-        						<span class="col-sm-6">
-            						<p contenteditable="true" id="bio">This is an Example....This is an Example....This is an Example....
+        						<div class="col-sm-6" id="paragraph">
+									<p contenteditable="true" id="bio">This is an Example....This is an Example....This is an Example....
 										This is an Example....This is an Example....</p>
-        						</span>
+        						</div>
 							<label class="col-sm-6 h3" id="facts-label">Interesting Facts:</label>
         						<div class="col-sm-6">
             						<input type="text" id="facts" value="&#8226 Example 1"><br>

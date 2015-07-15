@@ -16,11 +16,40 @@
 	</head>
 <body class="background">
 	<!-- This is the Login Header -->
-  			<header>
-				<nav class="login-nav">
-					<a href="signup.html" id="menu-icon">Sign Up</a>
-				</nav>
-			</header>
+  		<header>
+			<div class="container">	  
+				<a href="#openModal" id="modal-link">Signup</a>
+				<div id="openModal" class="modalDialog">
+					<div>
+						<a href="#close" title="Close" class="close">X</a>
+						<h2>Sign Up</h2>
+						<form role="form">
+							<div class="name-group">
+								<input type="name" class="form-control" id="first-name" placeholder="First Name">
+							</div>
+							<div class="name-group">
+								<input type="name" class="form-control" id="last-name" placeholder="Last Name">
+							</div>
+							<div class="email-signup-group">
+								<input type="email" class="form-control" id="email" placeholder="Email Address">
+							</div>
+							<div class="pwd-signup-group">
+								<input type="password" class="form-control" id="pwd" placeholder="Password">
+							</div>
+							<div class="pwd-signup-group">
+								<input type="password" class="form-control" id="pwd" placeholder="Confirm Password">
+							</div>
+						</form>
+						<div class="checkbox">
+							<label><input type="checkbox">I agree to the Terms and Conditions</label>
+						</div>
+						<form action="profile.html">
+    						<button type="submit" id="signup-button">Sign Up</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</header>
 	<!-- This is the login form -->
 	<div class="container-fluid">
 		<h2 class="mc-header">Missed Connections</h2>
