@@ -37,14 +37,9 @@ body div a#login-button{
 	width: 95%;
 	background-color: #0071bc;
 	display: block;
-}
-body a#signup-button{
-	margin-top: 50px;
-	margin-left: 5px;
-	text-align: center; 
-	width: 95%;
-	background-color: #0071bc;
-	display: block;
+  	-moz-box-shadow:    2.5px 3px 3px 2px #272727;
+  	-webkit-box-shadow: 2.5px 3px 3px 2px #272727;
+  	box-shadow:         2.5px 3px 3px 2px #272727;
 }
 body div div.modalDialog {
 	position: fixed;
@@ -121,14 +116,6 @@ body div.container div.modalDialog form button#login-button{
 /* Signup Modal Starts Here */
 	/* modal-link style here is for smaller screens, look
 	down in the style sheet for larger screen login styles */
-body a#login-button{
-	margin-top: 85%;
-	margin-left: 5px;
-	text-align: center; 
-	width: 95%;
-	background-color: #0071bc;
-	display: block;
-}
 body a#signup-button{
 	margin-top: 40px;
 	margin-left: 5px;
@@ -136,6 +123,9 @@ body a#signup-button{
 	width: 95%;
 	background-color: #0071bc;
 	display: block;
+	-moz-box-shadow:    2.5px 3px 3px 2px #272727;
+  	-webkit-box-shadow: 2.5px 3px 3px 2px #272727;
+  	box-shadow:         2.5px 3px 3px 2px #272727;
 }
 body div div.modalDialog-signup {
 	position: fixed;
@@ -216,7 +206,7 @@ body div.container div.modalDialog-signup form button#signup-button{
 header#login-header{
 	background-color: #0A60A0;
 	width: 100%;
-	height: 30px;
+	height: 20px;
 	margin-top: 0px;
 	bottom: 0;
 	left: 0;
