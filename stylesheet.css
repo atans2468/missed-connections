@@ -14,30 +14,6 @@ a {
 a:hover {
 	color: #ffffff;
 }
-
-header{
-	background: #14a3f5;
-	width: 100%;
-	height: 70px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	border-bottom: 1px solid #000000;
-	z-index: 100;
-	text-decoration: none;
-	position: fixed;
-}
-header nav#fixed-header{
-	background: #14a3f5;
-	width: 100%;
-	height: 60px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	text-decoration: none;
-	position: fixed;
-}
 nav.login-nav {
 	float: right;
 	padding: 20px;	
@@ -241,13 +217,11 @@ header#login-header {
 	background-color: #0A60A0;
 	width: 100%;
 	height: 30px;
-	font-size: 12px;
-	position: fixed;;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	z-index: 100;
 	border-bottom: 0px;
-	text-align: center;
 	color: #ffffff;
 }
 body div.container h2#login-page-header{
@@ -336,10 +310,146 @@ display:inline-block;
 }
 }
 
+/* Thread Page Starts Here */
+	/* Thread, Messages, Notifications and More Header */
+body header nav div#main-header-small {
+	background-color: #0A60A0;
+	width: 100%;
+	height: 20px;
+	position: fixed-top;
+	margin-top: 0px;
+	bottom: 0;
+	left: 0;
+	border-bottom: 0px;
+	color: #ffffff;
+}
+header nav#fixed-header{
+	background: #14a3f5;
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	text-decoration: none;
+	position: fixed;
+}
+header div.main-header{
+	color: #ffffff;
+	text-align: center;
+	font-size: 24px;
+	font-family: Helvetica Neue, Helvetica, Arial;
+	padding-top: 10px;
+}
+header div a#main-header-link{
+	color: #ffffff;
+	text-decoration: none;
+}
+header div a#main-header-link.active{
+	color: #ffffff;
+	background-color: #ffffff;
+	text-decoration: none;
+}
+header div p#thread-logo{
+	margin-top: 10px;
+	text-align: center;
+	padding: 0px;
+	margin-left: 25px;
+}
+header div span#search-button{
+	float: right;
+	margin-top: 5px;
+	margin-right: 20px;
+}
+
+/* The next two segments of code remove the underline and
+visual of pressing the link -- This is still for all main pages
+
+header div.main-header p#thread-logo a:hover {
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+header div.main-header p#thread-logo a{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+*/
+
+/* Bottom Navigation Menu */
+ul#navigation {
+    height: 60px;
+    list-style: none;
+    margin: 0;
+    padding-top: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+    border-width: 1px 0;
+	border-top: 1px solid #000000;    
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Cham-WebFont', Arial, sans-serif;
+    background-color: #14a3f5;
+    position: fixed;
+	bottom: 0;
+    width: 100%;
+	float: bottom;
+}
+div ul#navigation a:hover {
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+}
+div ul#navigation a{
+	margin-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+ul#navigation li {
+    display: inline;
+	font-size: 16px;
+    margin-right: .75em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul#navigation li.last {
+    margin-right: 0;
+}
+#navigation ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+
+#navigation li:before {
+	content: " | ";
+	color: #ffffff;
+}
+
+#navigation li:first-child:before {
+	content: none;
+}
+div ul#navigation li a{
+	color: #ffffff;
+}
+div ul#navigation li a.active{
+	color: #ffffff;
+	text-decoration: none;
+}
+div ul#navigation li.active{
+	
+}
 
 /* The Messages Page Starts Here */
 html, body#messages-page{
-	padding-bottom: 40px;
+	margin-bottom: 60px;
 }
 /* This is the styling for the divs */
 div#messages-page-container{
@@ -349,7 +459,7 @@ div#messages-page-container{
 div#messages-page-container button#messages{
 	width: 100%;
 	height: 50px;
-	margin-top: 60px;
+	margin-top: 80px;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -408,7 +518,7 @@ div#messages-page-container a#more-messages-link{
 
 /* The Notifications Page Starts Here */
 html, body#messages-page{
-	padding-bottom: 40px;
+	margin-bottom: 60px;
 }
 /* This is the styling for the divs */
 div#notifications-page-container{
@@ -418,7 +528,7 @@ div#notifications-page-container{
 div#notifications-page-container button#notifications{
 	width: 100%;
 	height: 50px;
-	margin-top: 60px;
+	margin-top: 80px;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -921,75 +1031,4 @@ div.container-fluid img#profile-pic3{
 	margin-right: 15px;
 	margin-bottom: 0px;
 	float: right;
-}
-
-/* Bottom Navigation Menu */
-ul#navigation {
-    height: 60px;
-    list-style: none;
-    margin: 0;
-    padding-top: 20px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-    border-width: 1px 0;
-	border-top: 1px solid #000000;    
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Cham-WebFont', Arial, sans-serif;
-    background-color: #14a3f5;
-    position: fixed;
-	bottom: 0;
-    width: 100%;
-	float: bottom;
-}
-div ul#navigation a:hover {
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-div ul#navigation a{
-	margin-top: 10px;
-	color: #ffffff;
-	text-decoration: none;
-}
-ul#navigation li {
-    display: inline;
-	font-size: 16px;
-    margin-right: .75em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-ul#navigation li.last {
-    margin-right: 0;
-}
-#navigation ul
-{
-    margin: 0;
-    padding: 0;
-}
-
-#navigation ul li
-{
-    list-style-type: none;
-    display: inline;
-}
-
-#navigation li:before {
-	content: " | ";
-	color: #ffffff;
-}
-
-#navigation li:first-child:before {
-	content: none;
-}
-div ul#navigation li a{
-	color: #ffffff;
-}
-div ul#navigation li a.active{
-	color: #ffffff;
-	text-decoration: none;
-}
-div ul#navigation li.active{
-	
 }
