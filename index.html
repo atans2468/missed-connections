@@ -14,91 +14,75 @@
 		</script>
 		<![endif]-->
 	</head>
-<body class="background">
-	<!-- This is the Login Header -->
-  		<header>
-			<div class="container">	  
-				<a href="#openModal" id="modal-link">Sign Up</a>
-				<a href="#openModal" id="modal-link-large">Sign Up</a>
-				<div id="openModal" class="modalDialog">
-					<div>
-						<a href="#close" title="Close" class="close">X</a>
-						<h2>Sign Up</h2>
-						<form role="form">
-							<div class="name-group">
-								<input type="name" class="form-control" id="first-name" placeholder="First Name">
-							</div>
-							<div class="name-group">
-								<input type="name" class="form-control" id="last-name" placeholder="Last Name">
-							</div>
-							<div class="email-signup-group">
-								<input type="email" class="form-control" id="email" placeholder="Email Address">
-							</div>
-							<div class="pwd-signup-group">
-								<input type="password" class="form-control" id="pwd" placeholder="Password">
-							</div>
-							<div class="pwd-signup-group">
-								<input type="password" class="form-control" id="pwd" placeholder="Confirm Password">
-							</div>
-						</form>
-						<div class="checkbox">
-							<label><input type="checkbox">I agree to the Terms and Conditions</label>
-						</div>
-						<form action="profile.html">
-    						<button type="submit" id="signup-button">Sign Up</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</header>
-	<!-- This is the login form -->
-		<!-- Form for smaller screens -->
-	<div class="container-fluid">
-		<h2 class="mc-header">Missed Connections</h2>
-		<div id="form-body">
-			<div id="login-header">
-				<h3>Login:</h3>
-			</div>
-			<form role="form">
-				<div class="email-group">
-					<input type="email" class="form-control" id="email" placeholder="Email Address" required>
-				</div>
-				<div class="pwd-group">
-					<input type="password" class="form-control" id="pwd" placeholder="Password" required>
-				</div>
-				<div class="checkbox">
-					<label><input type="checkbox">Remember Me</label>
-				</div>
-				<div class="form-actions">
-					<a href="thread.html" 
-					class="btn btn-info" role="button">Login</a>
-				</div>
-			</form>
+	<!-- This is the Login Page header -->
+	<header id="login-header">
+		<div id="login-header-small">
 		</div>
-		
-		<!-- Form for larger Screens -->
-		<h2 class="mc-header-large">Missed Connections</h2>
-		<div id="form-body-large">
-			<div id="login-header-large">
-				<h1>Login:</h1>
-			</div>
-			<form role="form">
-				<div class="email-group-large">
-					<input type="email" class="form-control" id="email-large" placeholder="Email Address" required>
-				</div>
-				<div class="pwd-group-large">
-					<input type="password" class="form-control" id="pwd-large" placeholder="Password" required>
-				</div>
-				<div class="checkbox-large">
+	</header>
+<body class="login-signup-background">
+  	<div class="container">	
+		  <!-- Replace this header with the MC logo -->
+		  <h2 id="login-page-header">Missed Connections</h2>  
+		<a href="#openModal" id="login-button" class="btn btn-info" role="button">Login</a>
+		<div id="openModal" class="modalDialog">
+			<div>
+				<a href="#close" title="Close" class="close">X</a>
+				<h2>Login:</h2>
+				<form role="form">
+					<div id="login-email">
+						<input type="email" class="form-control" id="email" placeholder="Email Address">
+					</div>
+					<div id="login-pwd">
+						<input type="password" class="form-control" id="pwd" placeholder="Password">
+					</div>
+				</form>
+				<div class="checkbox" id="login-checkbox">
 					<label><input type="checkbox">Remember Me</label>
 				</div>
-				<div class="form-actions-large">
-					<a href="thread.html" 
-					class="btn btn-info btn-lg" role="button">Login</a>
+				<form action="thread.html">
+    				<button type="submit" id="login-button">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>	
+	<div class="container">	  
+		<a href="#openModal-signup" id="signup-button"class="btn btn-info" role="button">Sign Up</a>
+		<div id="openModal-signup" class="modalDialog-signup">
+			<div>
+				<a href="#close" title="Close" class="close">X</a>
+				<h2>Sign Up:</h2>
+				<form role="form">
+					<div id="signup-first-name">
+						<input type="name" class="form-control" id="first-name" placeholder="First Name">
+					</div>
+					<div id="signup-last-name">
+						<input type="name" class="form-control" id="last-name" placeholder="Last Name">
+					</div>
+					<div id="signup-email">
+						<input type="email" class="form-control" id="email" placeholder="Email Address">
+					</div>
+					<div id="signup-pwd">
+						<input type="password" class="form-control" id="pwd" placeholder="Password">
+					</div>
+					<div id="signup-confirm-pwd">
+						<input type="password" class="form-control" id="pwd" placeholder="Confirm Password">
+					</div>
+				</form>
+				<div class="checkbox" id="signup-checkbox">
+					<label><input type="checkbox">I agree to the Terms and Conditions</label>
 				</div>
-			</form>
+				<form action="profile.html">
+    				<button type="submit" id="signup-button">Sign Up</button>
+				</form>
+			</div>
 		</div>
 	</div>
+		<!-- Change this from a button to a link down the road, but this will do for now -->
+		<div id="need-help-link">
+			<a href="#">Need Help?</a>
+		</div>
+	</div>
+	
 	
 	<!-- Footer -->
 	<footer id="login-footer">
@@ -106,10 +90,12 @@
 			<p class="mc-footer">Missed Connections &mdash; A Hive Production</p>
 		</div>
 	</footer>
+	<!--
 	<footer id="login-footer-large">
 		<div id="login-large">
 			<p class="mc-footer">Missed Connections &mdash; A Hive Production</p>
 		</div>
 	</footer>
+	-->
 </body>
 </html>

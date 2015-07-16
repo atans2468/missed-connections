@@ -1,4 +1,4 @@
-/* Login Header Starts Here */
+/* Main Header Starts Here */
 body { 
 	font-size: 1.05em;
 	line-height: 1.25em;
@@ -51,29 +51,26 @@ header nav a#menu-icon{
 	color: #ffffff;
 	text-decoration: none;
 }
-
-
-/* Header MEDIA QUERY*/
-@media only screen and (max-width : 640px) {
-header {
-position: absolute;
-}
-#menu-icon {
-display:inline-block;
-}
-}
-
-/* Modal Starts Here */
+/* Login Modal Starts Here */
 	/* modal-link style here is for smaller screens, look
 	down in the style sheet for larger screen login styles */
-header a#modal-link{
-	margin-top: 40px;
-	margin-right: 15px;
-	font-size: 16px;
-	float: right;
-	color: #ffffff
+body div a#login-button{
+	margin-top: 33%;
+	margin-left: 5px;
+	text-align: center; 
+	width: 95%;
+	background-color: #0071bc;
+	display: block;
 }
-header div div.modalDialog {
+body a#signup-button{
+	margin-top: 50px;
+	margin-left: 5px;
+	text-align: center; 
+	width: 95%;
+	background-color: #0071bc;
+	display: block;
+}
+body div div.modalDialog {
 	position: fixed;
 	font-family: Arial, Helvetica, sans-serif;
 	top: 20px;
@@ -126,286 +123,219 @@ header div div.modalDialog {
 .close:hover { 
 	background: #00d9ff; 
 }
-header div.modalDialog div.checkbox{
+body div.modalDialog div#login-checkbox{
+	margin-top: 5px;
+	margin-left: 28%;
+	padding-top: 10px;
+	font-size: 14px;
+}
+body div.modalDialog div#login-checkbox a{
+	font-size: 14px;
+	display: inline;
+}
+body div.container div.modalDialog form button#login-button{
+	margin-top: 10px;
+	margin-left: 30%;
+	border-radius: 7px;
+	width: 100px;
+	height: 40px;
+	background-color: #0071bc;;
+	color: #ffffff;
+}
+/* Signup Modal Starts Here */
+	/* modal-link style here is for smaller screens, look
+	down in the style sheet for larger screen login styles */
+body a#login-button{
+	margin-top: 85%;
+	margin-left: 5px;
+	text-align: center; 
+	width: 95%;
+	background-color: #0071bc;
+	display: block;
+}
+body a#signup-button{
+	margin-top: 40px;
+	margin-left: 5px;
+	text-align: center; 
+	width: 95%;
+	background-color: #0071bc;
+	display: block;
+}
+body div div.modalDialog-signup {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 20px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog-signup:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog-signup > div {
+	width: 92%;
+	height: auto;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #f1fcff;
+	background: -moz-linear-gradient(#f1fcff, #14a3f5);
+	background: -webkit-linear-gradient(#f1fcff, #14a3f5);
+	background: -o-linear-gradient(#f1fcff, #14a3f5);
+}
+.close {
+	background: #14a3f5;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { 
+	background: #00d9ff; 
+}
+body div.modalDialog-signup div#signup-checkbox{
 	margin-top: 10px;
 	margin-left: 15px;
 	padding-top: 10px;
 	font-size: 14px;
 	display: inline;
 }
-header div.modalDialog div.checkbox a{
+body div.modalDialog-signup div#signup-checkbox a{
 	font-size: 14px;
 	display: inline;
 }
-header div.container div.modalDialog form button#signup-button{
+body div.container div.modalDialog-signup form button#signup-button{
 	margin-top: 10px;
 	margin-left: 80px;
 	border-radius: 7px;
 	width: 100px;
 	height: 40px;
-	background-color: #aaaaaa;
+	background-color: #0071bc;
 	color: #ffffff;
 }
 
-/* Login Page -- Login Box Starts Here */
-	/* This is the styling for smaller screens */
-.background{
-	background-color: #f1fcff;
-}
-div h2.mc-header{
-	margin-top:90px;
-	text-align: center;
-}
-div div#form-body div#login-header h3{
-	color: #ffffff;
-	margin-top: 0px;
-	margin-left: 10px;
-	margin-bottom: 0px;
-}
-div div#form-body {
-	left: 0;
-	margin-top: 25px;
-	padding-top: 30px;
-	height: 250px;
-	background-color: #14a3f5;
-	position: absolute;
+/* Login Page starts Here */
+	/* This is the Login Page Header */
+header#login-header {
+	background-color: #0A60A0;
 	width: 100%;
-	border-top: 2px solid #000000;
-	border-bottom: 2px solid #000000;
-}
-div div.email-group {
-	color: #ffffff;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 15px;
-}
-div div.pwd-group {
-	color: #ffffff;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 20px;
-}
-.checkbox {
-	text-align: center;
-	color: #000000;
-}
-.form-actions {
-	margin: 0;
-	background-color: transparent;
-	text-align: center;	
-}
-
-/* Footer Starts Here */
-	/* This is the footer on the Login Page for smaller screens */
-footer#login-footer {
-	background: #14a3f5;
-	width: 100%;
-	height: 40px;
-	font-size: 13px;
+	height: 30px;
+	font-size: 12px;
 	position: fixed;;
 	bottom: 0;
 	left: 0;
-	border-top: 1.5px solid #000000;
+	z-index: 100;
+	border-bottom: 0px;
+	text-align: center;
+	color: #ffffff;
+}
+body div.container h2#login-page-header{
+	color: #ffffff;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	margin-top: 100px;
+	text-align: center;
+}
+/* This is the background color */
+body.login-signup-background{
+	background-color: #14a3f5;
+}
+
+/* This is the login modal styling */
+div.container div div#login-email{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+div.container div div#login-pwd{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* This is the signup modal styling */
+div.container div div#signup-first-name{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+div.container div div#signup-last-name{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}div.container div div#signup-email{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+div.container div div#signup-pwd{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+div.container div div#signup-confirm-pwd{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* Need Help Link Starts Here */
+
+div#need-help-link a{
+	background-color: #14a3f5;
+	border-radius: 4px 4px 0 0;
+	color: #ffffff;
+}
+div#need-help-link a:hover, div#need-help-link a:active, div#need-help-link a:visited { 
+	color: white; 
+}
+div#need-help-link{
+	margin-top: 20px;
+	color: #ffffff;
+	text-decoration: underline;
+	text-align: center;
+}
+/* Footer Starts Here */
+	/* This is the footer on the Login Page for smaller screens */
+footer#login-footer {
+	background: #0A60A0;
+	width: 100%;
+	height: 30px;
+	font-size: 12px;
+	position: fixed;;
+	bottom: 0;
+	left: 0;
 	z-index: 100;
 	text-align: center;
 	color: #ffffff;
 }
 footer#login-footer div#login-small{
-	padding-top: 10px;
+	padding-top: 5px;
 }
 
-/* Styling for larger screens */
-header a#modal-link-large{
-	font-size: 20px;
-	margin-top: 30px;
-	margin-right: 15px;
-	float: right;
-	color: #ffffff
+/* Header MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+header {
+position: absolute;
 }
-div h2.mc-header-large{
-	margin-top:110px;
-	text-align: center;
+#menu-icon {
+display:inline-block;
 }
-div div#form-body-large {
-	left: 0;
-	margin-top: 40px;
-	padding-top: 30px;
-	height: 340px;
-	background-color: #14a3f5;
-	position: absolute;
-	width: 100%;
-	border-top: 2px solid #000000;
-	border-bottom: 2px solid #000000;
-}
-div div#form-body-large div#login-header-large h1{
-	color: #ffffff;
-	margin-top: 5px;
-	margin-left: 10px;
-}
-div div.email-group-large {
-	color: #ffffff;
-	margin-top: 15px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 15px;
-}
-div div.pwd-group-large {
-	color: #ffffff;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 20px;
 }
 
-.checkbox-large {
-	font-size: 20px;
-	margin-top: 20px;
-	text-align: center;
-	color: #000000;
-}
-.form-actions-large {
-	margin-top: 20px;
-	background-color: transparent;
-	text-align: center;	
-}
-footer#login-footer-large {
-	background: #14a3f5;
-	width: 100%;
-	height: 60px;
-	font-size: 16px;
-	position: fixed;;
-	bottom: 0;
-	left: 0;
-	border-top: 1px solid #000000;
-	z-index: 100;
-	text-align: center;
-	color: #ffffff;
-}
-footer#login-footer-large div#login-large{
-	padding-top: 15px;
-}
-
-/* Media Queries for Login Page resizing */
-/* !!!! Ask Daniel about if this is ok to do and how to do it if it 
-is ok !!!! */
-@media screen and (min-width: 359px) {
-    #form-body {
-        display: none !important;
-    }
-}
-@media screen and (max-width: 359px) {
-    #form-body-large {
-        display: none !important;
-    }
-}
-@media screen and (min-width: 359px) {
-    #login-footer {
-        display: none !important;
-    }
-}
-@media screen and (max-width: 359px) {
-    #login-footer-large {
-        display: none !important;
-    }
-}
-@media screen and (min-width: 359px) {
-    .mc-header {
-        display: none !important;
-    }
-}
-@media screen and (max-width: 359px) {
-    .mc-header-large {
-        display: none !important;
-    }
-}
-@media screen and (min-width: 359px) {
-    header a#modal-link {
-        display: none !important;
-    }
-}
-@media screen and (max-width: 359px) {
-    header a#modal-link-large {
-        display: none !important;
-    }
-}
-
-/* Sign Up Page Starts Here */
-#form-signup-body {
-	left: 0;
-	width: 100%;
-	margin-top: 5px;
-	height: 300px;
-	background-color: #14a3f5;
-	position: absolute;
-}
-div h2.mc-header-signup{
-	margin-top:75px;
-	text-align: center;
-}
-.name-group {
-	color: #ffffff;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-}
-.email-signup-group {
-	color: #ffffff;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-}
-.pwd-signup-group {
-	color: #ffffff;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-}
-#terms-link{
-	text-decoration: underline;
-	color: #000000;
-}
-
-/* Thread Page Starts Here */
-
-/* Thread, Messages, Notifications and More Header */
-header div.main-header{
-	color: #ffffff;
-	text-align: center;
-	font-size: 24px;
-	font-family: Helvetica Neue, Helvetica, Arial;
-	padding-top: 10px;
-}
-header div a{
-	color: #ffffff;
-	text-decoration: none;
-}
-header div a.active{
-	color: #ffffff;
-	background-color: #ffffff;
-	text-decoration: none;
-}
-header div p#thread-logo{
-	margin-top: 20px;
-	text-align: center;
-	padding: 0px;
-	margin-left: 25px;
-}
-header div span{
-	float: right;
-	margin-top: 5px;
-	margin-right: 20px;
-}
-
-/* The next two segments of code remove the underline and
-visual of pressing the link -- This is still for all main pages */
-header div.main-header p#thread-logo a:hover {
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-header div.main-header p#thread-logo a{
-	margin-top: 10px;
-	color: #ffffff;
-	text-decoration: none;
-}
 
 /* The Messages Page Starts Here */
 html, body#messages-page{
