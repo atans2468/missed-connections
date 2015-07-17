@@ -56,39 +56,20 @@
 		}
 		</script>
 		
-		<!-- This is the JS for the Bottom Nav Bar -->
+		<!-- This is to hide the footer when an input box has focus -->
 		<script>
-		var sections = $('section')
-  			, nav = $('nav')
-  			, nav_height = nav.outerHeight();
-			  
-		$(window).on('scroll', function () {
-  			var cur_pos = $(this).scrollTop();
-  
-  			sections.each(function() {
-    			var top = $(this).offset().top - nav_height,
-        			bottom = top + $(this).outerHeight();
-    
-    			if (cur_pos >= top && cur_pos <= bottom) {
-      		nav.find('a').removeClass('active');
-      		sections.removeClass('active');
-      
-      		$(this).addClass('active');
-      		nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
-    		}
-  		});
-	});
-
-nav.find('a').on('click', function () {
-  var $el = $(this)
-    , id = $el.attr('href');
-  
-  $('html, body').animate({
-    scrollTop: $(id).offset().top - nav_height
-  }, 500);
-  
-  return false;
-});
+		if(/ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase()))
+		{
+    		$(document).on('focus', 'input, textarea', function() 
+    		{
+        		$("#bottom-navbar").hide();
+    		});
+    	
+			$(document).on('blur', 'input, textarea', function() 
+    		{
+        		$("#bottom-navbar").show();
+    		});
+		}
 		</script>
 	</head>
 	<body class="background" id="more-page">

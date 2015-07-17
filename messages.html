@@ -53,6 +53,22 @@
     		lastScrollTop = st;
 		}
 		</script>
+		
+		<!-- This is to hide the footer when an input box has focus -->
+		<script>
+		if(/ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase()))
+		{
+    		$(document).on('focus', 'input, textarea', function() 
+    		{
+        		$("#bottom-navbar").hide();
+    		});
+    	
+			$(document).on('blur', 'input, textarea', function() 
+    		{
+        		$("#bottom-navbar").show();
+    		});
+		}
+		</script>
 	</head>
 	<body class="background" id="messages-page">
 		
