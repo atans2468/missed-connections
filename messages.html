@@ -12,62 +12,112 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
 		<![endif]-->
+		
+		<script>
+			// Hide Header on on scroll down
+			var didScroll;
+			var lastScrollTop = 0;
+			var delta = 5;
+			var navbarHeight = $('header').outerHeight();
+			
+			$(window).scroll(function(event){
+    			didScroll = true;
+			});
+
+			setInterval(function() {
+    			if (didScroll) {
+        			hasScrolled();
+        			didScroll = false;
+    			}
+			}, 250);
+
+			function hasScrolled() {
+    			var st = $(this).scrollTop();
+   	
+   		 	// Make sure they scroll more than delta
+    		if(Math.abs(lastScrollTop - st) <= delta)
+        		return;
+    
+    		// If they scrolled down and are past the navbar, add class .nav-up.
+    		// This is necessary so you never see what is "behind" the navbar.
+    		if (st > lastScrollTop && st > navbarHeight){
+        		// Scroll Down
+        		$('header').removeClass('nav-down').addClass('nav-up');
+    		} else {
+        		// Scroll Up
+        		if(st + $(window).height() < $(document).height()) {
+            		$('header').removeClass('nav-up').addClass('nav-down');
+        		}
+    		}
+    
+    		lastScrollTop = st;
+		}
+		</script>
 	</head>
 	<body class="background" id="messages-page">
 		
 		<!-- Header -->
-			<header>
+			<header class="nav-down">
 				<nav class="nav navbar-fixed-top" id="fixed-header">
 					<div id="main-header-small">
 					</div>
-					<div class="main-header">
-						<p id="thread-logo"><a href="thread.html" id="main-header-link">MC</a><span class="glyphicon glyphicon-search" id="search-button"></span></p>
-					</div>
 				</nav>
+				<div class="container-login">
+					<div id="header-logo">
+						<p id="thread-logo"><a href="thread.html" id="main-header-link">MC</a></p>
+					</div>
+					<div id="header-search">
+						<form class="form-search form-inline">
+							<input type="search" class="form-control search-query" placeholder="Search..." />
+						</form>
+					</div>
+				</div>	
 			</header>
 		
 		<!-- Page Contents -->	
 			<div class="container-fluid" id="messages-page-container">
-				<a href="#" id="messages-link">
-				<button id="messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-				<a href="#" id="more-messages-link">
-				<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
-				<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+				<div class="messages">
+					<a href="#" id="messages-link">
+					<button id="messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+					<a href="#" id="more-messages-link">
+					<button id="more-messages" type="button" class="btn btn-default input-block-level"><span class="glyphicon glyphicon-user" id="more-messages-glyph"></span>Name
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
+				</div>
 			</div>
 		<!-- Bottom Nav Bar -->
-		<div id="MenuContainer">
-            <ul id="navigation">
-                <li class="x"><a title="1" href="thread.html" >Thread</a></li>
-                <li class="active"><a title="2" href="messages.html">Messages</a></li>
-                <li class="x"><a title="3" href="notifications.html" >Notifications</a></li>
-                <li class="contact" class="last"><a title="4" href="more.html" >More</a></li>
-            </ul>
-        </div> 
+		<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
+  				<ul>
+    				<li><a href="thread.html">Thread</a></li>
+    				<li><a class="active" href="messages.html">Messages</a></li>
+    				<li><a href="notifications.html">Notifications</a></li>
+    				<li><a href="more.html">More</a></li>
+  				</ul>
+			</nav>
 		<!-- End of Bottom Nav Bar -->
 	</body>
 </html>

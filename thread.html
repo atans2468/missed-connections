@@ -6,37 +6,167 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="jquery-1.11.3.min.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/uisearch.js"></script>
+
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
 		<![endif]-->
+		
+		<script>
+			// Hide Header on on scroll down
+			var didScroll;
+			var lastScrollTop = 0;
+			var delta = 5;
+			var navbarHeight = $('header').outerHeight();
+			
+			$(window).scroll(function(event){
+    			didScroll = true;
+			});
+
+			setInterval(function() {
+    			if (didScroll) {
+        			hasScrolled();
+        			didScroll = false;
+    			}
+			}, 250);
+
+			function hasScrolled() {
+    			var st = $(this).scrollTop();
+   	
+   		 	// Make sure they scroll more than delta
+    		if(Math.abs(lastScrollTop - st) <= delta)
+        		return;
+    
+    		// If they scrolled down and are past the navbar, add class .nav-up.
+    		// This is necessary so you never see what is "behind" the navbar.
+    		if (st > lastScrollTop && st > navbarHeight){
+        		// Scroll Down
+        		$('header').removeClass('nav-down').addClass('nav-up');
+    		} else {
+        		// Scroll Up
+        		if(st + $(window).height() < $(document).height()) {
+            		$('header').removeClass('nav-up').addClass('nav-down');
+        		}
+    		}
+    
+    		lastScrollTop = st;
+		}
+		</script>
+		<!-- This is the beginning of the search bar -->
 	</head>
-	<body class="background">
+	<body class="background" id="thread-page">
 		
 		<!-- Header -->
-			<header>
+			<header class="nav-down">
 				<nav class="nav navbar-fixed-top" id="fixed-header">
 					<div id="main-header-small">
 					</div>
-					<div class="main-header">
-						<p id="thread-logo"><a href="thread.html" id="main-header-link">MC</a><span class="glyphicon glyphicon-search" id="search-button"></span></p>
-					</div>
 				</nav>
+				<div class="container-login">
+					<div id="header-logo">
+						<p id="thread-logo"><a href="thread.html" id="main-header-link">MC</a></p>
+					</div>
+					<div id="header-search">
+						<form class="form-search form-inline">
+							<input type="search" class="form-control search-query" placeholder="Search..." />
+						</form>
+					</div>
+				</div>	
 			</header>
+			
+		<!-- This is the beginning of the Thread Contents -->
+			<div class="container">
+				<div class= "post-outline">
+					<div id="post-text-box">
+					
+						<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
+						<img id="post-profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png">
+					
+						<!-- This is the text are to write a post -->
+						<textarea class="text-left" id="text-area" placeholder="Write a post..." wrap="soft"></textarea>
+					</div>
+				
+					<!-- This is the thread cards -->
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+					
+						<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
+						<img id="card-profile-pic" src="#">
+						
+						<!-- This is the text are to write a post -->
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>
+				<div class="post-outline" id="thread-card-outline">	
+					<div id="thread-cards">
+						<img id="card-profile-pic" src="#">
+						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					</div>
+				</div>	
+			</div>
 		
 		<!-- Bottom Nav Bar -->
-		<div id="MenuContainer">
-            <ul id="navigation">
-                <li class="active"><a title="1" href="thread.html" >Thread</a></li>
-				<li class="x"><a title="2" href="messages.html">Messages</a></li>
-				<li class="x"><a title="3" href="notifications.html" >Notifications</a></li>
-				<li class="contact" class="last"><a title="4" href="more.html" >More</a></li>
-            </ul>
-        </div> 
-		
+		<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
+  				<ul>
+    				<li><a class="active" href="thread.html">Thread</a></li>
+    				<li><a href="messages.html">Messages</a></li>
+    				<li><a href="notifications.html">Notifications</a></li>
+    				<li><a href="more.html">More</a></li>
+  				</ul>
+			</nav>
 		<!-- End of Bottom Nav Bar -->
 	</body>
 </html>
