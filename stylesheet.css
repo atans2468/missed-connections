@@ -1,4 +1,7 @@
 /* Main Background Is Here */
+html{
+	min-height: 100%;
+}
 body.background { 
 	background: #f1fcff;
 }
@@ -269,8 +272,9 @@ footer#login-footer div#login-small{
 /* Thread Page Starts Here */
 	/* Thread, Messages, Notifications and More Header */
 /* This is the background of the small top header and the fixed main nav header */
-body#messages-page{
-	padding-top: 80px /* Same as main-header height */
+body#thread-page{
+	padding-top: 80px; /* Same as main-header height */
+	margin-bottom: 60px;
 }
 body header nav div#main-header-small {
 	background-color: #0A60A0;
@@ -287,11 +291,11 @@ body header nav div#main-header-small {
 }
 header {
 	background: #14a3f5;
-  	height: 80px;
-  	position: fixed;
-  	top: 0;
-  	transition: top 0.2s ease-in-out;
-  	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	transition: top 0.2s ease-in-out;
+	width: 100%;
 	border-bottom: 1px solid #0A60A0;
 	opacity: initial;
 	z-index: 1000;
@@ -366,9 +370,9 @@ input[type=search]{
 	-mox-border-radius: 10em;
 	border-radius: 10em;
 	
-	-webkit-transition: all .5s;
-	-mox-transition: all.5s;
-	transition: all .5s;
+	-webkit-transition: ease-in-out .8s;
+	-mox-transition: ease-in-out .8s;
+	transition: ease-in-out .8s;
 }
 input[type=search]:focus{
 	width: 300px; /* This is what the width will expand to on focus */
@@ -408,7 +412,7 @@ div.container div.post-outline{
 	text-align: center;
 	border: 1px solid #000000;
 	border-radius: 5px;
-	margin: 90px auto;
+	margin: 10px auto;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
@@ -458,14 +462,27 @@ button:hover
 }
 
 /* This is the Thread Card Styling */
-div.container div#thread-card-outline{
+div.container div#thread-card-outline-first{
 	height: 100px;
 	width: 100%;
 	background-color: #ffffff;
 	text-align: center;
 	border: 1px solid #000000;
 	border-radius: 5px;
-	margin: 40px auto;
+	margin-top: 40px;
+	margin-bottom: 0px;
+	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+}
+div.container div.card-post-outline{
+	height: 100px;
+	width: 100%;
+	background-color: #ffffff;
+	text-align: center;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	margin-top: 20px;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
@@ -533,45 +550,48 @@ header div.main-header p#thread-logo a{
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  	margin: 0;
+  	padding: 0;
+  	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  	font-family: 'Open Sans', sans-serif;
 }
 
 /* Navigation */
 
 nav#bottom-navbar {
-  width: 100%;
-  height: 40px; 
-  position: fixed-bottom; 
-  background: #14a3f5;
-  border-top: .5 solid #000000;
+	width: 100%;
+  	height: 40px; 
+  	position: fixed-bottom; 
+  	background: #14a3f5;
+  	border-top: .5 solid #000000;
 }
 
 nav#bottom-navbar ul {
-  padding: 10px;
-  margin: 0px auto;
-  list-style: none;
-  text-align: center;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;  
+	margin: 0px auto;
+	list-style: none;
+	text-align: center;
 }
 nav#bottom-navbar ul li {
-  display: inline-block;
-  margin: 0 10px;
+	display: inline-block;
+	margin: 0 10px;
 }
 nav#bottom-navbar ul li a {
-  padding: 10px 0;
-  color: #fff;
-  font-size: 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.2s ease;
+	padding: 10px 0;
+	color: #fff;
+	font-size: 1.2rem;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.2s ease;
 }
 nav#bottom-navbar ul li a:hover {
-  color: #34495E;
+	color: #34495E;
 }
 nav#bottom-navbar ul li a.active {
 	color: #0A60A0;
@@ -586,9 +606,11 @@ h1 {
 }
 
 /* The Messages Page Starts Here */
-html, body#messages-page{
+body#messages-page{
 	margin-bottom: 60px;
+	padding-top: 80px; /* Same as main-header height */
 }
+
 /* This is the styling for the divs */
 div#messages-page-container{
 	margin: 0;
@@ -659,8 +681,9 @@ div#messages-page-container a#more-messages-link{
 }
 
 /* The Notifications Page Starts Here */
-html, body#messages-page{
+body#notifications-page{
 	margin-bottom: 60px;
+	padding-top: 80px; /* Same as main-header height */
 }
 /* This is the styling for the divs */
 div#notifications-page-container{
@@ -716,37 +739,38 @@ div#notifications-page-container a#more-notifications-link{
 /* "More" Page Starts Here */
 
 /* Profile Button Starts Here */
-html, body#more-page{
-	padding-bottom: 20px;
+body#more-page{
+	margin-bottom: 60px;
+	padding-top: 80px; /* Same as main-header height */
 }
-div#more-page button#profile{
+div#more-page-container button#profile{
 	height: 45px;
-	margin-top: 95px;
+	margin-top: 35px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page button#profile span#profile-glyph{
+div#more-page-container button#profile span#profile-glyph{
 	margin-right: 5px;
 }
-div#more-page button#profile span#chevron-glyph{
+div#more-page-container button#profile span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page a#profile-link:hover{
+div#more-page-container a#profile-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page a#profile-link{
+div#more-page-container a#profile-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* General Button Starts Here */
-div#more-page button#general{
+div#more-page-container button#general{
 	height: 45px;
 	margin-top: 25px;
 	text-align: left;
@@ -754,27 +778,27 @@ div#more-page button#general{
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page button#general span#general-glyph{
+div#more-page-container button#general span#general-glyph{
 	margin-right: 5px;
 	color: #606060;
 }
-div#more-page button#general span#chevron-glyph{
+div#more-page-container button#general span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page a#general-link:hover{
+div#more-page-container a#general-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page a#general-link{
+div#more-page-container a#general-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Security Button Starts Here */
-div#more-page button#security{
+div#more-page-container button#security{
 	height: 45px;
 	margin-top: 5px;
 	text-align: left;
@@ -782,27 +806,27 @@ div#more-page button#security{
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page button#security span#security-glyph{
+div#more-page-container button#security span#security-glyph{
 	margin-right: 5px;
 	color: #606060;
 }
-div#more-page button#security span#chevron-glyph{
+div#more-page-container button#security span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page a#security-link:hover{
+div#more-page-container a#security-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page a#security-link{
+div#more-page-container a#security-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Privacy Button Starts Here */
-div#more-page button#privacy{
+div#more-page-container button#privacy{
 	height: 45px;
 	margin-top: 25px;
 	text-align: left;
@@ -810,27 +834,27 @@ div#more-page button#privacy{
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page button#privacy span#privacy-glyph{
+div#more-page-container button#privacy span#privacy-glyph{
 	margin-right: 5px;
 	color: #fec63d;
 }
-div#more-page button#privacy span#chevron-glyph{
+div#more-page-container button#privacy span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page a#privacy-link:hover{
+div#more-page-container a#privacy-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page a#privacy-link{
+div#more-page-container a#privacy-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Location Button Starts Here */
-div#more-page button#location{
+div#more-page-container button#location{
 	height: 45px;
 	margin-top: 5px;
 	text-align: left;
@@ -838,27 +862,27 @@ div#more-page button#location{
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page button#location span#location-glyph{
+div#more-page-container button#location span#location-glyph{
 	margin-right: 5px;
 	color: #14a3f5;
 }
-div#more-page button#location span#chevron-glyph{
+div#more-page-container button#location span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page a#location-link:hover{
+div#more-page-container a#location-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page a#location-link{
+div#more-page-container a#location-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Blocking Button Starts Here */
-div#more-page button#blocking{
+div#more-page-container button#blocking{
 	height: 45px;
 	margin-top: 5px;
 	text-align: left;
@@ -866,27 +890,27 @@ div#more-page button#blocking{
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page button#blocking span#blocking-glyph{
+div#more-page-container button#blocking span#blocking-glyph{
 	margin-right: 5px;
 	color: #ff3823;
 }
-div#more-page button#blocking span#chevron-glyph{
+div#more-page-container button#blocking span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page a#blocking-link:hover{
+div#more-page-container a#blocking-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page a#blocking-link{
+div#more-page-container a#blocking-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Terms Button Starts Here */
-div#more-page button#terms{
+div#more-page-container button#terms{
 	height: 45px;
 	margin-top: 5px;
 	text-align: left;
@@ -894,26 +918,26 @@ div#more-page button#terms{
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page button#terms span#terms-glyph{
+div#more-page-container button#terms span#terms-glyph{
 	margin-right: 5px;
 }
-div#more-page button#terms span#chevron-glyph{
+div#more-page-container button#terms span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page a#terms-link:hover{
+div#more-page-container a#terms-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page a#terms-link{
+div#more-page-container a#terms-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Log Out Button Starts Here */
-div#more-page button#logout{
+div#more-page-container button#logout{
 	height: 45px;
 	margin-top: 30px;
 	text-align: left;
@@ -921,28 +945,29 @@ div#more-page button#logout{
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page button#logout span#logout-glyph{
+div#more-page-container button#logout span#logout-glyph{
 	margin-right: 5px;
 	color: #ff3823;
 }
-div#more-page button#logout span#chevron-glyph{
+div#more-page-container button#logout span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page a#logout-link:hover{
+div#more-page-container a#logout-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page a#logout-link{
+div#more-page-container a#logout-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Profile Page Starts Here */
-html, body#profile-page{
-	padding-bottom: 40px;
+body#profile-page{
+	margin-bottom: 60px;
+	padding-top: 80px; /* Same as main-header height */
 }
 /* This is the Profile Pic */
 div.container-fluid img#profile-pic{
@@ -950,7 +975,7 @@ div.container-fluid img#profile-pic{
 	width: auto;
 	max-width: 100px;
 	max-height: 100px;
-	margin-top: 85px;
+	margin-top: 15px;
 	margin-left: 5px;
 	margin-right: 0;
 	margin-bottom: 0px;
@@ -961,7 +986,7 @@ div.container-fluid img#profile-pic{
 div.container-fluid form#name-container input#first-name{
 	width: 100px;
 	height: 50px;
-	margin-top: 85px;
+	margin-top: 15px;
 	margin-bottom: 0px;
 	margin-right: 0;
 	padding-left: 10px;
@@ -1042,13 +1067,12 @@ div.container-fluid form.form-vertical label#bio-label{
 	margin-right: 0;
 	margin-bottom: 0;
 	padding-left: 10px;
-	display: inline;
 	float: left;
 }
 textarea#bio-text-area{
 	width: 80%;
 	height: 80px;
-	margin: 12px 20px auto;
+	margin: 11px 20px auto;
 	background-color: transparent;
 	text-decoration: none;
 	padding: 0 0.4em 0.4em 0;
@@ -1082,7 +1106,6 @@ div.container-fluid form.form-vertical label#facts-label{
 	margin-right: 0;
 	margin-bottom: 0;
 	padding-left: 10px;
-	display: inline;
 	float: left;
 }
 div.container-fluid form.form-vertical div.form-group input#facts{
@@ -1097,7 +1120,6 @@ div.container-fluid form.form-vertical div.form-group input#facts{
 	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
-	display: inline;
 }
 
 /* This is the Favorite Quotes form with label */
@@ -1110,7 +1132,6 @@ div.container-fluid form.form-vertical label#quote-label{
 	margin-right: 0;
 	margin-bottom: 0;
 	padding-left: 10px;
-	display: inline;
 	float: left;
 }
 div.container-fluid form.form-vertical div.form-group input#quote{
@@ -1125,8 +1146,6 @@ div.container-fluid form.form-vertical div.form-group input#quote{
 	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
-	display: inline;
-
 }
 
 /* This is the Occupation form with label */
@@ -1139,7 +1158,6 @@ div.container-fluid form.form-vertical label#occupation-label{
 	margin-right: 0;
 	margin-bottom: 0;
 	padding-left: 10px;
-	display: inline;
 	float: left;
 }
 div.container-fluid form.form-vertical div.form-group input#occupation{
@@ -1154,7 +1172,6 @@ div.container-fluid form.form-vertical div.form-group input#occupation{
 	color: #000000;
 	background-color: #f1fcff;
 	border: 0;
-	display: inline;
 }
 
 /* This is the Second Profile Pic */
@@ -1182,3 +1199,155 @@ div.container-fluid img#profile-pic3{
 	margin-bottom: 0px;
 	float: right;
 }
+
+
+
+/* This is test script for a possible new header navigation feature */
+
+/* this is the advanced search bar */
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- FONTAWESOME ---------- */
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- 
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+a[class*="fontawesome-"]:before,
+span[class*="fontawesome-"]:before {
+	display: block;
+	font-family: 'FontAwesome', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ---------- GENERAL ---------- 
+
+body#search-page{
+	background: #ccc;
+	font: 'Open Sans', sans-serif;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+    -webkit-appearance: button;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+input:focus {
+	outline: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------- CLASSES ---------- 
+
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;	
+}
+.clearfix:after { clear: both; }
+
+.container {
+	left: 50%;
+	margin: -17px 0 0 -186px;
+	position: absolute;
+	top: 50%;
+	width: 372px;
+}
+
+/* ---------- TOOLBAR ---------- 
+
+.toolbar {
+	color: #fff;
+}
+
+.toolbar li {
+	float: left;
+}
+
+.toolbar li:first-child a { border-radius: .5em 0 0 .5em; }
+.toolbar li:last-child button { border-radius: 0 .5em .5em 0; }
+
+.toolbar a,
+.toolbar input[type="search"],
+.toolbar button {
+	background: #3598db;
+	color: #fff;
+	display: block;
+	padding: .5em 1em;
+	position: relative;
+}
+
+.toolbar a:hover,
+.toolbar input[type="search"]:hover,
+.toolbar input[type="search"]:focus,
+.toolbar button:hover {
+	background: #2a80b9;
+}
+
+.toolbar input[type="search"] {
+	display: none;
+	height: 21px;
+	width: 177px;
+}
+
+.toolbar input[type="search"]::-webkit-input-placeholder { color: #fff; }
+.toolbar input[type="search"]::-moz-placeholder { color: #fff; opacity: 1; }
+.toolbar input[type="search"]:-moz-placeholder { color: #fff; opacity: 1; }
+.toolbar input[type="search"]:-ms-input-placeholder { color: #fff; }
