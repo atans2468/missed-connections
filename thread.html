@@ -57,12 +57,23 @@
     		lastScrollTop = st;
 		}
 		</script>
-		<!-- This is the beginning of the search bar -->
+		<!-- This is to hide the footer when an input box has focus -->
 		<script>
-			$("#header-search").on("tap",function(){
-  				$(this).hide();
-			});
+		if(/ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase()))
+		{
+    		$(document).on('focus', 'input, textarea', function() 
+    		{
+        		$("#bottom-navbar").hide();
+    		});
+    	
+			$(document).on('blur', 'input, textarea', function() 
+    		{
+        		$("#bottom-navbar").show();
+    		});
+		}
 		</script>
+		<!-- This is the beginning of the search bar -->
+		
 	</head>
 	
 	<!-- This is the beginning of the body -->
