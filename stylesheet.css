@@ -295,7 +295,7 @@ body header nav div#main-header-small {
 }
 header {
 	background: #14a3f5;
-	height: 80px;
+	height: 65px;
 	position: fixed;
 	top: 0;
 	transition: top 0.8s ease-in-out;
@@ -326,7 +326,7 @@ header div.container-login{
 header div div#header-logo{
 	overflow: hidden;
 	font-family: Helvetica Neue, Helvetica, Arial;
-	margin-top: 40px;
+	margin-top: 25px;
 	padding-bottom: 0px;
 	display: inline-block; 
 }
@@ -349,7 +349,7 @@ header div div p#thread-logo{
 /* This is specifically the Search button */
 header div#header-search{
 	float: left;
-	margin-top: 40px;
+	margin-top: 25px;
 	margin-left: 10px;
 	padding-top: 0px;
 	width: 0px;
@@ -416,7 +416,7 @@ div.container div.post-outline{
 	text-align: center;
 	border: 1px solid #000000;
 	border-radius: 5px;
-	margin: 10px auto;
+	margin: 0px auto;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
@@ -612,7 +612,7 @@ h1 {
 /* The Messages Page Starts Here */
 body#messages-page{
 	margin-bottom: 60px;
-	padding-top: 80px; /* Same as main-header height */
+	padding-top: 65px; /* Same as main-header height */
 }
 
 /* This is the styling for the divs */
@@ -687,7 +687,7 @@ div#messages-page-container a#more-messages-link{
 /* The Notifications Page Starts Here */
 body#notifications-page{
 	margin-bottom: 60px;
-	padding-top: 80px; /* Same as main-header height */
+	padding-top: 65px; /* Same as main-header height */
 }
 /* This is the styling for the divs */
 div#notifications-page-container{
@@ -745,11 +745,11 @@ div#notifications-page-container a#more-notifications-link{
 /* Profile Button Starts Here */
 body#more-page{
 	margin-bottom: 60px;
-	padding-top: 80px; /* Same as main-header height */
+	padding-top: 65px; /* Same as main-header height */
 }
 div#more-page-container button#profile{
 	height: 45px;
-	margin-top: 35px;
+	margin-top: 30px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -971,7 +971,7 @@ div#more-page-container a#logout-link{
 /* Profile Page Starts Here */
 body#profile-page{
 	margin-bottom: 60px;
-	padding-top: 80px; /* Same as main-header height */
+	padding-top: 75px; /* Same as main-header height */
 }
 /* This is the Profile Pic */
 div.container-fluid img#profile-pic{
