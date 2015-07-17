@@ -12,18 +12,66 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
 		<![endif]-->
+		
+		<script>
+			// Hide Header on on scroll down
+			var didScroll;
+			var lastScrollTop = 0;
+			var delta = 5;
+			var navbarHeight = $('header').outerHeight();
+			
+			$(window).scroll(function(event){
+    			didScroll = true;
+			});
+
+			setInterval(function() {
+    			if (didScroll) {
+        			hasScrolled();
+        			didScroll = false;
+    			}
+			}, 250);
+
+			function hasScrolled() {
+    			var st = $(this).scrollTop();
+   	
+   		 	// Make sure they scroll more than delta
+    		if(Math.abs(lastScrollTop - st) <= delta)
+        		return;
+    
+    		// If they scrolled down and are past the navbar, add class .nav-up.
+    		// This is necessary so you never see what is "behind" the navbar.
+    		if (st > lastScrollTop && st > navbarHeight){
+        		// Scroll Down
+        		$('header').removeClass('nav-down').addClass('nav-up');
+    		} else {
+        		// Scroll Up
+        		if(st + $(window).height() < $(document).height()) {
+            		$('header').removeClass('nav-up').addClass('nav-down');
+        		}
+    		}
+    
+    		lastScrollTop = st;
+		}
+		</script>
 	</head>
 	<body class="background" id="profile-page">
 		
 		<!-- Header -->
-			<header>
+			<header class="nav-down">
 				<nav class="nav navbar-fixed-top" id="fixed-header">
 					<div id="main-header-small">
 					</div>
-					<div class="main-header">
-						<p id="thread-logo"><a href="thread.html" id="main-header-link">MC</a><span class="glyphicon glyphicon-search" id="search-button"></span></p>
-					</div>
 				</nav>
+				<div class="container-login">
+					<div id="header-logo">
+						<p id="thread-logo"><a href="thread.html" id="main-header-link">MC</a></p>
+					</div>
+					<div id="header-search">
+						<form class="form-search form-inline">
+							<input type="search" class="form-control search-query" placeholder="Search..." />
+						</form>
+					</div>
+				</div>	
 			</header>
 			
 			<!-- Page Contents -->	
@@ -56,10 +104,9 @@
 					<form class="form-vertical">
    						<div class="form-group">
         					<label class="col-sm-6 h3" id="bio-label">Bio:</label>
-        						<span class="col-sm-6">
-            						<p contenteditable="false" id="bio">This is an Example....This is an Example....This is an Example....
-										This is an Example....This is an Example....</p>
-        						</span>
+        						<div class="col-sm-6" id="paragraph">
+									<textarea class="text-left" id="bio-text-area" placeholder="Write your Bio here..." wrap="soft" disabled></textarea>
+        						</div>
 							<label class="col-sm-6 h3" id="facts-label">Interesting Facts:</label>
         						<div class="col-sm-6">
             						<input type="text" id="facts" value="&#8226 Example 1" disabled><br>
@@ -87,14 +134,14 @@
 				
 		
 		<!-- Bottom Nav Bar -->
-		<div id="MenuContainer">
-            <ul id="navigation">
-                <li class="x"><a title="1" href="thread.html" >Thread</a></li>
-                <li class="active"><a title="2" href="messages.html">Messages</a></li>
-                <li class="x"><a title="3" href="notifications.html" >Notifications</a></li>
-                <li class="contact" class="last"><a title="4" href="more.html" >More</a></li>
-            </ul>
-        </div> 
+		<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
+  				<ul>
+    				<li><a href="thread.html">Thread</a></li>
+    				<li><a href="messages.html">Messages</a></li>
+    				<li><a href="notifications.html">Notifications</a></li>
+    				<li><a class="active" href="more.html">More</a></li>
+  				</ul>
+			</nav>
 		<!-- End of Bottom Nav Bar -->
 	</body>
 </html>

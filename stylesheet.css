@@ -1,28 +1,8 @@
-/* Main Header Starts Here */
+/* Main Background Is Here */
 body.background { 
 	background: #f1fcff;
 }
-a {
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: bold;
-}
-a:hover {
-	color: #ffffff;
-}
-nav.login-nav {
-	float: right;
-	padding: 20px;	
-}
-a:hover#menu-icon {
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-header nav a#menu-icon{
-	margin-top: 10px;
-	color: #ffffff;
-	text-decoration: none;
-}
+
 /* Login Modal Starts Here */
 	/* modal-link style here is for smaller screens, look
 	down in the style sheet for larger screen login styles */
@@ -288,6 +268,10 @@ footer#login-footer div#login-small{
 
 /* Thread Page Starts Here */
 	/* Thread, Messages, Notifications and More Header */
+/* This is the background of the small top header and the fixed main nav header */
+body#messages-page{
+	padding-top: 80px /* Same as main-header height */
+}
 body header nav div#main-header-small {
 	background-color: #0A60A0;
 	width: 100%;
@@ -298,44 +282,237 @@ body header nav div#main-header-small {
 	left: 0;
 	border-bottom: 0px;
 	color: #ffffff;
+	opacity: initial;
+	z-index: 1000;
 }
-header nav#fixed-header{
+header {
 	background: #14a3f5;
-	width: 100%;
-	height: 80px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	text-decoration: none;
-	position: fixed;
+  	height: 80px;
+  	position: fixed;
+  	top: 0;
+  	transition: top 0.2s ease-in-out;
+  	width: 100%;
+	border-bottom: 1px solid #0A60A0;
+	opacity: initial;
+	z-index: 1000;
 }
-header div.main-header{
+/* This is for hiding the header upon scrolling down */
+.nav-up { 
+    top: -100px;
+}
+/* This is the header link styling */
+a {
 	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #ffffff;
+}
+
+/* This is the div surounding the MC Logo and the Search button */
+header div.container-login{
+	width: 100%;
 	text-align: center;
-	font-size: 24px;
+}
+header div div#header-logo{
+	overflow: hidden;
 	font-family: Helvetica Neue, Helvetica, Arial;
-	padding-top: 10px;
+	margin-top: 40px;
+	padding-bottom: 0px;
+	display: inline-block; 
 }
 header div a#main-header-link{
+	font-size: 24px;
 	color: #ffffff;
 	text-decoration: none;
+	width: 25px;
 }
 header div a#main-header-link.active{
 	color: #ffffff;
 	background-color: #ffffff;
 	text-decoration: none;
 }
-header div p#thread-logo{
-	margin-top: 10px;
-	text-align: center;
+/* This is specifically the MC Logo */
+header div div p#thread-logo{
 	padding: 0px;
-	margin-left: 25px;
+	margin-left: 0px;
 }
-header div span#search-button{
-	float: right;
+/* This is specifically the Search button */
+header div#header-search{
+	float: left;
+	margin-top: 40px;
+	margin-left: 10px;
+	padding-top: 0px;
+	width: 0px;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none;
+}
+input[type=search]{
+	background: #ededed url() no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 40px; /* This is the default width */
+	
+	-webkit-border-radius: 10em;
+	-mox-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-mox-transition: all.5s;
+	transition: all .5s;
+}
+input[type=search]:focus{
+	width: 300px; /* This is what the width will expand to on focus */
+	background-color: #fff;
+	border-color: #6dcf6;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+input.search-query {
+    padding-left:40px;
+}
+form.form-search {
+    position: relative;
+}
+form.form-search:before {
+    display: relative;
+    width: 14px;
+    height: 14px;
+    content: "\e003";
+    font-family: 'Glyphicons Halflings';
+    background-position: -48px 0;
+    position: absolute;
+    top:7px;
+    left:10px;
+    opacity: .5;
+    z-index: 1000;
+}
+
+/* This is where the "Write A Post" box starts */
+div.container div.post-outline{
+	height: 100px;
+	width: 100%;
+	background-color: #ffffff;
+	text-align: center;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	margin: 90px auto;
+	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+}
+div.container div#post-text-box{
+	height: 75px;
+	width: 90%;
+	border: 1px solid #000000;
+	margin: 10px auto;
+}
+img#post-profile-pic{
+	height: auto;
+	width: auto;
+	max-width: 35px;
+	max-height: 35px;
 	margin-top: 5px;
-	margin-right: 20px;
+	margin-left: 5px;
+	margin-right: 0;
+	margin-bottom: 0px;
+	float: left;
+}
+
+/* This is the text area styling */
+div div#post-text-box textarea#text-area{
+	width: 75%;
+	height: 60px;
+	margin: 5px auto;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 0 0.4em 0.4em 0;
+	text-align: left !important;
+	border: none;
+	resize: none;
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
+/* This is the Thread Card Styling */
+div.container div#thread-card-outline{
+	height: 100px;
+	width: 100%;
+	background-color: #ffffff;
+	text-align: center;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	margin: 40px auto;
+	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+}
+div.container div#thread-cards{
+	height: 75px;
+	width: 90%;
+	border: 1px solid #000000;
+	margin: 10px auto;
+	
+}
+img#card-profile-pic{
+	height: auto;
+	width: auto;
+	max-width: 35px;
+	max-height: 35px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 0;
+	margin-bottom: 0px;
+	float: left;
+}
+
+/* This is the Thread Card Text Area Styling */
+div div#thread-cards textarea#card-area{
+	width: 75%;
+	height: 60px;
+	margin: 5px auto;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 0 0.4em 0.4em 0;
+	text-align: left !important;
+	border: none;
+	resize: none;
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none;
 }
 
 /* The next two segments of code remove the underline and
@@ -353,74 +530,59 @@ header div.main-header p#thread-logo a{
 */
 
 /* Bottom Navigation Menu */
-ul#navigation {
-    height: 60px;
-    list-style: none;
-    margin: 0;
-    padding-top: 20px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-    border-width: 1px 0;
-	border-top: 1px solid #000000;    
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Cham-WebFont', Arial, sans-serif;
-    background-color: #14a3f5;
-    position: fixed;
-	bottom: 0;
-    width: 100%;
-	float: bottom;
-}
-div ul#navigation a:hover {
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-div ul#navigation a{
-	margin-top: 10px;
-	color: #ffffff;
-	text-decoration: none;
-}
-ul#navigation li {
-    display: inline;
-	font-size: 16px;
-    margin-right: .75em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-ul#navigation li.last {
-    margin-right: 0;
-}
-#navigation ul
-{
-    margin: 0;
-    padding: 0;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#navigation ul li
-{
-    list-style-type: none;
-    display: inline;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-#navigation li:before {
-	content: " | ";
-	color: #ffffff;
+/* Navigation */
+
+nav#bottom-navbar {
+  width: 100%;
+  height: 40px; 
+  position: fixed-bottom; 
+  background: #14a3f5;
+  border-top: .5 solid #000000;
 }
 
-#navigation li:first-child:before {
-	content: none;
+nav#bottom-navbar ul {
+  padding: 10px;
+  margin: 0px auto;
+  list-style: none;
+  text-align: center;
 }
-div ul#navigation li a{
-	color: #ffffff;
+nav#bottom-navbar ul li {
+  display: inline-block;
+  margin: 0 10px;
 }
-div ul#navigation li a.active{
-	color: #ffffff;
-	text-decoration: none;
+nav#bottom-navbar ul li a {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
 }
-div ul#navigation li.active{
-	
+nav#bottom-navbar ul li a:hover {
+  color: #34495E;
+}
+nav#bottom-navbar ul li a.active {
+	color: #0A60A0;
+	border-bottom: 2px solid #0A60A0;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 5rem;
+  color: #34495E;
 }
 
 /* The Messages Page Starts Here */
@@ -435,7 +597,7 @@ div#messages-page-container{
 div#messages-page-container button#messages{
 	width: 100%;
 	height: 50px;
-	margin-top: 80px;
+	margin-top: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -447,11 +609,13 @@ div#messages-page-container button#messages{
 }
 div#messages-page-container button#messages span#messages-glyph{
 	margin-right: 5px;
+	z-index: 0;
 }
 div#messages-page-container button#messages span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
+	z-index: 0;
 }
 div#messages-page-container a#messages-link:hover{
 	background-color: #14a3f5;
@@ -476,11 +640,13 @@ div#messages-page-container button#more-messages{
 }
 div#messages-page-container button#more-messages span#more-messages-glyph{
 	margin-right: 5px;
+	z-index: 0;
 }
 div#messages-page-container button#more-messages span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
+	z-index: 0;
 }
 div#messages-page-container a#more-messages-link:hover{
 	background-color: #14a3f5;
@@ -504,10 +670,7 @@ div#notifications-page-container{
 div#notifications-page-container button#notifications{
 	width: 100%;
 	height: 50px;
-	margin-top: 80px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
+	margin: 0px;
 	text-align: left;
 	border: 1px solid #aaaaaa;
 	border-radius: 0px;
@@ -882,6 +1045,17 @@ div.container-fluid form.form-vertical label#bio-label{
 	display: inline;
 	float: left;
 }
+textarea#bio-text-area{
+	width: 80%;
+	height: 80px;
+	margin: 12px 20px auto;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 0 0.4em 0.4em 0;
+	text-align: left !important;
+	border: none;
+	resize: none;
+}
 /* !!!! Make sure max height on bio is set, set max character limits
 in input fields, lock the bullets, look up how to lock footer
 when keyboard is off !!!!*/
@@ -903,7 +1077,7 @@ div.container-fluid form.form-vertical label#facts-label{
 	width: 100%;
 	height: 10px;
 	font-size: 16px;
-	margin-top: 50px;
+	margin-top: 0px;
 	margin-left: 0px;
 	margin-right: 0;
 	margin-bottom: 0;
