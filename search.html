@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Missed Connections</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+		<script>
+			( function() {
+				$('#btn-search').on('click', function(e) {
+					e.preventDefault();
+					$('#search').animate({width: 'toggle'}).focus();
+				});
+			} () );
+		</script>
+	</head>
+	
+	<!-- This is the beginning of the body -->
+	<body class="background" id="search-page">
+		
+		<!-- Header 
+			<header class="nav-down">
+				<nav class="nav navbar-fixed-top" id="fixed-header">
+					<div id="main-header-small">
+					</div>
+				</nav>
+				<div class="container-login">
+					<div id="header-logo">
+						<p id="thread-logo"><a href="thread.html" id="main-header-link">MC</a></p>
+					</div>
+					<div id="header-search">
+						<form class="form-search form-inline">
+							<input type="search" class="form-control search-query" placeholder="Search..." />
+						</form>
+					</div>
+				</div>	
+			</header>
+			-->
+		<!-- This is the beginning of the Thread Contents -->
+			<div class="container">	
+				<form action="javascript:void(0);" method="get">
+					<fieldset>
+						<ul class="toolbar clearfix">
+							<li><a href="#" class="fontawesome-heart"></a></li>
+							<li><a href="#" class="fontawesome-eye-open"></a></li>
+							<li><a href="#" class="fontawesome-comment"></a></li>
+							<li><input type="search" id="search" placeholder="What are you looking for?"></li>
+							<li><button type="submit" id="btn-search"><span class="fontawesome-search"></span></button></li>
+						</ul>
+					</fieldset>
+				</form>
+			</div>
+	</body>
+</html>
