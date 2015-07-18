@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type='application/javascript' src='/path/to/fastclick.js'></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
@@ -46,6 +47,7 @@
 			} () );
 		});
 		</script>
+		
 		<!-- This is to hide the footer when an input box has focus -->
 		<script>
 		if(/ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase()))
@@ -59,6 +61,13 @@
         		$("#bottom-navbar").show();
     		});
 		}
+		</script>
+		
+		<!-- This is to get rid of the 300ms delay in the screen -->
+		<script type="application/javascript">
+		window.addEventListener('load', function () {
+			FastClick.attach(document.body);
+		}, false);
 		</script>
 	</head>
 	</head>

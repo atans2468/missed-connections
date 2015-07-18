@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type='application/javascript' src='/path/to/fastclick.js'></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
@@ -60,6 +61,13 @@
     		});
 		}
 		</script>
+		
+		<!-- This is to get rid of the 300ms delay in the screen -->
+		<script type="application/javascript">
+		window.addEventListener('load', function () {
+			FastClick.attach(document.body);
+		}, false);
+		</script>
 	</head>
 	</head>
 	<body class="background" class="scrolling" id="messages-page">
@@ -110,10 +118,10 @@
 					<textarea class="text-left" id="background-placeholder-text" placeholder="Type a message to start a conversation..." disabled></textarea>
 				</div>
 			</div>
-			<div id="message-text-form">
-					<textarea class="text-left" id="message-textarea" placeholder="Type here..."></textarea>
-				</div>
 		<!-- Bottom Nav Bar -->
+		<div id="message-text-form">
+			<textarea class="text-left" id="message-textarea" placeholder="Type here..."></textarea>
+		</div>
 		<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
   				<ul>
     				<li id="thread-nav-link"><a href="thread.html"><span class="glyphicon glyphicon-edit"></span><br>Thread</a></li>
