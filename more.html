@@ -71,25 +71,37 @@
     		});
 		}
 		</script>
+		<!-- This is the left-sliding header -->
+		<script>		
+		$(document).ready(function () {
+   	 		var expanded = false;
+    		$("#drawer-handle").click(function () {
+        		if (expanded = !expanded) {
+            		$("#drawer-content").animate({ "margin-right": 0 },    "slow");
+        		} else {
+            		$("#drawer-content").animate({ "margin-right": -200 }, "slow");
+        		}
+    		});
+		});
+		</script>
 	</head>
-	<body class="background" id="more-page">
+	<body class="background" class="scrolling" id="more-page">
 		
 		<!-- Header -->
-			<header class="nav-down">
+			<header class="nav-down">	
 				<nav class="nav navbar-fixed-top" id="fixed-header">
 					<div id="main-header-small">
 					</div>
+					<div class="container" id="container-search">
+    					<div id="drawer">
+        					<div id="drawer-handle">
+								<p>MC</p>
+							</div>
+        					<div id="drawer-content">
+        					</div>
+    					</div>
+					</div>
 				</nav>
-				<div class="container-login">
-					<div id="header-logo">
-						<p id="thread-logo"><a href="thread.html" id="main-header-link">MC</a></p>
-					</div>
-					<div id="header-search">
-						<form class="form-search form-inline">
-							<input type="search" class="form-control search-query" placeholder="Search..." />
-						</form>
-					</div>
-				</div>	
 			</header>
 		
 		<!-- Page Contents -->

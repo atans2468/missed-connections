@@ -280,6 +280,12 @@ body#thread-page{
 	padding-top: 80px; /* Same as main-header height */
 	margin-bottom: 60px;
 }
+body.scrolling .bodyCap {
+height: 100%;
+width: 100%;
+background: transparent;
+z-index: 99999;
+}
 body header nav div#main-header-small {
 	background-color: #0A60A0;
 	width: 100%;
@@ -304,18 +310,47 @@ header {
 	opacity: initial;
 	z-index: 1000;
 }
+
+/* This is the styling for the left-sliding Header */
+* {
+    font-family: Helvetica;
+}
+#container-search {
+    width: 100%;
+    height: 50px;
+    background-color: #14a3f5;
+    margin: 0px auto;
+    position: relative;
+    color: white;
+    padding: 20px;
+}
+#drawer {
+    position: absolute;
+    right: 0;
+   	bottom: 0;
+    height: 75%;
+    overflow-x: hidden; /* Needed for initial hidden state */
+}
+#drawer > div {
+    height: 100%;
+    float: left;
+}
+#drawer-handle {
+    width: 50px;
+    background-color: none;
+	font-size: 24px;
+}
+#drawer-content {
+    width:         200px;
+    margin-right: -200px; /* -width */
+    background-color: #14a3f5;
+}
+#drawer-content > p {
+    padding: 10px;
+}
 /* This is for hiding the header upon scrolling down */
 .nav-up { 
     top: -100px;
-}
-/* This is the header link styling */
-a {
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: bold;
-}
-a:hover {
-	color: #ffffff;
 }
 
 /* This is the div surounding the MC Logo and the Search button */
@@ -1209,3 +1244,4 @@ div.container-fluid img#profile-pic3{
 /* This is test script for a possible new header navigation feature */
 
 /* this is the advanced search bar */
+
