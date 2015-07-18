@@ -1339,10 +1339,12 @@ header.nav-down div#container-search div div#drawer-content form ul.toolbar li:f
 header.nav-down div#container-search div div#drawer-content form ul.toolbar li a { 
 	border-radius: 0 0 0 0; 
 }
-header.nav-down div#container-search div div#drawer-content form ul.toolbar:last-child button { 
+header.nav-down div#container-search div div#drawer-content form ul.toolbar button { 
 	border-radius: 0 .5em .5em 0; 
 }
-
+header.nav-down div#container-search div div#drawer-content form ul.toolbar li input{
+	border-radius: 0 0 0 0;
+}
 header.nav-down div#container-search div div#drawer-content form ul.toolbar a,
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"],
 header.nav-down div#container-search div div#drawer-content form ul.toolbar button {
