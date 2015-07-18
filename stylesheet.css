@@ -299,7 +299,7 @@ body header nav div#main-header-small {
 	opacity: initial;
 	z-index: 1000;
 }
-header {
+header.nav-down {
 	background: #14a3f5;
 	height: 65px;
 	position: fixed;
@@ -335,15 +335,19 @@ header {
     height: 100%;
     float: left;
 }
-#drawer-handle {
-    width: 50px;
+#drawer-handle span#plus-glyph {
+	border: 0;
+    width: 20px;
     background-color: none;
-	font-size: 24px;
-	margin-right: 10px;
+	font-size: 1.5em;
+	margin-top: 3px;
+	margin-left: 0px;
+	margin-right: 5px;
+	padding-right: 5px;
 }
-#drawer-content {
-    width: 250px;
-    margin-right: -500px; /* -width */
+header.nav-down nav#fixed-header div#container-search div#drawer-content {
+    width: 290px;
+    margin-right: -290px;
     background-color: #14a3f5;
 }
 #drawer-content > p {
@@ -382,48 +386,6 @@ header div div p#thread-logo{
 	padding: 0px;
 	margin-left: 0px;
 }
-/* This is specifically the Search button */
-header div#header-search{
-	float: left;
-	margin-top: 25px;
-	margin-left: 10px;
-	padding-top: 0px;
-	width: 0px;
-}
-input[type=search] {
-	-webkit-appearance: textfield;
-	-webkit-box-sizing: content-box;
-	font-family: inherit;
-	font-size: 100%;
-}
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button {
-	display: none;
-}
-input[type=search]{
-	background: #ededed url() no-repeat 9px center;
-	border: solid 1px #ccc;
-	padding: 9px 10px 9px 32px;
-	width: 40px; /* This is the default width */
-	
-	-webkit-border-radius: 10em;
-	-mox-border-radius: 10em;
-	border-radius: 10em;
-	
-	-webkit-transition: ease-in-out .8s;
-	-mox-transition: ease-in-out .8s;
-	transition: ease-in-out .8s;
-}
-input[type=search]:focus{
-	width: 300px; /* This is what the width will expand to on focus */
-	background-color: #fff;
-	border-color: #6dcf6;
-	
-	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	box-shadow: 0 0 5px rgba(109,207,246,.5);
-}
-
 input.search-query {
     padding-left:40px;
 }
@@ -445,21 +407,21 @@ form.form-search:before {
 }
 
 /* This is where the "Write A Post" box starts */
-div.container div.post-outline{
+div.post-outline{
 	height: 100px;
 	width: 100%;
 	background-color: #ffffff;
 	text-align: center;
 	border: 1px solid #000000;
-	border-radius: 5px;
+	border-radius: 0px;
 	margin: 0px auto;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
-div.container div#post-text-box{
+div#post-text-box{
 	height: 75px;
-	width: 90%;
+	width: 95%;
 	border: 1px solid #000000;
 	margin: 10px auto;
 }
@@ -477,7 +439,7 @@ img#post-profile-pic{
 
 /* This is the text area styling */
 div div#post-text-box textarea#text-area{
-	width: 75%;
+	width: 80%;
 	height: 60px;
 	margin: 5px auto;
 	background-color: transparent;
@@ -502,34 +464,34 @@ button:hover
 }
 
 /* This is the Thread Card Styling */
-div.container div#thread-card-outline-first{
-	height: 100px;
+div#thread-card-outline-first{
+	height: 140px;
 	width: 100%;
 	background-color: #ffffff;
 	text-align: center;
 	border: 1px solid #000000;
-	border-radius: 5px;
+	border-radius: 0px;
 	margin-top: 40px;
 	margin-bottom: 0px;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
-div.container div.card-post-outline{
-	height: 100px;
+div.card-post-outline{
+	height: 140px;
 	width: 100%;
 	background-color: #ffffff;
 	text-align: center;
 	border: 1px solid #000000;
-	border-radius: 5px;
+	border-radius: 0px;
 	margin-top: 20px;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
-div.container div#thread-cards{
-	height: 75px;
-	width: 90%;
+div#thread-cards{
+	height: 95px;
+	width: 95%;
 	border: 1px solid #000000;
 	margin: 10px auto;
 	
@@ -603,46 +565,42 @@ body {
 
 nav#bottom-navbar {
 	width: 100%;
-  	height: 40px; 
+  	height: 45px; 
   	position: fixed-bottom; 
   	background: #14a3f5;
   	border-top: .5 solid #000000;
 }
 
 nav#bottom-navbar ul {
-	padding-top: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-top: 0px;
 	padding-bottom: 10px;  
-	margin: 0px auto;
+	margin: 0px;
 	list-style: none;
 	text-align: center;
 }
 nav#bottom-navbar ul li {
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0 21px;
 }
 nav#bottom-navbar ul li a {
-	padding: 10px 0;
+	padding: 5px 0;
 	color: #fff;
-	font-size: 1.2rem;
+	font-size: .9em;
 	text-decoration: none;
 	font-weight: bold;
 	transition: all 0.2s ease;
+}
+nav#bottom-navbar ul li a span{
+	color: #ffffff;
+}
+nav#bottom-navbar ul li a span.active{
+	color: #0A60A0;
 }
 nav#bottom-navbar ul li a:hover {
 	color: #34495E;
 }
 nav#bottom-navbar ul li a.active {
 	color: #0A60A0;
-	border-bottom: 2px solid #0A60A0;
-}
-
-/* Headings */
-
-h1 {
-  font-size: 5rem;
-  color: #34495E;
 }
 
 /* The Messages Page Starts Here */
@@ -1241,9 +1199,6 @@ div.container-fluid img#profile-pic3{
 }
 
 
-
-/* This is test script for a possible new header navigation feature */
-
 /* this is the advanced search bar */
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
@@ -1258,12 +1213,12 @@ header.nav-down div#container-search div div#drawer-content form ul li a {
 	text-decoration: none;
 }
 
-header.nav-down div#container-search div div#drawer-content form ul li button#btn-search {
-    -webkit-appearance: none;
-    background-color: #2a80b9;
-	border-style: 1px solid #000000;
-    cursor: pointer;
-    font-family: inherit;
+header.nav-down div#container-search div div#drawer-content form ul button#btn-search {
+	-webkit-appearance: none;
+	background: #2a80b9;
+	transition: top 0.8s ease-in-out;
+	cursor: pointer;
+	font-family: inherit;
     font-size: 100%;
     line-height: inherit;
     margin-right: 0;
@@ -1271,7 +1226,7 @@ header.nav-down div#container-search div div#drawer-content form ul li button#bt
     text-transform: none;
 }
 
-header.nav-down div#container-search div div#drawer-content form ul li button#btn-search::-moz-focus-inner {
+header.nav-down div#container-search div div#drawer-content form ul button#btn-search::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
@@ -1280,14 +1235,18 @@ header.nav-down div#container-search div div#drawer-content form fieldset {
 	border: 0;
 	margin: 0;
 	padding: 0;
+	width: auto;
 }
 
 header.nav-down div#container-search div div#drawer-content form ul li input#search {
 	border: 0;
-	font-size: 100%;
+	width: 130px;
+	height: 34px;
+	font-size: 12px;
 	line-height: inherit;
 	margin: 0;
-	padding: 0;
+	padding-left: 5px;
+	display: none;
 }
 
 header.nav-down div#container-search div div#drawer-content form ul li input#search:focus {
@@ -1319,12 +1278,17 @@ header.nav-down div#container-search div div#drawer-content form ul {
 
 /* ---------- CLASSES ---------- */
 
-header.nav-down div#container-search div div#drawer-content form ul.clearfix { *zoom: 1; }
-header.nav-down div#container-search div div#drawer-content form ul.clearfix:before, header.nav-down div#container-search div div#drawer-content form ul.clearfix:after {
-	content: "";
-	display: table;	
+header.nav-down div#container-search div div#drawer-content form ul.clearfix { 
+	*zoom: 1; 
 }
-header.nav-down div#container-search div div#drawer-content form ul.clearfix:after { clear: both; }
+header.nav-down div#container-search div div#drawer-content form ul.clearfix:before, 
+header.nav-down div#container-search div div#drawer-content form ul.clearfix:after {
+	content: "";
+	display: table;
+}
+header.nav-down div#container-search div div#drawer-content form ul.clearfix:after { 
+	clear: both; 
+}
 
 header.nav-down div#container-search div div#drawer-content form ul.container-search {
 	left: 50%;
@@ -1333,7 +1297,7 @@ header.nav-down div#container-search div div#drawer-content form ul.container-se
 	top: 50%;
 	width: 372px;
 }
-header.nav-down div#container-search div div#drawer-content form ul li button span.glyphicon-search{
+header.nav-down div#container-search div div#drawer-content form ul button span.glyphicon-search{
 	margin-top: 5px;
 	font-size: 1em;
 	padding-top: 2px;
@@ -1347,7 +1311,7 @@ header.nav-down div#container-search div div#drawer-content form ul li a span.gl
 	padding-top: 1px;
 	color: #ffffff;
 }
-header.nav-down div#container-search div div#drawer-content form ul li a span.glyphicon-pencil{
+header.nav-down div#container-search div div#drawer-content form ul li a span.glyphicon-edit{
 	margin-top: 0px;
 	font-size: 1em;
 	padding-top: 1px;
@@ -1369,9 +1333,15 @@ header.nav-down div#container-search div div#drawer-content form ul.toolbar li {
 	float: left;
 }
 
-header.nav-down div#container-search div div#drawer-content form ul.toolbar li:first-child a { border-radius: .5em 0 0 .5em; }
-header.nav-down div#container-search div div#drawer-content form ul.toolbar li a { border-radius: 0 0 0 0; }
-header.nav-down div#container-search div div#drawer-content form ul.toolbar li:last-child button { border-radius: 0 .5em .5em 0; }
+header.nav-down div#container-search div div#drawer-content form ul.toolbar li:first-child a { 
+	border-radius: .5em 0 0 .5em; 
+}
+header.nav-down div#container-search div div#drawer-content form ul.toolbar li a { 
+	border-radius: 0 0 0 0; 
+}
+header.nav-down div#container-search div div#drawer-content form ul.toolbar:last-child button { 
+	border-radius: 0 .5em .5em 0; 
+}
 
 header.nav-down div#container-search div div#drawer-content form ul.toolbar a,
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"],
@@ -1383,20 +1353,18 @@ header.nav-down div#container-search div div#drawer-content form ul.toolbar butt
 	border-bottom: 0;
 	position: relative;
 }
-
-header.nav-down div#container-search div div#drawer-content form ul.toolbar a:hover,
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:hover,
-header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:focus,
-header.nav-down div#container-search div div#drawer-content form ul.toolbar button:hover {
+header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:focus{
 	background: #2a80b9;
 }
-
+header.nav-down div#container-search div div#drawer-content form ul.toolbar a:hover,
+header.nav-down div#container-search div div#drawer-content form ul.toolbar button:hover{
+	background: #0A60A0;
+}
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"] {
-	display: none;
 	height: 21px;
 	width: 177px;
 }
-
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]::-webkit-input-placeholder { 
 	color: #fff; 
 }
