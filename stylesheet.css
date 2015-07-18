@@ -277,7 +277,7 @@ footer#login-footer div#login-small{
 	/* Thread, Messages, Notifications and More Header */
 /* This is the background of the small top header and the fixed main nav header */
 body#thread-page{
-	padding-top: 80px; /* Same as main-header height */
+	padding-top: 70px; /* Same as main-header height */
 	margin-bottom: 60px;
 }
 body.scrolling .bodyCap {
@@ -507,7 +507,109 @@ img#card-profile-pic{
 	margin-bottom: 0px;
 	float: left;
 }
+/* This is the 'Accept', 'Tag', and 'Report' buttons NOTE This is only the first post in the thread */
+div.post-outline div.thread-actions{
+	margin: 20px 0px 0px 0px;
+	padding: 0;
+	width: 100%;
+	border: 0;
+}
 
+div.post-outline div.thread-actions ul {
+	padding: 0;
+	margin: 0px;
+	list-style: none;
+	text-align: center;
+}
+div.post-outline div.thread-actions ul li {
+	display: inline-block;
+	margin: 5px 22px;
+}
+div.post-outline div.thread-actions ul li a#accept-link {
+	padding: 5px 0;
+	color: #008000;
+	font-size: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+div.post-outline div.thread-actions ul li a#tag-link {
+	padding: 5px 0;
+	color: #0A60A0;
+	font-size: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+div.post-outline div.thread-actions ul li a#report-link {
+	padding: 5px 0;
+	color: #ff0000;
+	font-size: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+div.post-outline div.thread-actions ul li a span#accept-glyph{
+	color: #008000;
+}
+div.post-outline div.thread-actions ul li a span#tag-glyph{
+	color: #0A60A0;
+}
+div.post-outline div.thread-actions ul li a span#report-glyph{
+	color: #ff0000;
+}
+
+/* The rest of the posts start here */
+div.card-post-outline div.thread-actions{
+	margin: 20px 0px 0px 0px;
+	padding: 0;
+	width: 100%;
+	border: 0;
+}
+
+div.card-post-outline div.thread-actions ul {
+	padding: 0;
+	margin: 0px;
+	list-style: none;
+	text-align: center;
+}
+div.card-post-outline div.thread-actions ul li {
+	display: inline-block;
+	margin: 5px 22px;
+}
+div.card-post-outline div.thread-actions ul li a#accept-link {
+	padding: 5px 0;
+	color: #008000;
+	font-size: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+div.card-post-outline div.thread-actions ul li a#tag-link {
+	padding: 5px 0;
+	color: #0A60A0;
+	font-size: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+div.card-post-outline div.thread-actions ul li a#report-link {
+	padding: 5px 0;
+	color: #ff0000;
+	font-size: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+div.card-post-outline div.thread-actions ul li a span#accept-glyph{
+	color: #008000;
+}
+div.card-post-outline div.thread-actions ul li a span#tag-glyph{
+	color: #0A60A0;
+}
+div.card-post-outline div.thread-actions ul li a span#report-glyph{
+	color: #ff0000;
+}
 /* This is the Thread Card Text Area Styling */
 div div#thread-cards textarea#card-area{
 	width: 75%;
@@ -1229,6 +1331,7 @@ header.nav-down div#container-search div div#drawer-content form ul button#btn-s
 header.nav-down div#container-search div div#drawer-content form ul button#btn-search::-moz-focus-inner {
 	border: 0;
 	padding: 0;
+	border-radius: 0;
 }
 
 header.nav-down div#container-search div div#drawer-content form fieldset {
@@ -1236,6 +1339,7 @@ header.nav-down div#container-search div div#drawer-content form fieldset {
 	margin: 0;
 	padding: 0;
 	width: auto;
+	border-radius: 0;
 }
 
 header.nav-down div#container-search div div#drawer-content form ul li input#search {
@@ -1247,10 +1351,12 @@ header.nav-down div#container-search div div#drawer-content form ul li input#sea
 	margin: 0;
 	padding-left: 5px;
 	display: none;
+	border-radius: 0;
 }
 
 header.nav-down div#container-search div div#drawer-content form ul li input#search:focus {
 	outline: none;
+	border-radius: 0;
 }
 
 header.nav-down div#container-search div div#drawer-content form ul li input[type="search"] {
@@ -1258,22 +1364,26 @@ header.nav-down div#container-search div div#drawer-content form ul li input[typ
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+	border-radius: 0;
 }
 
 header.nav-down div#container-search div div#drawer-content form ul li input[type="search"]::-webkit-search-cancel-button,
 header.nav-down div#container-search div div#drawer-content form ul li input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
+	border-radius: 0;
 }
 
 header.nav-down div#container-search div div#drawer-content form ul li input::-moz-focus-inner {
     border: 0;
     padding: 15px;
+	border-radius: 0;
 }
 
 header.nav-down div#container-search div div#drawer-content form ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	border-radius: 0px
 }
 
 /* ---------- CLASSES ---------- */
@@ -1358,6 +1468,7 @@ header.nav-down div#container-search div div#drawer-content form ul.toolbar butt
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:hover,
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:focus{
 	background: #2a80b9;
+	border-radius: 0;
 }
 header.nav-down div#container-search div div#drawer-content form ul.toolbar a:hover,
 header.nav-down div#container-search div div#drawer-content form ul.toolbar button:hover{
@@ -1366,16 +1477,23 @@ header.nav-down div#container-search div div#drawer-content form ul.toolbar butt
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"] {
 	height: 21px;
 	width: 177px;
+	border-radius: 0;
 }
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]::-webkit-input-placeholder { 
 	color: #fff; 
+	border-radius: 0;
 }
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]::-moz-placeholder { 
-	color: #fff; opacity: 1; 
+	color: #fff; 
+	opacity: 1; 
+	border-radius: 0;
 }
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:-moz-placeholder { 
-	color: #fff; opacity: 1; 
+	color: #fff; 
+	opacity: 1; 
+	border-radius: 0;
 }
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:-ms-input-placeholder { 
-	color: #fff; 
+	color: #fff;
+	border-radius: 0; 
 }
