@@ -6,12 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
-		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="js/classie.js"></script>
-		<script src="js/uisearch.js"></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
@@ -29,6 +25,25 @@
     		});
 		});
 		</script>
+		<script>
+			( function() {
+				$('#btn-search').on('click', function(e) {
+					e.preventDefault();
+				$('#search').animate({width: 'toggle'}).focus();
+				});
+			} () );
+		</script>
+		
+		<script type="text/javascript">
+		$(document).ready(function() {
+			
+		$('#btn-search').click(function() {
+        	$('#search').animate({
+        	'marginLeft' : "+=50px" //moves right
+        	});
+    	 });
+		});
+		</script>
 	</head>
 	
 	<!-- This is the beginning of the body -->
@@ -37,12 +52,23 @@
 		<nav class="nav navbar-fixed-top" id="fixed-header">
 			<div id="main-header-small">
 			</div>
-			<div class="container" id="container-search">
+			<div class="container-search" id="container-search">
     			<div id="drawer">
         			<div id="drawer-handle">
 						<p>MC</p>
 					</div>
         			<div id="drawer-content">
+						<form action="javascript:void(0);" method="get">
+							<fieldset>
+								<ul class="toolbar clearfix">
+									<li><a href="#" class="form-control search-query"><span class="glyphicon glyphicon-user"></span></a></li>
+									<li><a href="#" class="form-control search-query"><span class="glyphicon glyphicon-pencil"></span></a></li>
+									<li><a href="#" class="form-control search-query"><span class="glyphicon glyphicon-cog"></span></a></li>
+									<li><input type="search" id="search" placeholder="What are you looking for?"></li>
+									<li><button type="submit" id="btn-search"><span class="glyphicon glyphicon-search"></span></button></li>
+								</ul>
+							</fieldset>
+						</form>
         			</div>
     			</div>
 			</div>
@@ -50,3 +76,4 @@
 	</header>
 	</body>
 </html>
+
