@@ -7,6 +7,7 @@
 		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<script src="https://raw.githubusercontent.com/benbarnett/jQuery-Animate-Enhanced/master/scripts/src/jquery.animate-enhanced.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -64,6 +65,28 @@
     		});
 		}
 		</script>
+		
+		<!-- This is to make the 'Write A Post' box sticky -->
+		<script>
+		var menu = document.querySelector('.post-outline');
+		var menuPosition = menu.getBoundingClientRect();
+		var placeholder = document.createElement('div');
+		placeholder.style.width = menuPosition.width + '100%';
+		placeholder.style.height = menuPosition.height + '80px';
+		var isAdded = false;
+ 
+		window.addEventListener('scroll', function() {
+    		if (window.pageYOffset >= menuPosition.top && !isAdded) {
+        		menu.classList.add('sticky');
+        		menu.parentNode.insertBefore(placeholder, menu);
+        		isAdded = true;
+    		} else if (window.pageYOffset < menuPosition.top && isAdded) {
+        		menu.classList.remove('sticky');
+        		menu.parentNode.removeChild(placeholder);
+        		isAdded = false;
+    		}
+		});
+	</script>
 	</head>
 	
 	<!-- This is the beginning of the body -->
@@ -98,7 +121,7 @@
 	</header>
 
 		<!-- This is the beginning of the Thread Contents -->
-			<div class= "post-outline">
+			<div class= "post-outline" id="thread-background-card">
 				<div id="post-text-box">
 					
 					<!-- Set image to correlate with gender, randomize so that colors change throughout post -->

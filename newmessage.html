@@ -6,7 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  		<script src="https://raw.githubusercontent.com/benbarnett/jQuery-Animate-Enhanced/master/scripts/src/jquery.animate-enhanced.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
@@ -72,7 +73,7 @@
 			<div class="container-search" id="container-search">
 				<div id="thread-name">
 					<div id="button-holder">
-						<button type="button" class="btn btn-default" onclick="goBack()" id="recent-button"><span id="chevron-left"class="glyphicon glyphicon-chevron-left"></span>Recent</button>
+						<button type="button" class="btn btn-default" onclick="goBack()" id="recent-button" style="border-style:none"><span id="chevron-left"class="glyphicon glyphicon-chevron-left"></span>Recent</button>
 						<script>
 						function goBack() {
     						window.history.back();
@@ -80,7 +81,6 @@
 						</script>
 						<textarea class="text-center" id="users-name" placeholder="Name" wrap="soft" style="color: #000000" disabled></textarea>
 					</div>
-				</div>
 				<div id="drawer">
         			<div id="drawer-handle">
 						<span class="glyphicon glyphicon-plus" id="plus-glyph"></span>
@@ -106,7 +106,8 @@
 		<!-- Page Contents -->	
 			<div class="container-fluid" id="new-message-page-container">
 				<div id="background-text">
-					<textarea class="text-left" id="background-placeholder-text" placeholder="Type a message to start a conversation..." disabled></textarea>
+					<form action="#" id="#"></form>
+					<textarea class="text-left" type="submit" id="background-placeholder-text" placeholder="Type a message to start a conversation..." disabled></textarea>
 				</div>
 			</div>
 		<!-- Bottom Nav Bar -->
