@@ -360,9 +360,8 @@ header.nav-down nav#fixed-header div#container-search div#drawer-content {
 div.sticky div.post-outline{
 	height: 130px;
 	width: 100%;
-	background-color: #ffffff;
+	background-color: #ebebeb;
 	text-align: right;
-	border-bottom: .5px solid #ebebeb;
 	border-radius: 0px;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
@@ -418,7 +417,7 @@ div.sticky div.post-outline div#submit-cancel-buttons div#change-location div#op
 }
 /* This is the text area wrapper styling */
 div.sticky div#post-text-box{
-	height: 60%;
+	height: 65%;
 	width: 100%;
 	border-bottom: .1em solid #000000;
 	margin: 0px auto;
@@ -467,9 +466,9 @@ button:hover
 div#thread-card-outline-first{
 	height: 140px;
 	width: 100%;
-	background-color: #ffffff;
+	background-color: #ebebeb;
 	text-align: center;
-	border: 1px solid #000000;
+	border: 0;
 	border-radius: 0px;
 	margin-top: 25px;
 	margin-bottom: 0px;
@@ -480,20 +479,21 @@ div#thread-card-outline-first{
 div.card-post-outline{
 	height: 140px;
 	width: 100%;
-	background-color: #ffffff;
+	background-color: #ebebeb;
 	text-align: center;
-	border: 1px solid #000000;
+	border: 0;
 	border-radius: 0px;
-	margin-top: 20px;
+	margin-top: 30px;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
 div#thread-cards{
-	height: 95px;
-	width: 95%;
-	border: 1px solid #000000;
-	margin: 10px auto;
+	height: 70%;
+	width: 100%;
+	border-bottom: .1em solid #000000;
+	margin: 0px auto;
+	margin-bottom: 10px;
 	
 }
 img#card-profile-pic{
@@ -509,7 +509,7 @@ img#card-profile-pic{
 }
 /* This is the 'Accept', 'Tag', and 'Report' buttons NOTE This is only the first post in the thread */
 div.post-outline div.thread-actions{
-	margin: 20px 0px 0px 0px;
+	margin: 28px 0px 0px 0px;
 	padding: 0;
 	width: 100%;
 	border: 0;
@@ -561,7 +561,7 @@ div.post-outline div.thread-actions ul li a span#report-glyph{
 
 /* The rest of the posts start here */
 div.card-post-outline div.thread-actions{
-	margin: 20px 0px 0px 0px;
+	margin: 28px 0px 0px 0px;
 	padding: 0;
 	width: 100%;
 	border: 0;
