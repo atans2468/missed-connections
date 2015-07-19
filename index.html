@@ -14,13 +14,27 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
 		<![endif]-->
-	</head>
+		
+		<script>
+		$(document).one("mobileinit", function () {
+
+    	// Setting #container div as a jqm pageContainer
+    	$.mobile.pageContainer = $('#container');
+
+    	// Setting default page transition to slide
+    	$.mobile.defaultPageTransition = 'slide';
+
+		});
+		</script>
+		
+	</head>	
 	<!-- This is the Login Page header -->
+<div id="container">	
 	<header id="login-header">
 		<div id="login-header-small">
 		</div>
 	</header>
-<body class="login-signup-background">
+	<body class="login-signup-background">
   	<div class="container">	
 		  <!-- Replace this header with the MC logo -->
 		  <h2 id="login-page-header">Missed Connections</h2>  
@@ -108,5 +122,6 @@
 		</div>
 	</footer>
 	-->
-</body>
+	</body>
+</div>
 </html>

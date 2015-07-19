@@ -61,11 +61,25 @@
     		});
 		}
 		</script>
+		
+		<script>
+		$(document).one("mobileinit", function () {
+
+    	// Setting #container div as a jqm pageContainer
+    	$.mobile.pageContainer = $('#container');
+
+    	// Setting default page transition to slide
+    	$.mobile.defaultPageTransition = 'slide';
+
+		});
+		</script>
+		
 	</head>
 	</head>
-	<body class="background" class="scrolling" id="messages-page">
+<body class="background" class="scrolling" id="messages-page">
 		
 		<!-- Header -->
+<div id="container">	
 	<header class="nav-down">	
 		<nav class="nav navbar-fixed-top" id="fixed-header">
 			<div id="main-header-small">
@@ -122,5 +136,6 @@
   				</ul>
 			</nav>
 		<!-- End of Bottom Nav Bar -->
+		</div>
 	</body>
 </html>
