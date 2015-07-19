@@ -2,129 +2,10 @@
 <html lang="en">
 <title>Missed Connections</title>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link href="https://rawgit.com/benbarnett/jQuery-Animate-Enhanced/master/scripts/src/jquery.animate-enhanced.js"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-		<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-		</script>
-		<![endif]-->
-		
-		<!-- This is the code to slide the 'Plus' icon out -->
-		<script>		
-		$(document).ready(function () {
-   	 		var expanded = false;
-    		$("#drawer-handle").click(function () {
-        		if (expanded = !expanded) {
-            		$("#drawer-content").animate({ "margin-right": 0 }, "slow");
-        		} else {
-            		$("#drawer-content").animate({ "margin-right": -290 }, "slow");
-        		}
-    		});
-		});
-		</script>
-		
-		<!-- This is the top quick nav menu -->
-		<script>
-		$(document).ready( function(){
-    		( function() {
-				$('#btn-search').on('click', function(e) {
-					e.preventDefault();
-					$('#search').animate({width: 
-				'toggle'}).focus();
-				});
-			} () );
-		( function() {
-				$('document').on('click', function(e) {
-					e.preventDefault();
-					$('#search').animate({width: 
-				'toggle'}).hide();
-				});
-			} () );
-		});
-		</script>
 	</head>
-		<!-- This is to hide the footer when an input box has focus -->
-		<script>
-		if(/ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase()))
-		{
-    		$(document).on('focus', 'input, textarea', function() 
-    		{
-        		$("#bottom-navbar").hide();
-    		});
-    	
-			$(document).on('blur', 'input, textarea', function() 
-    		{
-        		$("#bottom-navbar").show();
-    		});
-		}
-		</script>
-		
-		<!-- This is to make the 'Write A Post' box sticky -->
-		<script>
-		$(document).on('touchmove',function(e){
-    		e.preventDefault();
-		});
-
-		//uses body because jquery on events are called off of the element they are
-		//added to, so bubbling would not work if we used document instead.
-		$('body').on('touchstart','.scrollable',function(e) {
-    		if (e.currentTarget.scrollTop === 0) {
-        		e.currentTarget.scrollTop = 1;
-    		} else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
-        		e.currentTarget.scrollTop -= 1;
-    		}
-		});
-
-		//prevents preventDefault from being called on document if it sees a scrollable div
-		$('body').on('touchmove','.scrollable',function(e) {
-    		var tot = 0;
-    		$(this).children('li:visible').each(function() { tot += $(this).height(); });
-    		if(tot > $(this).innerHeight()) {
-        		e.stopPropagation();
-    		}
-		});
-		</script>
-	</head>
-	
-	<!-- This is the beginning of the body -->
-	<body class="background" id="thread-page">
-		
-		<!-- Header -->
-	<header class="nav-down">	
-		<nav class="nav navbar-fixed-top" id="fixed-header">
-			<div id="main-header-small">
-			</div>
-			<div class="container-search" id="container-search">
-    			<div id="drawer">
-        			<div id="drawer-handle">
-						<span class="glyphicon glyphicon-plus" id="plus-glyph"></span>
-					</div>
-        			<div id="drawer-content">
-						<form action="javascript:void(0);" method="get" id="search-form">
-							<fieldset>
-								<ul class="toolbar clearfix">
-									<li><a href="profile.html" class="form-control search-query" id="userprof-link"><span class="glyphicon glyphicon-user"></span></a></li>
-									<li><a href="thread.html" class="form-control search-query"><span class="glyphicon glyphicon-edit"></span></a></li>
-									<li><a href="more.html" class="form-control search-query"><span class="glyphicon glyphicon-cog"></span></a></li>
-									<li><input type="search" id="search" placeholder="Search..."></li>
-									<button type="submit" id="btn-search"><span class="glyphicon glyphicon-search"></span></button></li>
-								</ul>
-							</fieldset>
-						</form>
-        			</div>
-    			</div>
-			</div>
-		</nav>
-	</header>
-
+		<body>
 		<!-- This is the beginning of the Thread Contents -->
-			<div class= "post-outline scrollable" id="thread-background-card">
+			<div class= "post-outline" id="thread-background-card">
 				<div id="post-text-box">
 					
 					<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
@@ -135,7 +16,7 @@
 				</div>
 			</div>	
 				<!-- This is the thread cards NOTE that this div has a different ID from the rest of the Div's' -->
-			<div class="post-outline scrollable" id="thread-card-outline-first">	
+			<div class="post-outline" id="thread-card-outline-first">	
 				<div id="thread-cards">
 					
 					<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
@@ -152,7 +33,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -165,7 +46,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -178,7 +59,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -191,7 +72,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -204,7 +85,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -217,7 +98,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -230,7 +111,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -243,7 +124,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -256,7 +137,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-post-outline scrollable" id="thread-card-outline">	
+			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
@@ -270,15 +151,5 @@
 				</div>
 			</div>	
 		</div>
-		
-		<!-- Bottom Nav Bar -->
-		<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
-  				<ul>
-    				<li id="thread-nav-link"><a class="active" href="thread.html"><span class="active glyphicon glyphicon-edit"></span><br>Thread</a></li>
-    				<li id="messages-nav-link"><a href="messages.html"><span class="glyphicon glyphicon-comment"></span><br>Messages</a></li>
-    				<li id="notifications-nav-link"><a href="notifications.html"><span class="glyphicon glyphicon-bell"></span><br>Notifications</a></li>
-  				</ul>
-			</nav>
-		<!-- End of Bottom Nav Bar -->
 	</body>
 </html>
