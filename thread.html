@@ -64,38 +64,24 @@
     		});
 		}
 		</script>
-		
-		<!-- This is to make the 'Write A Post' box sticky -->
 		<script>
-		$(document).on('touchmove',function(e){
-    		e.preventDefault();
-		});
+		$(document).one("mobileinit", function () {
 
-		//uses body because jquery on events are called off of the element they are
-		//added to, so bubbling would not work if we used document instead.
-		$('body').on('touchstart','.scrollable',function(e) {
-    		if (e.currentTarget.scrollTop === 0) {
-        		e.currentTarget.scrollTop = 1;
-    		} else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
-        		e.currentTarget.scrollTop -= 1;
-    		}
-		});
+    	// Setting #container div as a jqm pageContainer
+    	$.mobile.pageContainer = $('#container');
 
-		//prevents preventDefault from being called on document if it sees a scrollable div
-		$('body').on('touchmove','.scrollable',function(e) {
-    		var tot = 0;
-    		$(this).children('li:visible').each(function() { tot += $(this).height(); });
-    		if(tot > $(this).innerHeight()) {
-        		e.stopPropagation();
-    		}
+    	// Setting default page transition to slide
+    	$.mobile.defaultPageTransition = 'slide';
+
 		});
 		</script>
 	</head>
 	
 	<!-- This is the beginning of the body -->
-	<body class="background" id="thread-page">
+<body class="background" id="thread-page">
 		
 		<!-- Header -->
+<div id="container">	
 	<header class="nav-down">	
 		<nav class="nav navbar-fixed-top" id="fixed-header">
 			<div id="main-header-small">
@@ -123,17 +109,104 @@
 		</nav>
 	</header>
 	<!-- This is the beginning of the Thread Contents -->
-		<div class="scrollable">	
+		<div class="sticky">	
 			<div class= "post-outline" id="thread-background-card">
 				<div id="post-text-box">
 					
 					<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
 					<img id="post-profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png">
 					
-					<!-- This is the text are to write a post -->
-					<textarea class="text-left" id="text-area" placeholder="Write a post..." wrap="soft"></textarea>
+					<!-- This is the text area to write a post -->
+					<form action="#" method="#">
+						<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft"></textarea>
+					</form>
 				</div>
-			</div>	
+				<div id="submit-cancel-buttons">
+					<input type="reset" value="Cancel"></input>
+					<button type="submit" class="btn btn-primary btn-sm">Post</button>
+					<div id="change-location">
+						<a href="#openModal" id="change-location">Change Location?</a>
+						<div id="openModal" class="modalDialog">
+							<div>
+								<a href="#close" title="Close" class="close">X</a>
+								<div class="row">
+  									<div class="col-xs-6">
+    									<select class="form-control">
+											<option selected value="">State...</option>
+											<option value="AL">Alabama</option>
+											<option value="AK">Alaska</option>				
+											<option value="AZ">Arizona</option>					
+											<option value="AR">Arkansas</option>
+											<option value="CA">California</option>
+											<option value="CO">Colorado</option>
+											<option value="CT">Connecticut</option>
+											<option value="DE">Delaware</option>
+											<option value="FL">Florida</option>
+											<option value="GA">Georgia</option>
+											<option value="HI">Hawaii</option>
+											<option value="ID">Idaho</option>
+											<option value="IL">Illinois</option>
+											<option value="IN">Indiana</option>
+											<option value="IA">Iowa</option>
+											<option value="KS">Kansas</option>
+											<option value="KY">Kentucky</option>
+											<option value="LA">Louisiana</option>
+											<option value="ME">Maine</option>
+											<option value="MD">Maryland</option>
+											<option value="MA">Massachusetts</option>
+											<option value="MI">Michigan</option>
+											<option value="MN">Minnesota</option>
+											<option value="MS">Mississippi</option>
+											<option value="MO">Missouri</option>
+											<option value="MT">Montana</option>
+											<option value="NE">Nebraska</option>
+											<option value="NV">Nevada</option>
+											<option value="NH">New Hampshire</option>
+											<option value="NJ">New Jersey</option>
+											<option value="NM">New Mexico</option>
+											<option value="NY">New York</option>
+											<option value="NC">North Carolina</option>
+											<option value="ND">North Dakota</option>
+											<option value="OH">Ohio</option>
+											<option value="OK">Oklahoma</option>
+											<option value="OR">Oregon</option>
+											<option value="PA">Pennsylvania</option>
+											<option value="RI">Rhode Island</option>
+											<option value="SC">South Carolina</option>
+											<option value="SD">South Dakota</option>
+											<option value="TN">Tennessee</option>
+											<option value="TX">Texas</option>
+											<option value="UT">Utah</option>
+											<option value="VT">Vermont</option>
+											<option value="VA">Virginia</option>
+											<option value="WA">Washington</option>
+											<option value="WV">West Virginia</option>
+											<option value="WI">Wisconsin</option>
+											<option value="WY">Wyoming</option>
+										</select>
+  									</div>
+  									<div class="col-xs-6">
+    									<input type="text" class="form-control" placeholder="city...">
+  									</div>
+								</div>
+				
+									<!-- Default Checkbox -->
+									<div class="checkbox" id="login-checkbox">
+										<label><input type="checkbox">Make this your default location?</label>
+									</div>
+				
+									<!-- Submit Button -->
+									<div id="location-submit-button">
+										<form action="thread.html">
+    										<button type="submit" id="login-button">Submit</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
 				<!-- This is the thread cards NOTE that this div has a different ID from the rest of the Div's' -->
 			<div class="post-outline" id="thread-card-outline-first">	
 				<div id="thread-cards">
@@ -281,5 +354,6 @@
 			</nav>
 			<!-- End of Bottom Nav Bar -->
 		</div>
-	</body>
+	</div>
+</body>
 </html>
