@@ -16,7 +16,8 @@
     <author href="" email="austintans7@gmail.com">
         Austin Tans
     </author>
-    
+    <content src="index.html" />
+    <access origin="*" />
     <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
 </widget>
