@@ -6,12 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css"></script>
-		<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+  		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		
+
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
@@ -51,10 +49,46 @@
 		});
 		</script>
 	</head>
+		<!-- This is to hide the footer when an input box has focus -->
+		<script>
+		if(/ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase()))
+		{
+    		$(document).on('focus', 'input, textarea', function() 
+    		{
+        		$("#bottom-navbar").hide();
+    		});
+    	
+			$(document).on('blur', 'input, textarea', function() 
+    		{
+        		$("#bottom-navbar").show();
+    		});
+		}
+		</script>
+        
+        <script>
+        $(function(){
+        // Check the initial Poistion of the Sticky Header
+        var stickyHeaderTop = $('#stickyheader').offset().top;
+ 
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop ) {
+                        $('#stickyheader').css({position: 'fixed', top: '0px'});
+                        $('#stickyalias').css('display', 'block');
+                } else {
+                        $('#stickyheader').css({position: 'static', top: '0px'});
+                        $('#stickyalias').css('display', 'none');
+                }
+            });
+        });
+    </script>
+    
+	</head>
 	
 	<!-- This is the beginning of the body -->
-	<body class="background" id="search-page">
-	<header class="nav-down">	
+	<body class="background" class="scrolling" id="thread-page">
+		
+		<!-- Header -->
+	<header class="nav-down" id="unstickyheader">	
 		<nav class="nav navbar-fixed-top" id="fixed-header">
 			<div id="main-header-small">
 			</div>
@@ -68,7 +102,7 @@
 							<fieldset>
 								<ul class="toolbar clearfix">
 									<li><a href="profile.html" class="form-control search-query" id="userprof-link"><span class="glyphicon glyphicon-user"></span></a></li>
-									<li><a href="#" class="form-control search-query"><span class="glyphicon glyphicon-edit"></span></a></li>
+									<li><a href="thread.html" class="form-control search-query"><span class="glyphicon glyphicon-edit"></span></a></li>
 									<li><a href="more.html" class="form-control search-query"><span class="glyphicon glyphicon-cog"></span></a></li>
 									<li><input type="search" id="search" placeholder="Search..."></li>
 									<button type="submit" id="btn-search"><span class="glyphicon glyphicon-search"></span></button></li>
@@ -80,80 +114,151 @@
 			</div>
 		</nav>
 	</header>
-	<div class="container">
-		<div class= "post-outline">
-			<div id="post-text-box">
+
+		<!-- This is the beginning of the Thread Contents -->
+			<div class= "post-outline" id="stickyheader">
+				<div id="post-text-box">
 					
-				<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
-				<img id="post-profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png">
+					<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
+					<img id="post-profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png">
 					
-				<!-- This is the text are to write a post -->
-				<textarea class="text-left" id="text-area" placeholder="Write a post..." wrap="soft"></textarea>
-			</div>
+					<!-- This is the text are to write a post -->
+					<textarea class="text-left" id="text-area" placeholder="Write a post..." wrap="soft"></textarea>
+				</div>
 				
 				<!-- This is the thread cards NOTE that this div has a different ID from the rest of the Div's' -->
-			<div class="post-outline" id="thread-card-outline-first">	
+			<div class="post-outline" id="stickyalias">	
 				<div id="thread-cards">
 					
-				<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
+					<!-- Set image to correlate with gender, randomize so that colors change throughout post -->
 					<img id="card-profile-pic" src="#">
 						
 					<!-- This is the text are to write a post -->
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card-post-outline" id="thread-card-outline othercontent">	
+				<div id="thread-cards">
+					<img id="card-profile-pic" src="#">
+					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="card-post-outline" id="thread-card-outline">	
 				<div id="thread-cards">
 					<img id="card-profile-pic" src="#">
 					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-				</div>
-			</div>
-			<div class="card-post-outline" id="thread-card-outline">	
-				<div id="thread-cards">
-					<img id="card-profile-pic" src="#">
-					<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+					<div class="thread-actions">
+						<ul>
+							<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+							<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						</ul>
+					</div>
 				</div>
 			</div>	
 		</div>
@@ -161,12 +266,11 @@
 		<!-- Bottom Nav Bar -->
 		<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
   				<ul>
-    				<li><a href="thread.html">Thread</a></li>
-    				<li><a href="messages.html">Messages</a></li>
-    				<li><a href="notifications.html">Notifications</a></li>
+    				<li id="thread-nav-link"><a class="active" href="thread.html"><span class="active glyphicon glyphicon-edit"></span><br>Thread</a></li>
+    				<li id="messages-nav-link"><a href="messages.html"><span class="glyphicon glyphicon-comment"></span><br>Messages</a></li>
+    				<li id="notifications-nav-link"><a href="notifications.html"><span class="glyphicon glyphicon-bell"></span><br>Notifications</a></li>
   				</ul>
 			</nav>
 		<!-- End of Bottom Nav Bar -->
 	</body>
 </html>
-
