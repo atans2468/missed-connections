@@ -1558,93 +1558,39 @@ div.container-fluid div#background-text textarea#background-placeholder-text{
 
 
 
-/* This is a test shrinking div
-#stickyheader {
-	height: 80px;
-	width: 100%; 
-	background-color: #ffffff;
-	text-align: center; 
-	color:#000000;
-	z-index: 1000;
-	border: 1px solid #000000;
-	border-radius: 0px;
-	margin: 10px auto;
-	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-}
-#unstickyheader {
-	
+/* This is a test shrinking div */
+body#search{
+	background-color:white; 
+	padding-top:10px; 
+	font:100 14px 'Open Sans'}
+
+#lipsum{
+	width:690px; 
+	margin:30px auto; 
+	color:#34495e;
+	text-align:justify}
+
+img#search{
+	float:left; 
+	margin:0 10px 10px 0;}
+
+.yapiskan{
+  background-color:#e74c3c; 
+  color:white; 
+  font-size:24px; 
+  padding:5px; 
+  text-align:center; 
+  position: fixed; 
+  left:0; 
+  top:0; 
+  width:100%; 
+  transition: top .5s;
 }
 
-#stickyalias{
-	height: 140px;
-	width: 100%;
-	background-color: #ffffff;
-	text-align: center;
-	border: 1px solid #000000;
-	border-radius: 0px;
-	margin-top: 40px;
-	margin-bottom: 0px;
-	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+.gizle {
+  top: -90px;
 }
-*/
-* {
-  box-sizing: border-box;
-}
-
-.prez {
-  padding: 40px 0 80px;
-  background: #efefef;
-}
-.prez .prez--img {
-  width: 400px;
-  height: 200px;
-  background: #ccc;
-  margin: auto;
-}
-
-main#search {
-  padding: 50px;
-  text-align: center;
-}
-main#search div {
-  display: inline-block;
-  height: 100px;
-  width: 200px;
-  background: #ccc;
-  margin: 5px;
-}
-
-.burger {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 20px;
-}
-
-.search-field {
-  margin-top: -50px;
-  padding-top: 16px;
-  position: relative;
-  width: 100%;
-  float: left;
-}
-.search-field input {
-  top: 0;
-  display: block;
-  margin: auto;
-  width: 200px;
-  margin: auto;
-  padding: 5px;
-}
-
-.nav.fix-search .search-field {
-  position: fixed;
-  margin: 0;
-  top: 0;
-  background: #ccc;
-  padding: 16px;
+.sabit {
+  top:0;
+	z-index: 9999;
 }
