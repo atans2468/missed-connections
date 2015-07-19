@@ -279,6 +279,7 @@ footer#login-footer div#login-small{
 body#thread-page{
 	padding-top: 70px; /* Same as main-header height */
 	margin-bottom: 60px;
+	height: 1000px;
 }
 body header nav div#main-header-small {
 	background-color: #0A60A0;
