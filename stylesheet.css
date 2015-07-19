@@ -1496,12 +1496,14 @@ header.nav-down div#container-search div div#drawer-content form ul.toolbar butt
 	border-bottom: 0;
 	position: relative;
 	z-index: 100;
+	-webkit-appearance: none;
 }
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:hover,
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]:focus{
 	background: #2a80b9;
 	border-radius: 0;
 	z-index: 100;
+	-webkit-appearance: none;
 }
 header.nav-down div#container-search div div#drawer-content form ul.toolbar a:hover,
 header.nav-down div#container-search div div#drawer-content form ul.toolbar button:hover{
@@ -1513,6 +1515,7 @@ header.nav-down div#container-search div div#drawer-content form ul.toolbar inpu
 	width: 177px;
 	border-radius: 0;
 	z-index: 100;
+	-webkit-appearance: none;
 }
 header.nav-down div#container-search div div#drawer-content form ul.toolbar input[type="search"]::-webkit-input-placeholder { 
 	color: #fff; 
@@ -1563,6 +1566,36 @@ header.nav-down nav#fixed-header div#container-search div#thread-name textarea#u
    color: #000000;  
 }
 
+/* This is the start of the 'New Message' screen */
+	/* This is for the recent button as well as the name form */
+header.nav-down nav#fixed-header div#thread-name div#button-holder{
+	border: 0;
+	margin-top: 0px;
+	margin-left: -15px;
+	margin-right: -15px;
+}	
+header.nav-down nav#fixed-header div#thread-name div#button-holder button#recent-button{
+	float: left;
+	border: 0;
+	background-color: transparent;
+	height: 25px;
+	margin-top: -5px;
+}
+header.nav-down nav#fixed-header div#thread-name div#button-holder span#chevron-left{
+	float: left;
+	text-align: right;
+	color: #000000;
+	z-index: 1;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+}
+header.nav-down nav#fixed-header div#thread-name div#button-holder textarea#users-name{
+	border: 0;
+	top: 0;
+	margin-top: -23px;
+	width: 100%;
+}
 /* This is the background placeholder area */
 div.container-fluid div#background-text textarea#background-placeholder-text{
 	width: 100%;
@@ -1570,32 +1603,6 @@ div.container-fluid div#background-text textarea#background-placeholder-text{
 	resize: none;
 	border: 0;
 	margin: 50% auto;	
-}
-header.nav-down nav#fixed-header textarea#recent-button{
-	width: 60px;
-	height: 22px;
-	background-color: transparent;
-	margin-top: 13px;
-	margin-left: 0px;
-	margin-bottom: 0px;
-	padding-top: 7px;
-	padding-left: 0px;
-	text-align: left;
-	border: 0;
-	border-radius: 0px;
-	outline: 0;
-	display: inline-block;
-	position: relative;
-	resize: none;
-}
-header.nav-down nav#fixed-header span#chevron-left{
-	float: left;
-	text-align: right;
-	color: #000000;
-	z-index: 1;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-left: 5px;
 }
 
 
