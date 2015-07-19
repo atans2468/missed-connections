@@ -280,12 +280,6 @@ body#thread-page{
 	padding-top: 70px; /* Same as main-header height */
 	margin-bottom: 60px;
 }
-body.scrolling .bodyCap {
-height: 100%;
-width: 100%;
-background: transparent;
-z-index: 99999;
-}
 body header nav div#main-header-small {
 	background-color: #0A60A0;
 	width: 100%;
@@ -301,7 +295,6 @@ body header nav div#main-header-small {
 }
 header.nav-down {
 	background: #14a3f5;
-	height: 65px;
 	position: fixed;
 	top: 0;
 	transition: top 0.8s ease-in-out;
@@ -354,59 +347,6 @@ header.nav-down nav#fixed-header div#container-search div#drawer-content {
 #drawer-content > p {
     padding: 10px;
 }
-/* This is for hiding the header upon scrolling down */
-.nav-up { 
-    top: -100px;
-}
-
-/* This is the div surounding the MC Logo and the Search button */
-header div.container-login{
-	width: 100%;
-	text-align: center;
-}
-header div div#header-logo{
-	overflow: hidden;
-	font-family: Helvetica Neue, Helvetica, Arial;
-	margin-top: 25px;
-	padding-bottom: 0px;
-	display: inline-block; 
-}
-header div a#main-header-link{
-	font-size: 24px;
-	color: #ffffff;
-	text-decoration: none;
-	width: 25px;
-}
-header div a#main-header-link.active{
-	color: #ffffff;
-	background-color: #ffffff;
-	text-decoration: none;
-}
-/* This is specifically the MC Logo */
-header div div p#thread-logo{
-	padding: 0px;
-	margin-left: 0px;
-}
-input.search-query {
-    padding-left:40px;
-}
-form.form-search {
-    position: relative;
-}
-form.form-search:before {
-    display: relative;
-    width: 14px;
-    height: 14px;
-    content: "\e003";
-    font-family: 'Glyphicons Halflings';
-    background-position: -48px 0;
-    position: absolute;
-    top:7px;
-    left:10px;
-    opacity: .5;
-    z-index: 1000;
-}
-
 /* This is where the "Write A Post" box starts */
 div.post-outline{
 	height: 80px;
@@ -415,10 +355,11 @@ div.post-outline{
 	text-align: center;
 	border: 1px solid #000000;
 	border-radius: 0px;
-	margin: 10px auto;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+	margin: 0 auto;
+    padding: 0;
 }
 div#post-text-box{
 	height: 65%;
@@ -659,7 +600,8 @@ header div.main-header p#thread-logo a{
   	padding: 0;
   	box-sizing: border-box;
 }
-
+/* NOTE Need to decide on an exact font and go through and 
+re-edit all fonts on page */
 body {
   	font-family: 'Open Sans', sans-serif;
 }
@@ -704,13 +646,6 @@ nav#bottom-navbar ul li a:hover {
 }
 nav#bottom-navbar ul li a.active {
 	color: #0A60A0;
-}
-div#message-text-form textarea#message-textarea{
-	width: 100%;
-	resize: none;
-	background-color: transparent;
-	position: fixed;
-	bottom: 8%;
 }
 
 /* The Messages Page Starts Here */
@@ -1309,7 +1244,7 @@ div.container-fluid img#profile-pic3{
 }
 
 
-/* this is the advanced search bar */
+/* This is the advanced top search bar and buttons */
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
 a[class*="form-control"]:before,
@@ -1570,7 +1505,7 @@ header.nav-down nav#fixed-header div#container-search div#thread-name textarea#u
 	/* This is for the recent button as well as the name form */
 header.nav-down nav#fixed-header div#thread-name div#button-holder{
 	border: 0;
-	margin-top: 0px;
+	margin-top: -5px;
 	margin-left: -15px;
 	margin-right: -15px;
 }	
@@ -1578,8 +1513,15 @@ header.nav-down nav#fixed-header div#thread-name div#button-holder button#recent
 	float: left;
 	border: 0;
 	background-color: transparent;
-	height: 25px;
+	height: 35px;
 	margin-top: -5px;
+	border-style: none;
+	text-decoration: none;
+}
+header.nav-down nav#fixed-header div#thread-name div#button-holder button#recent-button:active{
+	border: none;
+	border-style: none;
+	outline: none;
 }
 header.nav-down nav#fixed-header div#thread-name div#button-holder span#chevron-left{
 	float: left;
@@ -1593,8 +1535,17 @@ header.nav-down nav#fixed-header div#thread-name div#button-holder span#chevron-
 header.nav-down nav#fixed-header div#thread-name div#button-holder textarea#users-name{
 	border: 0;
 	top: 0;
-	margin-top: -23px;
+	margin-top: 0px;
+	margin-left: 1em;
+	width: 100px;
+}
+/* This is the bottom text area that pulls up the keyboard */
+div#message-text-form textarea#message-textarea{
 	width: 100%;
+	resize: none;
+	background-color: transparent;
+	position: fixed;
+	bottom: 8%;
 }
 /* This is the background placeholder area */
 div.container-fluid div#background-text textarea#background-placeholder-text{
@@ -1640,3 +1591,60 @@ div.container-fluid div#background-text textarea#background-placeholder-text{
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
 */
+* {
+  box-sizing: border-box;
+}
+
+.prez {
+  padding: 40px 0 80px;
+  background: #efefef;
+}
+.prez .prez--img {
+  width: 400px;
+  height: 200px;
+  background: #ccc;
+  margin: auto;
+}
+
+main#search {
+  padding: 50px;
+  text-align: center;
+}
+main#search div {
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  background: #ccc;
+  margin: 5px;
+}
+
+.burger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.search-field {
+  margin-top: -50px;
+  padding-top: 16px;
+  position: relative;
+  width: 100%;
+  float: left;
+}
+.search-field input {
+  top: 0;
+  display: block;
+  margin: auto;
+  width: 200px;
+  margin: auto;
+  padding: 5px;
+}
+
+.nav.fix-search .search-field {
+  position: fixed;
+  margin: 0;
+  top: 0;
+  background: #ccc;
+  padding: 16px;
+}
