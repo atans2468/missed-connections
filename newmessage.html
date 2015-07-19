@@ -68,19 +68,18 @@
 	<header class="nav-down">	
 		<nav class="nav navbar-fixed-top" id="fixed-header">
 			<div id="main-header-small">
-			</div>
-				<span id="chevron-left"class="glyphicon glyphicon-chevron-left">
-					<textarea id="recent-button" onclick="goBack()" placeholder="Recent"></textarea>
-				</span>
-					<script>
-					function goBack() {
-    					window.history.back();
-					}
-					</script>
-					
+			</div>	
 			<div class="container-search" id="container-search">
 				<div id="thread-name">
-					<textarea class="text-center" id="users-name" placeholder="Name" wrap="soft" style="color: #000000" disabled></textarea>
+					<div id="button-holder">
+						<button type="button" class="btn btn-default" onclick="goBack()" id="recent-button"><span id="chevron-left"class="glyphicon glyphicon-chevron-left"></span>Recent</button>
+						<script>
+						function goBack() {
+    						window.history.back();
+						}
+						</script>
+						<textarea class="text-center" id="users-name" placeholder="Name" wrap="soft" style="color: #000000" disabled></textarea>
+					</div>
 				</div>
 				<div id="drawer">
         			<div id="drawer-handle">
