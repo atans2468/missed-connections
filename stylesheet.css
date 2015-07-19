@@ -3,15 +3,16 @@ html{
 }
 .ui-page {
 	-webkit-backface-visibility:hidden;
-	backface-visibility: hidden;
 }
 .ui-mobile{
 	-webkit-backface-visibility:hidden;
-	backface-visibility: hidden;
 }
 .ui-mobile-viewport{
 	-webkit-backface-visibility:hidden;
-	backface-visibility: hidden;
+}
+.x-panel {
+-webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
 }
 body.background { 
 	background: #f1fcff;
