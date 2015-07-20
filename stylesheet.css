@@ -321,9 +321,6 @@ header.nav-down {
 	opacity: initial;
 	z-index: 100;
 }
-.nav-up {
-  top: -70px; /* same as header height. use variables in LESS/SASS */
-}
 
 /* This is the styling for the left-sliding Header */
 * {
@@ -370,7 +367,7 @@ header.nav-down nav#fixed-header div#container-search div#drawer-content {
 }
 /* This is where the "Write A Post" box starts */
 div.sticky div.post-outline{
-	height: 130px;
+	height: 105px;
 	width: 100%;
 	background-color: #ebebeb;
 	text-align: right;
@@ -394,7 +391,7 @@ div.sticky div.post-outline div#submit-cancel-buttons input{
 div.sticky div.post-outline div#submit-cancel-buttons button{
 	width: 80px;
 	background-color: #0A60A0;
-	margin-top: 0px;
+	margin-top: -10px;
 	margin-left: 15px;
 	margin-right: 10px;
 	border: 0;
@@ -404,7 +401,7 @@ div.sticky div.post-outline div#submit-cancel-buttons div#change-location{
 	border: 0;
 	height: 25px;
 	width: 140px;
-	margin-top: -25px;
+	margin-top: -20px;
 	margin-left: 5px;
 }
 div.sticky div.post-outline div#submit-cancel-buttons div#change-location a{
@@ -431,20 +428,21 @@ div.sticky div.post-outline div#submit-cancel-buttons div#change-location div#op
 div.sticky div#post-text-box{
 	height: 65%;
 	width: 100%;
-	border-bottom: .1em solid #000000;
+	border: 0;
 	margin: 0px auto;
 	margin-bottom: 10px;
 }
 /* This is the text area styling */
 div div#post-text-box textarea#text-area{
-	width: 87%;
+	width: 100%;
 	height: 60px;
 	margin: 5px auto;
-	background-color: transparent;
+	background-color: #f7f6f6;
 	text-decoration: none;
-	padding: 0 0.4em 0.4em 0;
+	padding-top: 3px;
+	padding-left: 5px;
 	text-align: left !important;
-	border: 0;
+	border: 1px solid #aaaaaa;
 	resize: none;
 }
 /* This is the post profile pic */
@@ -503,7 +501,7 @@ div.card-post-outline{
 div#thread-cards{
 	height: 70%;
 	width: 100%;
-	border-bottom: .1em solid #000000;
+	border-bottom: 0;
 	margin: 0px auto;
 	margin-bottom: 10px;
 	
@@ -519,9 +517,22 @@ img#card-profile-pic{
 	margin-bottom: 0px;
 	float: left;
 }
+/* This is the Thread Card Text Area Styling */
+div div#thread-cards textarea#card-area{
+	width: 100%;
+	height: 100px;
+	margin: 10px auto;
+	background-color: #f7f6f6;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-left: 5px;
+	text-align: left !important;
+	border: 1px solid #aaaaaa;
+	resize: none;
+}
 /* This is the 'Accept', 'Tag', and 'Report' buttons NOTE This is only the first post in the thread */
 div.post-outline div.thread-actions{
-	margin: 28px 0px 0px 0px;
+	margin: -15px 0px 0px 0px;
 	padding: 0;
 	width: 100%;
 	border: 0;
@@ -573,7 +584,7 @@ div.post-outline div.thread-actions ul li a span#report-glyph{
 
 /* The rest of the posts start here */
 div.card-post-outline div.thread-actions{
-	margin: 28px 0px 0px 0px;
+	margin: -15px 0px 0px 0px;
 	padding: 0;
 	width: 100%;
 	border: 0;
@@ -622,31 +633,7 @@ div.card-post-outline div.thread-actions ul li a span#tag-glyph{
 div.card-post-outline div.thread-actions ul li a span#report-glyph{
 	color: #ff0000;
 }
-/* This is the Thread Card Text Area Styling */
-div div#thread-cards textarea#card-area{
-	width: 75%;
-	height: 60px;
-	margin: 5px auto;
-	background-color: transparent;
-	text-decoration: none;
-	padding: 0 0.4em 0.4em 0;
-	text-align: left !important;
-	border: none;
-	resize: none;
-}
-textarea:hover, 
-input:hover, 
-textarea:active, 
-input:active, 
-textarea:focus, 
-input:focus,
-button:focus,
-button:active,
-button:hover
-{
-    outline:0px !important;
-    -webkit-appearance:none;
-}
+
 
 /* The next two segments of code remove the underline and
 visual of pressing the link -- This is still for all main pages
@@ -1539,13 +1526,14 @@ header.nav-down nav#fixed-header div#container-search div#thread-name textarea#u
 }
 
 /* This is the start of the 'New Message' screen */
-	/* This is for the recent button as well as the name form */
+	/* This is the 'Recent' button holder */
 header.nav-down nav#fixed-header div#thread-name div#button-holder{
 	border: 0;
 	margin-top: -5px;
 	margin-left: -15px;
 	margin-right: -15px;
-}	
+}
+/* This is the 'Recent' button */	
 header.nav-down nav#fixed-header div#thread-name div#button-holder button#recent-button{
 	float: left;
 	border: 0;
@@ -1554,27 +1542,32 @@ header.nav-down nav#fixed-header div#thread-name div#button-holder button#recent
 	margin-top: -5px;
 	border-style: none;
 	text-decoration: none;
+	color: #ffffff;
 }
+/* This is the 'Recent' button when active */
 header.nav-down nav#fixed-header div#thread-name div#button-holder button#recent-button:active{
 	border: none;
 	border-style: none;
 	outline: none;
 }
+/* This is the chevron pointing left */
 header.nav-down nav#fixed-header div#thread-name div#button-holder span#chevron-left{
 	float: left;
 	text-align: right;
-	color: #000000;
+	color: #ffffff;
 	z-index: 1;
-	margin-top: 0px;
+	margin-top: 1.5px;
 	margin-bottom: 0px;
 	padding-left: 0px;
 }
+/* This is the Name within the header */
 header.nav-down nav#fixed-header div#thread-name div#button-holder textarea#users-name{
 	border: 0;
 	top: 0;
 	margin-top: 0px;
 	margin-left: 1em;
 	width: 100px;
+	color: #ffffff;
 }
 /* This is the bottom text area that pulls up the keyboard */
 div#message-text-form textarea#message-textarea{
