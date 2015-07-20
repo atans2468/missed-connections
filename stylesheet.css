@@ -444,6 +444,7 @@ div div#post-text-box textarea#text-area{
 	text-align: left !important;
 	border: 1px solid #aaaaaa;
 	resize: none;
+	border-radius: 0px;
 }
 /* This is the post profile pic */
 div.sticky img#post-profile-pic{
