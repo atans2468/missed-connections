@@ -8,7 +8,8 @@
     <!-- versionCode is optional and Android only -->
 
     <name>Missed Connections</name>
-
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
     <description>
         A safe way for people to conect with others that they met before but didn't have a chance to make the connection. 
     </description>
@@ -18,6 +19,4 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <preference name="orientation" value="portrait" />
-    <preference name="DisallowOverscroll" value="true" />
 </widget>
