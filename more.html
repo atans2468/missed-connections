@@ -63,19 +63,6 @@
     		});
 		}
 		</script>
-		
-		<script>
-		$(document).one("mobileinit", function () {
-
-    	// Setting #container div as a jqm pageContainer
-    	$.mobile.pageContainer = $('#container');
-
-    	// Setting default page transition to slide
-    	$.mobile.defaultPageTransition = 'slide';
-
-		});
-		</script>
-		
 	</head>
 
 	<body class="background" class="scrolling" id="more-page">
@@ -109,7 +96,6 @@
 		</header>
 			
 			<!-- Page Contents -->
-	    	<div class="container" id="more-page-container">
 				<!-- Profile button needs to display name and profile pic of user that is logged in
 					not the word "Profile" -->
 				
@@ -156,7 +142,7 @@
 			<!-- Bottom Nav Bar -->
 			<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
 				<div class="row" id="footer-row">	
-	    				<div class="col-xs-4" id="footer-thread-link"><a class="active" href="thread.html"><span class="active glyphicon glyphicon-edit"></span><br>Thread</a></div>
+	    				<div class="col-xs-4" id="footer-thread-link"><a href="thread.html"><span class="glyphicon glyphicon-edit"></span><br>Thread</a></div>
 	    				<div class="col-xs-4" id="footer-messages-link"><a href="messages.html"><span class="glyphicon glyphicon-comment"></span><br>Messages</a></div>
 						<div class="col-xs-4" id="footer-notifications-link"><a href="notifications.html"><span class="glyphicon glyphicon-bell"></span><br>Notifications</a></div>
 					</div>
