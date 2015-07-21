@@ -18,7 +18,7 @@ html{
 -webkit-backface-visibility: hidden;
 }
 body.background { 
-	background: #f1fcff;
+	background: #f4f6fe;
     margin: 0;
 }
 /* #container div with absolute position and 100% width and height so it takes up whole window */
@@ -369,7 +369,7 @@ header.nav-down nav#fixed-header div#container-search div#drawer-content {
 div.sticky div.post-outline{
 	height: 105px;
 	width: 100%;
-	background-color: #ebebeb;
+	background-color: #ffffff;
 	text-align: right;
 	border-radius: 0px;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
@@ -477,7 +477,7 @@ button:hover
 div#thread-card-outline-first{
 	height: 140px;
 	width: 100%;
-	background-color: #ebebeb;
+	background-color: #ffffff;
 	text-align: center;
 	border: 0;
 	border-radius: 0px;
@@ -490,7 +490,7 @@ div#thread-card-outline-first{
 div.card-post-outline{
 	height: 140px;
 	width: 100%;
-	background-color: #ebebeb;
+	background-color: #ffffff;
 	text-align: center;
 	border: 0;
 	border-radius: 0px;
@@ -665,20 +665,21 @@ body {
   	font-family: 'Open Sans', sans-serif;
 }
 
-/* Navigation */
+/* !!!! Navigation */
 nav#bottom-navbar div#footer-row{
-	background-color: #14a3f5;
+	background-color: #ffffff;
 	text-align: center;
 	height: 45px;
 	padding-top: 5px;
 	text-decoration: none;
+	border-top: .1em #ebebeb
 }
 nav#bottom-navbar{
 	width: 100%;
 	text-decoration: none;
 }
 nav#bottom-navbar div#footer-row div a{
-	color: #ffffff;
+	color: #aaaaaa;
 	text-decoration: none;
 }
 nav#bottom-navbar div#footer-row div a:hover {
@@ -690,7 +691,7 @@ nav#bottom-navbar div#footer-row div a.active {
 	text-decoration: none;
 }
 nav#bottom-navbar div#footer-row div a span{
-	color: #ffffff;
+	color: #aaaaaa;
 	text-decoration: none;
 }
 nav#bottom-navbar div#footer-row div span:hover{
@@ -840,222 +841,229 @@ body#more-page{
 	margin-bottom: 60px;
 	padding-top: 65px; /* Same as main-header height */
 }
-div#more-page-container button#profile{
+  button#profile{
 	height: 45px;
 	margin-top: 30px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page-container button#profile span#profile-glyph{
+  button#profile span#profile-glyph{
 	margin-right: 5px;
 }
-div#more-page-container button#profile span#chevron-glyph{
+  button#profile span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page-container a#profile-link:hover{
+  a#profile-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page-container a#profile-link{
+  a#profile-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* General Button Starts Here */
-div#more-page-container button#general{
+  button#general{
 	height: 45px;
 	margin-top: 25px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page-container button#general span#general-glyph{
+  button#general span#general-glyph{
 	margin-right: 5px;
 	color: #606060;
 }
-div#more-page-container button#general span#chevron-glyph{
+  button#general span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page-container a#general-link:hover{
+  a#general-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page-container a#general-link{
+  a#general-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Security Button Starts Here */
-div#more-page-container button#security{
+  button#security{
 	height: 45px;
-	margin-top: 5px;
+	margin-top: 0px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-top: 0;
+	border-bottom: 1px solid #ebebeb;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page-container button#security span#security-glyph{
+  button#security span#security-glyph{
 	margin-right: 5px;
 	color: #606060;
 }
-div#more-page-container button#security span#chevron-glyph{
+  button#security span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page-container a#security-link:hover{
+  a#security-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page-container a#security-link{
+  a#security-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Privacy Button Starts Here */
-div#more-page-container button#privacy{
+button#privacy{
 	height: 45px;
 	margin-top: 25px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page-container button#privacy span#privacy-glyph{
+button#privacy span#privacy-glyph{
 	margin-right: 5px;
 	color: #fec63d;
 }
-div#more-page-container button#privacy span#chevron-glyph{
+button#privacy span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page-container a#privacy-link:hover{
+a#privacy-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page-container a#privacy-link{
+a#privacy-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Location Button Starts Here */
-div#more-page-container button#location{
+button#location{
 	height: 45px;
-	margin-top: 5px;
+	margin-top: 0px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-top: 0;
+	border-bottom: 1px solid #ebebeb;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page-container button#location span#location-glyph{
+button#location span#location-glyph{
 	margin-right: 5px;
 	color: #14a3f5;
 }
-div#more-page-container button#location span#chevron-glyph{
+button#location span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page-container a#location-link:hover{
+a#location-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page-container a#location-link{
+a#location-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Blocking Button Starts Here */
-div#more-page-container button#blocking{
+button#blocking{
 	height: 45px;
-	margin-top: 5px;
+	margin-top: 0px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-top: 0;
+	border-bottom: 1px solid #ebebeb;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page-container button#blocking span#blocking-glyph{
+button#blocking span#blocking-glyph{
 	margin-right: 5px;
 	color: #ff3823;
 }
-div#more-page-container button#blocking span#chevron-glyph{
+button#blocking span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page-container a#blocking-link:hover{
+a#blocking-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page-container a#blocking-link{
+a#blocking-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Terms Button Starts Here */
-div#more-page-container button#terms{
+button#terms{
 	height: 45px;
-	margin-top: 5px;
+	margin-top: 0px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border: 0;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page-container button#terms span#terms-glyph{
+button#terms span#terms-glyph{
 	margin-right: 5px;
 }
-div#more-page-container button#terms span#chevron-glyph{
+button#terms span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page-container a#terms-link:hover{
+a#terms-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page-container a#terms-link{
+a#terms-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Log Out Button Starts Here */
-div#more-page-container button#logout{
+button#logout{
 	height: 45px;
 	margin-top: 30px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
 	border-radius: 0px;
 	outline: 0;
 }
-div#more-page-container button#logout span#logout-glyph{
+button#logout span#logout-glyph{
 	margin-right: 5px;
 	color: #ff3823;
 }
-div#more-page-container button#logout span#chevron-glyph{
+button#logout span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
-div#more-page-container a#logout-link:hover{
+a#logout-link:hover{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
 }
-div#more-page-container a#logout-link{
+a#logout-link{
 	margin-top: 10px;
 	color: #ffffff;
 	text-decoration: none;
@@ -1064,7 +1072,7 @@ div#more-page-container a#logout-link{
 /* Profile Page Starts Here */
 body#profile-page{
 	margin-bottom: 60px;
-	padding-top: 75px; /* Same as main-header height */
+	padding-top: 70px; /* Same as main-header height */
 }
 /* This is the Profile Pic */
 div.container-fluid img#profile-pic{
@@ -1089,7 +1097,7 @@ div.container-fluid form#name-container input#first-name{
 	padding-left: 10px;
 	font-size: 24px;
 	color: #000000;
-	background-color: #f1fcff;
+	background-color: #f4f6fe;
 	border: 0;
 }
 div.container-fluid form#name-container input#first-name span#profile-edit-glyph{
@@ -1125,7 +1133,7 @@ div.container-fluid form.form-horizontal div.form-group input#age{
 	margin-bottom: 0;
 	font-size: 14px;
 	color: #000000;
-	background-color: #f1fcff;
+	background-color: #f4f6fe;
 	border: 0;
 
 }
@@ -1150,7 +1158,7 @@ div.container-fluid form.form-horizontal div.form-group input#gender{
 	margin-bottom: 0;
 	font-size: 14px;
 	color: #000000;
-	background-color: #f1fcff;
+	background-color: #f4f6fe;
 	border: 0;
 
 }
@@ -1177,21 +1185,6 @@ textarea#bio-text-area{
 	border: none;
 	resize: none;
 }
-/* !!!! Make sure max height on bio is set, set max character limits
-in input fields, lock the bullets, look up how to lock footer
-when keyboard is off !!!!*/
-div.container-fluid form.form-vertical div.form-group p#bio{
-	width: 100%;
-	max-height: 30px;
-	margin-top: 10px;
-	margin-left: 0px;
-	margin-right: 0;
-	margin-bottom: 0;
-	font-size: 14px;
-	background-color: #f1fcff;
-	border: 0;
-	display: inline-block;
-}
 
 /* This is the Intesting Facts form with label */
 div.container-fluid form.form-vertical label#facts-label{
@@ -1215,7 +1208,7 @@ div.container-fluid form.form-vertical div.form-group input#facts{
 	padding-left: 10px;
 	font-size: 14px;
 	color: #000000;
-	background-color: #f1fcff;
+	background-color: #f4f6fe;
 	border: 0;
 }
 
@@ -1241,7 +1234,7 @@ div.container-fluid form.form-vertical div.form-group input#quote{
 	padding-left: 10px;
 	font-size: 14px;
 	color: #000000;
-	background-color: #f1fcff;
+	background-color: #f4f6fe;
 	border: 0;
 }
 
@@ -1267,7 +1260,7 @@ div.container-fluid form.form-vertical div.form-group input#occupation{
 	padding-left: 10px;
 	font-size: 14px;
 	color: #000000;
-	background-color: #f1fcff;
+	background-color: #f4f6fe;
 	border: 0;
 }
 
@@ -1586,4 +1579,111 @@ div.container-fluid div#background-text textarea#background-placeholder-text{
 	resize: none;
 	border: 0;
 	margin: 50% auto;	
+}
+
+
+/* Edit Profile Page */
+	/* <img id="profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png"> */
+	/* This is the Row containing the 'Bio:' label and the 'Edit' button */
+body#edit-profile-page{
+	padding-top: 70px; /* Same as main-header height */
+	padding-bottom: 100px;
+}
+div#edit-profilepic-section div#profilepic-label-row{
+	width: 97%;
+	margin: 15px auto;
+	border: 1px solid #aaaaaa;
+	background-color: #ebebeb;
+	border-radius: 5px;
+}
+div#edit-profilepic-section div#edit-profilepic-label{
+	margin-top: 5px;
+}
+div#edit-profilepic-section div#profilepic-edit-button{
+	margin-top: 3px;
+}
+div#edit-profilepic-section div#profilepic-edit-button button{
+	width: 40px;
+	height: 20px;
+	margin-left: 5px;
+}
+div#edit-profilepic-section div#myCarousel{
+	margin: 15px auto;
+}
+div#edit-profilepic-section div#myCarousel div.carousel-inner div.item img{
+	height: 200px;
+	width: 200px;
+	margin: 0px auto;
+}
+
+/* This is the Row containing the 'Bio:' label and edit button */
+div#edit-bio-section div#bio-label-row{
+	width: 97%;
+	margin: 15px auto;
+	border: 1px solid #aaaaaa;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+div#edit-bio-section div#edit-bio-label{
+	margin-top: 5px;
+}
+div#edit-bio-section div#edit-bio-button{
+	margin-top: 3px;
+}
+div#edit-bio-section div#edit-bio-button button{
+	width: 40px;
+	height: 20px;
+	margin-left: 0px;
+}
+
+/* This is the row containing the Edit Bio Textarea */
+div#edit-bio-section div#bio-textarea-row{
+	margin: 5px auto;
+	height: 80px;
+}
+div#edit-bio-section div#bio-textarea-row div textarea{
+	width: 100%;
+	height: 100px;
+	background-color: #f7f6f6;
+	resize: none;
+	margin: 5px auto;
+	padding-left: 5px;
+	padding-top: 5px;	
+}
+
+/* This is the row containing the 'Submit' button */
+div#edit-bio-section div#bio-textarea-row div button{
+	float: right;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	background-color: #0A60A0;
+	border: 1px solid #000000;
+}
+
+/* This is the Row containing the 'About: ' label */
+div#edit-about-section div#about-label-row{
+	width: 97%;
+	height: 350px;
+	margin: 15px auto;
+	border: 1px solid #aaaaaa;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+div#edit-about-section div#edit-about-label{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+div#edit-about-section div#edit-occupation-button button{
+	width: 100%;
+	height: 40px;
+	border-radius: 0;
+	text-align: left;
+	background-color: #f7f6f6;
+}
+
+/* This is the row containing the Edit Bio Textarea */
+button#occupation span#chevron-glyph{
+	float: right;
+	text-align: right;
+	color: #14a3f5;
 }
