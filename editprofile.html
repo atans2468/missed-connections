@@ -14,54 +14,6 @@
 		</script>
 		<![endif]-->
 		
-		<!-- This is the code to slide the 'Plus' icon out -->
-		<script>		
-		$(document).ready(function () {
-   	 		var expanded = false;
-    		$("#drawer-handle").click(function () {
-        		if (expanded = !expanded) {
-            		$("#drawer-content").animate({ "margin-right": 0 }, "slow");
-        		} else {
-            		$("#drawer-content").animate({ "margin-right": -290 }, "slow");
-        		}
-    		});
-		});
-		</script>
-		
-		<!-- This is the top quick nav menu -->
-		<script>
-		$(document).ready( function(){
-    		( function() {
-				$('#btn-search').on('click', function(e) {
-					e.preventDefault();
-					$('#search').animate({width: 
-				'toggle'}).focus();
-				});
-			} () );
-		( function() {
-				$('document').on('click', function(e) {
-					e.preventDefault();
-					$('#search').animate({width: 
-				'toggle'}).hide();
-				});
-			} () );
-		});
-		</script>
-		
-		<script>
-		$(document).one("mobileinit", function () {
-
-    	// Setting #container div as a jqm pageContainer
-    	$.mobile.pageContainer = $('#container');
-
-    	// Setting default page transition to slide
-    	$.mobile.defaultPageTransition = 'slide';
-
-		});
-		</script>
-		
-	</head>
-		
 		<!-- This is to hide the footer when an input box has focus -->
 		<script>
 		if(/ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase()))
@@ -80,34 +32,14 @@
 	
 	<body class="background" class="scroll" id="edit-profile-page">
 			<!-- Header -->
-		<header class="nav-down">	
-			<nav class="nav navbar-fixed-top" id="fixed-header">
+		<header class="nav-down" id="search-nav-down">	
+			<nav id="search-header">
 				<div id="main-header-small">
 				</div>
-				<div class="container-search" id="container-search">
-	    			<div id="drawer">
-	        			<div id="drawer-handle">
-							<span class="glyphicon glyphicon-plus" id="plus-glyph"></span>
-						</div>
-	        			<div id="drawer-content">
-							<form action="javascript:void(0);" method="get" id="search-form">
-								<fieldset>
-									<ul class="toolbar clearfix">
-										<li><a href="profile.html" class="form-control search-query" id="userprof-link">
-											<span class="glyphicon glyphicon-user"></span></a></li>
-										<li><a href="thread.html" class="form-control search-query">
-											<span class="glyphicon glyphicon-edit"></span></a></li>
-										<li><a href="more.html" class="form-control search-query">
-											<span class="glyphicon glyphicon-cog"></span></a></li>
-										<li><input type="search" id="search" placeholder="Search..."></li>
-										<button type="submit" id="btn-search"><span class="glyphicon glyphicon-search"></span></button></li>
-									</ul>
-								</fieldset>
-							</form>
-	        			</div>
-	    			</div>
-				</div>
-			</nav>
+				<form class="inner-addon left-addon" method="get" action="/search" id="search">
+					<i class="glyphicon glyphicon-search"></i>
+					<input name="q" type="text" size="40" placeholder="Search...">
+				</form>
 		</header>
 				
 				<!-- Page Contents -->
