@@ -367,7 +367,7 @@ header.nav-down nav#fixed-header div#container-search div#drawer-content {
 }
 /* This is where the "Write A Post" box starts */
 div.sticky div.post-outline{
-	height: 105px;
+	height: 100px;
 	width: 100%;
 	background-color: #ffffff;
 	text-align: right;
@@ -436,13 +436,16 @@ div.sticky div#post-text-box{
 div div#post-text-box textarea#text-area{
 	width: 100%;
 	height: 60px;
-	margin: 5px auto;
+	margin: 0px auto;
 	background-color: #f7f6f6;
 	text-decoration: none;
 	padding-top: 3px;
 	padding-left: 5px;
 	text-align: left !important;
-	border: 1px solid #aaaaaa;
+	border-top: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
+	border-left: 0;
+	border-right: 0;
 	resize: none;
 	border-radius: 0px;
 }
@@ -475,7 +478,7 @@ button:hover
 
 /* This is the Thread Card Styling */
 div#thread-card-outline-first{
-	height: 140px;
+	height: 150px;
 	width: 100%;
 	background-color: #ffffff;
 	text-align: center;
@@ -488,7 +491,7 @@ div#thread-card-outline-first{
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
 div.card-post-outline{
-	height: 140px;
+	height: 150px;
 	width: 100%;
 	background-color: #ffffff;
 	text-align: center;
@@ -522,13 +525,16 @@ img#card-profile-pic{
 div div#thread-cards textarea#card-area{
 	width: 100%;
 	height: 100px;
-	margin: 10px auto;
+	margin: 15px auto;
 	background-color: #f7f6f6;
 	text-decoration: none;
 	padding-top: 3px;
 	padding-left: 5px;
 	text-align: left !important;
-	border: 1px solid #aaaaaa;
+	border-top: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
+	border-left: 0;
+	border-right: 0;
 	resize: none;
 	border-radius: 0px;
 }
@@ -672,7 +678,7 @@ nav#bottom-navbar div#footer-row{
 	height: 45px;
 	padding-top: 5px;
 	text-decoration: none;
-	border-top: .1em #ebebeb
+	border-top: 1px solid #ebebeb;
 }
 nav#bottom-navbar{
 	width: 100%;
@@ -1593,7 +1599,7 @@ div#edit-profilepic-section div#profilepic-label-row{
 	width: 97%;
 	margin: 15px auto;
 	border: 1px solid #aaaaaa;
-	background-color: #ebebeb;
+	background-color: #ffffff;
 	border-radius: 5px;
 }
 div#edit-profilepic-section div#edit-profilepic-label{
@@ -1645,6 +1651,7 @@ div#edit-bio-section div#bio-textarea-row div textarea{
 	width: 100%;
 	height: 100px;
 	background-color: #f7f6f6;
+	
 	resize: none;
 	margin: 5px auto;
 	padding-left: 5px;
