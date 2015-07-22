@@ -720,7 +720,6 @@ nav#bottom-navbar div#footer-row div a span.active{
 /* The Messages Page Starts Here */
 body#messages-page{
 	margin-bottom: 60px;
-	padding-top: 65px; /* Same as main-header height */
 }
 
 /* This is the styling for the divs */
@@ -795,7 +794,6 @@ div#messages-page-container a#more-messages-link{
 /* The Notifications Page Starts Here */
 body#notifications-page{
 	margin-bottom: 60px;
-	padding-top: 65px; /* Same as main-header height */
 }
 /* This is the styling for the divs */
 div#notifications-page-container{
@@ -853,7 +851,6 @@ div#notifications-page-container a#more-notifications-link{
 /* Profile Button Starts Here */
 body#more-page{
 	margin-bottom: 60px;
-	padding-top: 65px; /* Same as main-header height */
 }
   button#profile{
 	height: 45px;
@@ -1086,7 +1083,6 @@ a#logout-link{
 /* Profile Page Starts Here */
 body#profile-page{
 	margin-bottom: 60px;
-	padding-top: 70px; /* Same as main-header height */
 }
 /* This is the Profile Pic */
 div.container-fluid img#profile-pic{
@@ -1370,7 +1366,6 @@ div.container-fluid div#background-text textarea#background-placeholder-text{
 	/* <img id="profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png"> */
 	/* This is the Row containing the 'Bio:' label and the 'Edit' button */
 body#edit-profile-page{
-	padding-top: 70px; /* Same as main-header height */
 	padding-bottom: 100px;
 }
 div#edit-profilepic-section div#profilepic-label-row{
