@@ -1,6 +1,7 @@
 html{
 	min-height: 100%;
 }
+/* !!CHECK TO SEE IF THIS WAS THE FIX!! */
 .ui-page {
 	-webkit-backface-visibility:hidden;
 	background: #000;
@@ -21,6 +22,8 @@ body.background {
 	background: #f4f6fe;
     margin: 0;
 }
+/* END OF SCREEN FLICKER FIX */
+
 /* #container div with absolute position and 100% width and height so it takes up whole window */
 #container {
     position: absolute;
@@ -215,6 +218,7 @@ header#login-header{
 	border-bottom: 0px;
 	color: #ffffff;
 }
+/* This is the 'Missed Connections' Header */
 body div.container h2#login-page-header{
 	color: #ffffff;
 	margin-bottom: 0px;
@@ -232,6 +236,7 @@ div.container div div#login-email{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+/*This is the Login Password Input Box */
 div.container div div#login-pwd{
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -242,23 +247,26 @@ div.container div div#signup-first-name{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+/* Last Name Input */
 div.container div div#signup-last-name{
 	margin-top: 5px;
 	margin-bottom: 5px;
+/* Email Input */
 }div.container div div#signup-email{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+/* Password Input */
 div.container div div#signup-pwd{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+/* Confirm Password Input */
 div.container div div#signup-confirm-pwd{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 /* Need Help Link Starts Here */
-
 div#need-help-link a{
 	background-color: #14a3f5;
 	border-radius: 4px 4px 0 0;
@@ -293,12 +301,18 @@ footer#login-footer div#login-small{
 
 /* Thread Page Starts Here */
 	/* Thread, Messages, Notifications and More Header */
-/* This is the background of the small top header and the fixed main nav header */
-
-body#thread-page{ /* Same as main-header height */
+body#thread-page{ 
 	margin-bottom: 60px;
 }
-/* Top Search Bar */
+/* Header's with Top Search Bar */
+body header#search-nav-down{
+	background: #14a3f5;
+	height: 60px;
+	top: 0;
+	transition: top 0.2s ease-in-out;
+	width: 100%;
+	border-bottom: 1px solid #0A60A0;
+}
 #search input[type="text"] {
     background: no-repeat 10px 6px #444;
     border: 0 none;
@@ -329,21 +343,11 @@ body#thread-page{ /* Same as main-header height */
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     }
-	
-body header#search-nav-down{
-	background: #14a3f5;
-	height: 60px;
-	top: 0;
-	transition: top 0.2s ease-in-out;
-	width: 100%;
-	border-bottom: 1px solid #0A60A0;
-}
-/* enable absolute positioning */
+/* enable absolute positioning for top search bar */
 .inner-addon { 
     position: relative; 
 }
-
-/* style icon */
+/* style icon within the search bar */
 .inner-addon .glyphicon {
 	color: #ebebeb;
 	position: absolute;
@@ -351,14 +355,16 @@ body header#search-nav-down{
 	padding-left: 10px;
 	pointer-events: none;
 }
-
 /* align icon */
-.left-addon .glyphicon  { left:  0px;}
-
+.left-addon .glyphicon  { 
+	left:  0px;
+}
 /* add padding  */
-.left-addon input  { padding-left:  30px; }
-
+.left-addon input  { 
+	padding-left:  30px; 
+}
 /* Thread content resumes here */
+	/* This is the small dark blue header */
 body header nav div#main-header-small {
 	background-color: #0A60A0;
 	width: 100%;
@@ -484,7 +490,7 @@ button:hover
     -webkit-appearance:none;
 }
 
-/* This is the Thread Card Styling */
+/* This is the first card within the Thread */
 div#thread-card-outline-first{
 	height: 150px;
 	width: 100%;
@@ -498,6 +504,7 @@ div#thread-card-outline-first{
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
+/* ??This is the card for the rest of the thread?? */ 
 div.card-post-outline{
 	height: 150px;
 	width: 100%;
@@ -546,7 +553,8 @@ div div#thread-cards textarea#card-area{
 	resize: none;
 	border-radius: 0px;
 }
-/* This is the 'Accept', 'Tag', and 'Report' buttons NOTE This is only the first post in the thread */
+/* This is the 'Accept', 'Tag', and 'Report' buttons 
+NOTE This is only the first post in the thread */
 div.post-outline div.thread-actions{
 	margin: -15px 0px 0px 0px;
 	padding: 0;
@@ -735,7 +743,8 @@ div#messages-page-container button#messages{
 	margin-right: 0px;
 	margin-bottom: 0px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-bottom: 1px solid #ebebeb;
+	border-top: 0;
 	border-radius: 0px;
 	outline: 0;
 	display: inline-block;
@@ -766,7 +775,8 @@ div#messages-page-container button#more-messages{
 	margin-top: auto;
 	margin-left: 0px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-bottom: 1px solid #ebebeb;
+	border-top: 0;
 	border-radius: 0px;
 	outline: 0;
 	display: block;
@@ -805,7 +815,8 @@ div#notifications-page-container button#notifications{
 	height: 50px;
 	margin: 0px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-bottom: 1px solid #ebebeb;
+	border-top: 0;
 	border-radius: 0px;
 	outline: 0;
 	display: inline-block;
@@ -829,7 +840,8 @@ div#notifications-page-container button#more-notifications{
 	margin-top: auto;
 	margin-left: 0px;
 	text-align: left;
-	border: 1px solid #aaaaaa;
+	border-bottom: 1px solid #ebebeb;
+	border-top: 0;
 	border-radius: 0px;
 	outline: 0;
 	display: block;
