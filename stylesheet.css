@@ -1,21 +1,27 @@
 html{
 	min-height: 100%;
 }
+/* Beginning of Screen Flicker Fix */
 .ui-page {
 	-webkit-backface-visibility:hidden;
+	backface-visibility: hidden;
 	background: #000;
 }
 .ui-mobile{
 	-webkit-backface-visibility:hidden;
+	backface-visibility: hidden;
 	background: #000;
 }
 .ui-mobile-viewport{
 	-webkit-backface-visibility:hidden;
+	backface-visibility: hidden;
 	background: #000;
 }
 .x-panel {
--webkit-perspective: 1000;
--webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 body.background { 
