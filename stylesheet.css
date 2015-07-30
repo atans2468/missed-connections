@@ -1,7 +1,6 @@
 html{
 	min-height: 100%;
 }
-/* !!CHECK TO SEE IF THIS WAS THE FIX!!  
 .ui-page {
 	-webkit-backface-visibility:hidden;
 	background: #000;
@@ -18,7 +17,7 @@ html{
 -webkit-perspective: 1000;
 -webkit-backface-visibility: hidden;
 }
-*/
+
 body.background { 
 	background: #f4f6fe;
     margin: 0;
