@@ -3,13 +3,13 @@
 <title>Missed Connections</title>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link href="https://rawgit.com/benbarnett/jQuery-Animate-Enhanced/master/scripts/src/jquery.animate-enhanced.js"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+		
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
@@ -17,265 +17,200 @@
 	</head>
 		
 	<!-- This is the beginning of the body -->
-	<body class="background" id="thread-page">
+	<body class="background" id="search-page">
 			<!-- Header -->	
-		<header class="nav-down" id="search-nav-down">	
-			<nav id="search-header">
+		<header id="top">	
 				<div id="main-header-small">
 				</div>
+		</header>
+		<div class="nav-down" id="nav">
 				<form class="inner-addon left-addon" method="get" action="/search" id="search">
 					<i class="glyphicon glyphicon-search"></i>
 					<input name="q" type="text" size="40" placeholder="Search...">
 				</form>
-		</header>
+		</div>
+		
 		<!-- This is the beginning of the Thread Contents -->
-			<div class="sticky">	
-				<div class= "post-outline" id="thread-background-card">
-					<div id="post-text-box">
-						
-						<!-- Set image to correlate with gender, randomize so that colors change throughout post
-						<img id="post-profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png">
-						-->
-						
-						<!-- This is the text area to write a post -->
+			<!-- This is the Write a post Section -->
+			<div class="write-post-section">
+				<div class="row" id="write-post-row">
+					<div class="col-xs-12" id="write-post-textarea">
 						<form action="#" method="#">
 							<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft"></textarea>
 						</form>
 					</div>
-					<div id="submit-cancel-buttons">
-						<input type="reset" value="Cancel"></input>
-						<button type="submit" class="btn btn-primary btn-sm">Post</button>
-						<div id="change-location">
-							<a href="#openModal" id="change-location">Change Location?</a>
-							<div id="openModal" class="modalDialog">
-								<div>
-									<a href="#close" title="Close" class="close">X</a>
-									<div class="row">
-	  									<div class="col-xs-6">
-	    									<select class="form-control">
-												<option selected value="">State...</option>
-												<option value="AL">Alabama</option>
-												<option value="AK">Alaska</option>				
-												<option value="AZ">Arizona</option>					
-												<option value="AR">Arkansas</option>
-												<option value="CA">California</option>
-												<option value="CO">Colorado</option>
-												<option value="CT">Connecticut</option>
-												<option value="DE">Delaware</option>
-												<option value="FL">Florida</option>
-												<option value="GA">Georgia</option>
-												<option value="HI">Hawaii</option>
-												<option value="ID">Idaho</option>
-												<option value="IL">Illinois</option>
-												<option value="IN">Indiana</option>
-												<option value="IA">Iowa</option>
-												<option value="KS">Kansas</option>
-												<option value="KY">Kentucky</option>
-												<option value="LA">Louisiana</option>
-												<option value="ME">Maine</option>
-												<option value="MD">Maryland</option>
-												<option value="MA">Massachusetts</option>
-												<option value="MI">Michigan</option>
-												<option value="MN">Minnesota</option>
-												<option value="MS">Mississippi</option>
-												<option value="MO">Missouri</option>
-												<option value="MT">Montana</option>
-												<option value="NE">Nebraska</option>
-												<option value="NV">Nevada</option>
-												<option value="NH">New Hampshire</option>
-												<option value="NJ">New Jersey</option>
-												<option value="NM">New Mexico</option>
-												<option value="NY">New York</option>
-												<option value="NC">North Carolina</option>
-												<option value="ND">North Dakota</option>
-												<option value="OH">Ohio</option>
-												<option value="OK">Oklahoma</option>
-												<option value="OR">Oregon</option>
-												<option value="PA">Pennsylvania</option>
-												<option value="RI">Rhode Island</option>
-												<option value="SC">South Carolina</option>
-												<option value="SD">South Dakota</option>
-												<option value="TN">Tennessee</option>
-												<option value="TX">Texas</option>
-												<option value="UT">Utah</option>
-												<option value="VT">Vermont</option>
-												<option value="VA">Virginia</option>
-												<option value="WA">Washington</option>
-												<option value="WV">West Virginia</option>
-												<option value="WI">Wisconsin</option>
-												<option value="WY">Wyoming</option>
-											</select>
-	  									</div>
-	  									<div class="col-xs-6">
-	    									<input type="text" class="form-control" placeholder="city...">
-	  									</div>
-									</div>
-					
-										<!-- Default Checkbox -->
-										<div class="checkbox" id="login-checkbox">
-											<label><input type="checkbox">Make this your default location?</label>
-										</div>
-					
-										<!-- Submit Button -->
-										<div id="location-submit-button">
-											<form action="thread.html">
-	    										<button type="submit" id="login-button">Submit</button>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>		
-					<!-- This is the thread cards NOTE that this div has a different ID from the rest of the Div's' -->
-					<!-- This is the first card after 'Write a post' -->
-				<div class="post-outline" id="thread-card-outline-first">	
-					<div id="thread-cards">
-						
-						<!-- Set image to correlate with gender, randomize so that colors change throughout post
-						<img id="card-profile-pic" src="#">
-						-->
-							
-						<!-- This is the text are to view a post -->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
+				</div>
+			</div>		
+			
+			<!-- This is the Thread Card Section -->
+			<div class="thread-card-section">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
 					</div>
 				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
 				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card-post-outline" id="thread-card-outline">	
-					<div id="thread-cards">
-						<!-- <img id="card-profile-pic" src="#">
-						-->
-						<textarea class="text-left" id="card-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
-						<div class="thread-actions">
-							<ul>
-								<li><a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
-								<li><a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
-								<li><a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-							</ul>
-						</div>
-					</div>
-				</div>	
 			</div>
 			
+			<div class="thread-card-section">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="thread-card-section">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="thread-card-section">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="thread-card-section">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="thread-card-section">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="thread-card-section">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="thread-card-section">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+				</div>
+			</div>
+				
 			<!-- Bottom Nav Bar -->
 			<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
 				<div class="row" id="footer-row">	

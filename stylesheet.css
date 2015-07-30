@@ -1,7 +1,7 @@
 html{
 	min-height: 100%;
 }
-/* !!CHECK TO SEE IF THIS WAS THE FIX!! */
+/* !!CHECK TO SEE IF THIS WAS THE FIX!!  
 .ui-page {
 	-webkit-backface-visibility:hidden;
 	background: #000;
@@ -18,6 +18,7 @@ html{
 -webkit-perspective: 1000;
 -webkit-backface-visibility: hidden;
 }
+*/
 body.background { 
 	background: #f4f6fe;
     margin: 0;
@@ -302,36 +303,53 @@ footer#login-footer div#login-small{
 /* Thread Page Starts Here */
 	/* Thread, Messages, Notifications and More Header */
 body#thread-page{ 
+	margin-top: 60px;
 	margin-bottom: 60px;
 }
-/* Header's with Top Search Bar */
-body header#search-nav-down{
+/* Thread Starts Here */
+body#search-page{
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+/*  Header Starts here beginning with Small top header */
+body header#top div#main-header-small {
+	background-color: #0A60A0;
+	width: 100%;
+	height: 20px;
+	top: 0 !important;
+	position: fixed;
+	border-bottom: 0px;
+	color: #ffffff;
+	opacity: initial;
+	z-index: 1000;
+}
+/* Header bottom with Search Bar */
+body div#nav{
 	background: #14a3f5;
 	height: 60px;
-	top: 0;
-	transition: top 0.2s ease-in-out;
 	width: 100%;
+	position: fixed;
+	top: 0 !important;
 	border-bottom: 1px solid #0A60A0;
+	z-index: 999;
 }
-#search input[type="text"] {
+/* Beginning of search bar */
+div#nav #search input[type="text"] {
     background: no-repeat 10px 6px #444;
     border: 0 none;
     font: bold 12px Arial,Helvetica,Sans-serif;
     color: #d7d7d7;
-    width: 45%;
-	margin: 5px 5px;
+    width: 95%;
+	margin: 25px 5px;
     padding: 6px 0px 6px 25px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); 
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    -webkit-transition: all 0.7s ease 0s;
-    -moz-transition: all 0.7s ease 0s;
-    -o-transition: all 0.7s ease 0s;
-    transition: all 0.7s ease 0s;
     }
 
 #search input[type="text"]:focus {
@@ -351,7 +369,7 @@ body header#search-nav-down{
 .inner-addon .glyphicon {
 	color: #ebebeb;
 	position: absolute;
-	padding-top: 10px;
+	padding-top: 30px;
 	padding-left: 10px;
 	pointer-events: none;
 }
@@ -363,91 +381,25 @@ body header#search-nav-down{
 .left-addon input  { 
 	padding-left:  30px; 
 }
-/* Thread content resumes here */
-	/* This is the small dark blue header */
-body header nav div#main-header-small {
-	background-color: #0A60A0;
-	width: 100%;
-	height: 20px;
-	position: fixed-top;
-	margin-top: 0px;
-	bottom: 0;
-	left: 0;
-	border-bottom: 0px;
-	color: #ffffff;
-	opacity: initial;
-	z-index: 1000;
-}
 
-/* This is where the "Write A Post" box starts */
-div.sticky div.post-outline{
-	height: 100px;
+
+/* Write Post Box */
+div.write-post-section{
+	height: 60px;
 	width: 100%;
 	background-color: #ffffff;
+	border-top: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
 	text-align: right;
 	border-radius: 0px;
-	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-	margin: 10 auto;
+	-moz-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
+  	-webkit-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
+  	box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
+	margin-top: 70px;
     padding: 0;
+	z-index: 100;
 }
-/* This is the cancel button */
-div.sticky div.post-outline div#submit-cancel-buttons input{
-	text-decoration: none;
-	margin-top: 0px;
-	text-align: bottom;
-	border: 0;
-	background-color: transparent;
-	color: #0A60A0;
-}
-/* This is the Post button */
-div.sticky div.post-outline div#submit-cancel-buttons button{
-	width: 80px;
-	background-color: #0A60A0;
-	margin-top: -10px;
-	margin-left: 15px;
-	margin-right: 10px;
-	border: 0;
-}
-/* This is the Change Location wrapper, button and modal */
-div.sticky div.post-outline div#submit-cancel-buttons div#change-location{
-	border: 0;
-	height: 25px;
-	width: 140px;
-	margin-top: -20px;
-	margin-left: 5px;
-}
-div.sticky div.post-outline div#submit-cancel-buttons div#change-location a{
-	float: left;
-	margin-top: 0px;
-}
-div.sticky div.post-outline div#submit-cancel-buttons div#change-location div#openModal div.row{
-	background-color: transparent;
-	border: 0;
-}
-div.sticky div.post-outline div#submit-cancel-buttons div#change-location div#openModal div.row input{
-	background-color: #ffffff;
-}
-div.sticky div.post-outline div#submit-cancel-buttons div#change-location div#openModal div label input{
-	margin-top: 4px;
-}
-div.sticky div.post-outline div#submit-cancel-buttons div#change-location div#openModal div form button{
-	height: 35px;
-	width: 100px;
-	border-radius: 5px;
-	color: #ffffff;
-}
-/* This is the text area wrapper styling */
-div.sticky div#post-text-box{
-	height: 65%;
-	width: 100%;
-	border: 0;
-	margin: 0px auto;
-	margin-bottom: 10px;
-}
-/* This is the text area styling */
-div div#post-text-box textarea#text-area{
+div.write-post-section div div textarea#text-area{
 	width: 100%;
 	height: 60px;
 	margin: 0px auto;
@@ -456,91 +408,31 @@ div div#post-text-box textarea#text-area{
 	padding-top: 3px;
 	padding-left: 5px;
 	text-align: left !important;
-	border-top: 1px solid #aaaaaa;
+	border: 0;
 	border-bottom: 1px solid #aaaaaa;
-	border-left: 0;
-	border-right: 0;
 	resize: none;
 	border-radius: 0px;
+	z-index: 100;
 }
-/* This is the post profile pic */
-div.sticky img#post-profile-pic{
-	height: auto;
-	width: auto;
-	max-width: 35px;
-	max-height: 35px;
-	margin-top: 5px;
-	margin-left: 5px;
-	margin-right: 0;
+/* This is where the "Thread Card" starts */
+div.thread-card-section{
+	height: 145px;
+	width: 100%;
+	background-color: #ffffff;
+	text-align: center;
+	border-bottom: 1px solid #aaaaaa;
+	border-radius: 0px;
+	margin-top: 10px;
 	margin-bottom: 0px;
-	float: left;
-	border: 1px solid black;
-}
-textarea:hover, 
-input:hover, 
-textarea:active, 
-input:active, 
-textarea:focus, 
-input:focus,
-button:focus,
-button:active,
-button:hover
-{
-    outline:0px !important;
-    -webkit-appearance:none;
+	-moz-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
+  	-webkit-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
+  	box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
 }
 
-/* This is the first card within the Thread */
-div#thread-card-outline-first{
-	height: 150px;
+div.thread-card-section div div textarea#text-area{
 	width: 100%;
-	background-color: #ffffff;
-	text-align: center;
-	border: 0;
-	border-radius: 0px;
-	margin-top: 25px;
-	margin-bottom: 0px;
-	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-}
-/* ??This is the card for the rest of the thread?? */ 
-div.card-post-outline{
-	height: 150px;
-	width: 100%;
-	background-color: #ffffff;
-	text-align: center;
-	border: 0;
-	border-radius: 0px;
-	margin-top: 30px;
-	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-}
-div#thread-cards{
-	height: 70%;
-	width: 100%;
-	border-bottom: 0;
+	height: 110px;
 	margin: 0px auto;
-	margin-bottom: 10px;
-	
-}
-img#card-profile-pic{
-	height: auto;
-	width: auto;
-	max-width: 35px;
-	max-height: 35px;
-	margin-top: 5px;
-	margin-left: 5px;
-	margin-right: 0;
-	margin-bottom: 0px;
-	float: left;
-}
-/* This is the Thread Card Text Area Styling */
-div div#thread-cards textarea#card-area{
-	width: 100%;
-	height: 100px;
-	margin: 15px auto;
 	background-color: #f7f6f6;
 	text-decoration: none;
 	padding-top: 3px;
@@ -552,112 +444,17 @@ div div#thread-cards textarea#card-area{
 	border-right: 0;
 	resize: none;
 	border-radius: 0px;
+	z-index: 100;
 }
-/* This is the 'Accept', 'Tag', and 'Report' buttons 
-NOTE This is only the first post in the thread */
-div.post-outline div.thread-actions{
-	margin: -15px 0px 0px 0px;
-	padding: 0;
-	width: 100%;
-	border: 0;
-}
-
-div.post-outline div.thread-actions ul {
-	padding: 0;
-	margin: 0px;
-	list-style: none;
-	text-align: center;
-}
-div.post-outline div.thread-actions ul li {
-	display: inline-block;
-	margin: 5px 22px;
-}
-div.post-outline div.thread-actions ul li a#accept-link {
-	padding: 5px 0;
-	color: #008000;
-	font-size: 1em;
-	text-decoration: none;
-	font-weight: bold;
-	transition: all 0.2s ease;
-}
-div.post-outline div.thread-actions ul li a#tag-link {
-	padding: 5px 0;
-	color: #0A60A0;
-	font-size: 1em;
-	text-decoration: none;
-	font-weight: bold;
-	transition: all 0.2s ease;
-}
-div.post-outline div.thread-actions ul li a#report-link {
-	padding: 5px 0;
-	color: #ff0000;
-	font-size: 1em;
-	text-decoration: none;
-	font-weight: bold;
-	transition: all 0.2s ease;
-}
-div.post-outline div.thread-actions ul li a span#accept-glyph{
+div#thread-card-actions div#accept-post a{
 	color: #008000;
 }
-div.post-outline div.thread-actions ul li a span#tag-glyph{
+div#thread-card-actions div#tag-friend a{
 	color: #0A60A0;
 }
-div.post-outline div.thread-actions ul li a span#report-glyph{
+div#thread-card-actions div#report-post a{
 	color: #ff0000;
 }
-
-/* The rest of the posts start here */
-div.card-post-outline div.thread-actions{
-	margin: -15px 0px 0px 0px;
-	padding: 0;
-	width: 100%;
-	border: 0;
-}
-
-div.card-post-outline div.thread-actions ul {
-	padding: 0;
-	margin: 0px;
-	list-style: none;
-	text-align: center;
-}
-div.card-post-outline div.thread-actions ul li {
-	display: inline-block;
-	margin: 5px 22px;
-}
-div.card-post-outline div.thread-actions ul li a#accept-link {
-	padding: 5px 0;
-	color: #008000;
-	font-size: 1em;
-	text-decoration: none;
-	font-weight: bold;
-	transition: all 0.2s ease;
-}
-div.card-post-outline div.thread-actions ul li a#tag-link {
-	padding: 5px 0;
-	color: #0A60A0;
-	font-size: 1em;
-	text-decoration: none;
-	font-weight: bold;
-	transition: all 0.2s ease;
-}
-div.card-post-outline div.thread-actions ul li a#report-link {
-	padding: 5px 0;
-	color: #ff0000;
-	font-size: 1em;
-	text-decoration: none;
-	font-weight: bold;
-	transition: all 0.2s ease;
-}
-div.card-post-outline div.thread-actions ul li a span#accept-glyph{
-	color: #008000;
-}
-div.card-post-outline div.thread-actions ul li a span#tag-glyph{
-	color: #0A60A0;
-}
-div.card-post-outline div.thread-actions ul li a span#report-glyph{
-	color: #ff0000;
-}
-
 
 /* The next two segments of code remove the underline and
 visual of pressing the link -- This is still for all main pages
@@ -727,6 +524,7 @@ nav#bottom-navbar div#footer-row div a span.active{
 
 /* The Messages Page Starts Here */
 body#messages-page{
+	margin-top: 60px;
 	margin-bottom: 60px;
 }
 
@@ -803,6 +601,7 @@ div#messages-page-container a#more-messages-link{
 
 /* The Notifications Page Starts Here */
 body#notifications-page{
+	margin-top: 60px;
 	margin-bottom: 60px;
 }
 /* This is the styling for the divs */
@@ -862,6 +661,7 @@ div#notifications-page-container a#more-notifications-link{
 
 /* Profile Button Starts Here */
 body#more-page{
+	margin-top: 60px;
 	margin-bottom: 60px;
 }
   button#profile{
@@ -1094,6 +894,7 @@ a#logout-link{
 
 /* Profile Page Starts Here */
 body#profile-page{
+	margin-top: 60px;
 	margin-bottom: 60px;
 }
 /* This is the Profile Pic */
@@ -1314,6 +1115,10 @@ div.container-fluid img#profile-pic3{
 
 /* This is the start of the 'New Message' screen */
 	/* This is the 'Recent' button holder */
+body#new-messages-page{
+	margin-top: 60px;
+	padding-bottom: 100px;
+}
 header.nav-down nav#fixed-header div#thread-name div#button-holder{
 	border: 0;
 	margin-top: -5px;
@@ -1378,6 +1183,7 @@ div.container-fluid div#background-text textarea#background-placeholder-text{
 	/* <img id="profile-pic" src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg.hi.png"> */
 	/* This is the Row containing the 'Bio:' label and the 'Edit' button */
 body#edit-profile-page{
+	margin-top: 60px;
 	padding-bottom: 100px;
 }
 div#edit-profilepic-section div#profilepic-label-row{
@@ -1478,4 +1284,12 @@ button#occupation span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
+}
+
+
+
+/* Search Page Starts Here */
+body#search-page{
+	margin-top: 60px;
+	margin-bottom: 60px;
 }
