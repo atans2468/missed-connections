@@ -37,264 +37,62 @@ body.background {
     height: 100%;
 }
 
-/* Login Modal Starts Here */
-	/* modal-link style here is for smaller screens, look
-	down in the style sheet for larger screen login styles */
-body div a#login-button{
-	margin-top: 33%;
-	margin-left: 5px;
-	text-align: center; 
-	width: 95%;
-	background-color: #0071bc;
-	border: none;
-	display: block;
-  	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
-  	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
+/* Login Page starts Here */
+	/* This is the Login Page Body */
+body#login-page{
+	overflow: hidden;
 }
-body div div.modalDialog {
+/* This is the Login Page Top Header */
+body header#login-nav{
+	background: #EC9D02;
+	height: 60px;
+	width: 100%;
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 20px;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
+	top: 0 !important;
+	border-bottom: 1px solid #0A60A0;
+	z-index: 999;
 }
-.modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
-}
-
-.modalDialog > div {
-	width: 92%;
-	height: auto;
-	position: relative;
-	margin: 30% auto;
-	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-	background: #f1fcff;
-	background: -moz-linear-gradient(#f1fcff, #14a3f5);
-	background: -webkit-linear-gradient(#f1fcff, #14a3f5);
-	background: -o-linear-gradient(#f1fcff, #14a3f5);
-}
-.close {
-	background: #14a3f5;
-	color: #FFFFFF;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	top: -10px;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-}
-.close:hover { 
-	background: #00d9ff; 
-}
-body div.modalDialog div#login-checkbox{
-	text-align: center;
-	font-size: 14px;
-}
-body div.modalDialog div#login-checkbox a{
-	font-size: 14px;
-	display: inline;
-}
-body div.container div.modalDialog div#login-button{
+/* This is the Login Page Heading */
+div div#login-header-column{
 	text-align: center;
 }
-body div.container div.modalDialog form button#login-button{
-	border-radius: 7px;
-	width: 100px;
-	height: 40px;
-	background-color: #0071bc;;
-	color: #ffffff;
+div div#login-header-column h2#login-page-header{
+	margin-top: 100px;
+	color: #0A60A0;
 }
-/* Signup Modal Starts Here */
-	/* modal-link style here is for smaller screens, look
-	down in the style sheet for larger screen login styles */
-body a#signup-button{
-	margin-top: 40px;
-	margin-left: 5px;
-	text-align: center; 
-	width: 95%;
-	background-color: #0071bc;
-	display: block;
+/* This is the Login Page Heading Paragraph */
+div div#login-paragraph-column{
+	text-align: center;
+	color: #0A60A0;
+}
+/* This is the Login Page Login Button */
+div div#login-button-column a#login-button{
+	background-color: #0A60A0;
+	margin: 65% auto;
+	margin-bottom: 10px;
+	width: 80%;
 	border: none;
+	display: block;
 	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
   	box-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
-body div div.modalDialog-signup {
-	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 20px;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
-}
-.modalDialog-signup:target {
-	opacity:1;
-	pointer-events: auto;
-}
-
-.modalDialog-signup > div {
-	width: 92%;
-	height: auto;
-	position: relative;
-	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-	background: #f1fcff;
-	background: -moz-linear-gradient(#f1fcff, #14a3f5);
-	background: -webkit-linear-gradient(#f1fcff, #14a3f5);
-	background: -o-linear-gradient(#f1fcff, #14a3f5);
-}
-.close {
-	background: #14a3f5;
-	color: #FFFFFF;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	top: -10px;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-}
-.close:hover { 
-	background: #00d9ff; 
-}
-body div.modalDialog-signup div#signup-checkbox{
-	text-align: center;
-	font-size: 14px;
-}
-body div.modalDialog-signup div#signup-checkbox a{
-	font-size: 14px;
-	display: inline;
-}
-body div.container div.modalDialog-signup div#signup-button{
+/* This is the Login Page Need Help */
+div div#need-help-column{
 	text-align: center;
 }
-body div.container div.modalDialog-signup form button#signup-button{
-	margin-top: 10px;
-	border-radius: 7px;
-	width: 100px;
-	height: 40px;
-	background-color: #0071bc;
-	color: #ffffff;
-}
-
-/* Login Page starts Here */
-	/* This is the Login Page Header */
-header#login-header{
-	background-color: #0A60A0;
-	width: 100%;
-	height: 20px;
-	margin-top: 0px;
-	bottom: 0;
-	left: 0;
-	z-index: 100;
-	border-bottom: 0px;
-	color: #ffffff;
-}
-/* This is the 'Missed Connections' Header */
-body div.container h2#login-page-header{
-	color: #ffffff;
-	margin-bottom: 0px;
-	margin-left: 5px;
-	margin-top: 100px;
-	text-align: center;
-}
-/* This is the background color */
-body.login-signup-background{
-	background-color: #14a3f5;
-}
-
-/* This is the login modal styling */
-div.container div div#login-email{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-/*This is the Login Password Input Box */
-div.container div div#login-pwd{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-/* This is the signup modal styling */
-div.container div div#signup-first-name{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-/* Last Name Input */
-div.container div div#signup-last-name{
-	margin-top: 5px;
-	margin-bottom: 5px;
-/* Email Input */
-}div.container div div#signup-email{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-/* Password Input */
-div.container div div#signup-pwd{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-/* Confirm Password Input */
-div.container div div#signup-confirm-pwd{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-/* Need Help Link Starts Here */
-div#need-help-link a{
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-	color: #ffffff;
-}
-div#need-help-link a:hover, div#need-help-link a:active, div#need-help-link a:visited { 
-	color: white; 
-}
-div#need-help-link{
-	margin-top: 20px;
-	color: #ffffff;
+div div#need-help-column a{
+	color: #0A60A0;
+	z-index: 1000;
 	text-decoration: underline;
-	text-align: center;
 }
-/* Footer Starts Here */
-	/* This is the footer on the Login Page for smaller screens */
+/* Login Page Footer Starts Here */
 footer#login-footer {
 	background: #0A60A0;
 	width: 100%;
 	height: 30px;
 	font-size: 12px;
-	position: fixed;;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	z-index: 100;
@@ -305,13 +103,13 @@ footer#login-footer div#login-small{
 	padding-top: 5px;
 }
 
+
 /* Thread Page Starts Here */
 	/* Thread Starts Here */
 body#thread-page{ 
 	margin-top: 60px;
 	margin-bottom: 60px;
 }
-
 /*  Header Starts here beginning with Small top header */
 body header#top div#main-header-small {
 	background-color: #0A60A0;
@@ -1317,7 +1115,3 @@ button#occupation span#chevron-glyph{
 
 
 /* Search Page Starts Here */
-body#search-page{
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
