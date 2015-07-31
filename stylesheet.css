@@ -64,6 +64,8 @@ div div#login-header-column h2#login-page-header{
 div div#login-paragraph-column{
 	text-align: center;
 	color: #0A60A0;
+	width: 100%;
+	font-size: 13px;
 }
 /* This is the Login Page Login Button */
 div div#login-button-column a#login-button{
