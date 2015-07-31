@@ -17,7 +17,7 @@
 	</head>
 		
 	<!-- This is the beginning of the body -->
-	<body class="background" id="search-page">
+	<body class="background" id="thread-page">
 			<!-- Header -->	
 		<header id="top">	
 				<div id="main-header-small">
@@ -32,18 +32,30 @@
 		
 		<!-- This is the beginning of the Thread Contents -->
 			<!-- This is the Write a post Section -->
-			<div class="write-post-section">
+			<div class="write-post-section" id="write-post-section" data-spy="affix" data-offset-top="55" data-offset-bottom="300">
 				<div class="row" id="write-post-row">
 					<div class="col-xs-12" id="write-post-textarea">
 						<form action="#" method="#">
-							<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft"></textarea>
+							<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft" onclick="document.getElementById('write-post-section').style.height = '95px';
+								document.getElementById('write-post-actions').style.visibility = 'visible'"></textarea>
 						</form>
+					</div>
+				</div>
+				<div class="row" id="write-post-actions">
+					<div class="col-xs-6" id="change-post-location">
+						<a href="#" id="accept-link">Change Location?</a>
+					</div>
+					<div class="col-xs-2" id="cancel-post">
+						<a href="#" id="cacel-link" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'">Cancel</a>
+					</div>
+					<div class="col-xs-4" id="post-post">
+						<button href="#" id="post-button" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'">Post</button>
 					</div>
 				</div>
 			</div>		
 			
 			<!-- This is the Thread Card Section -->
-			<div class="thread-card-section">
+			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
 					<div class="col-xs-12" id="post-textarea">
 						<form action="#" method="#">
