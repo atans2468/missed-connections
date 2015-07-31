@@ -44,7 +44,7 @@ body#login-page{
 }
 /* This is the Login Page Top Header */
 body header#login-nav{
-	background: #EC9D02;
+	background: #DB9201;
 	height: 60px;
 	width: 100%;
 	position: fixed;
@@ -65,7 +65,7 @@ div div#login-paragraph-column{
 	text-align: center;
 	color: #0A60A0;
 	width: 100%;
-	font-size: 13px;
+	font-size: 14px;
 }
 /* This is the Login Page Login Button */
 div div#login-button-column a#login-button{
@@ -90,7 +90,7 @@ div div#need-help-column a{
 }
 /* Login Page Footer Starts Here */
 footer#login-footer {
-	background: #0A60A0;
+	background: #DB9201;
 	width: 100%;
 	height: 30px;
 	font-size: 12px;
@@ -195,7 +195,7 @@ div.write-post-section{
 	-moz-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
   	box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
-	margin-top: 70px;
+	margin-top: 60px;
     padding: 0;
 	z-index: 100;
 	overflow: hidden;
@@ -299,20 +299,12 @@ header div.main-header p#thread-logo a{
 */
 
 /* Bottom Navigation Menu */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
-* {
-  	margin: 0;
-  	padding: 0;
-  	box-sizing: border-box;
-}
 /* NOTE Need to decide on an exact font and go through and 
 re-edit all fonts on page */
-body {
-  	font-family: 'Open Sans', sans-serif;
+nav#bottom-navbar{
+	width: 100%;
+	text-decoration: none;
 }
-
-/* !!!! Navigation */
 nav#bottom-navbar div#footer-row{
 	background-color: #ffffff;
 	text-align: center;
@@ -320,10 +312,6 @@ nav#bottom-navbar div#footer-row{
 	padding-top: 5px;
 	text-decoration: none;
 	border-top: 1px solid #ebebeb;
-}
-nav#bottom-navbar{
-	width: 100%;
-	text-decoration: none;
 }
 nav#bottom-navbar div#footer-row div a{
 	color: #aaaaaa;
@@ -350,12 +338,12 @@ nav#bottom-navbar div#footer-row div a span.active{
 	text-decoration: none;
 }
 
+
 /* The Messages Page Starts Here */
 body#messages-page{
 	margin-top: 60px;
 	margin-bottom: 60px;
 }
-
 /* This is the styling for the divs */
 div#messages-page-container{
 	margin: 0;
@@ -1097,6 +1085,7 @@ div#edit-about-section div#about-label-row{
 }
 div#edit-about-section div#edit-about-label{
 	margin-top: 5px;
+	margin-left: 5px;
 	margin-bottom: 5px;
 }
 div#edit-about-section div#edit-occupation-button button{
