@@ -13,86 +13,41 @@
 		</script>
 		<![endif]-->
 	</head>	
-	<!-- This is the Login Page header -->
 	
-	<header id="login-header">
-		<div id="login-header-small">
-		</div>
-	</header>
-	<body class="login-signup-background">
+	<!-- This is the beginning of the body -->
+	<body class="background" id="login-page">
+			<!-- Header -->	
+		<header id="top">	
+				<div id="main-header-small">
+				</div>
+		</header>
+		<header class="nav-down" id="login-nav">
+		</header>
 	  	<div class="container">	
-			  <!-- Replace this header with the MC logo -->
-			  <h2 id="login-page-header">Missed Connections</h2>  
-			<a href="#openModal" id="login-button" class="btn btn-info" role="button">Login</a>
-			<div id="openModal" class="modalDialog">
-				<div>
-					<a href="#close" title="Close" class="close">X</a>
-					<h2>Login:</h2>
-					<form role="form">
-						<div id="login-email">
-							<input type="email" class="form-control" id="email" placeholder="Email Address">
-						</div>
-						<div id="login-pwd">
-							<input type="password" class="form-control" id="pwd" placeholder="Password">
-						</div>
-					</form>
-					
-					<!-- Remember Me Checkbox -->
-					<div class="checkbox" id="login-checkbox">
-						<label><input type="checkbox">Remember Me</label>
-					</div>
-					
-					<!-- Login Button -->
-					<div id="login-button">
-						<form action="thread.html">
-	    					<button type="submit" id="login-button">Login</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div><!-- End first Container -->
-		
-		<!-- Start of Second Div Container -->
-		<div class="container">	  
-			<a href="#openModal-signup" id="signup-button"class="btn btn-info" role="button">Sign Up</a>
-			<div id="openModal-signup" class="modalDialog-signup">
-				<div>
-					<a href="#close" title="Close" class="close">X</a>
-					<h2>Sign Up:</h2>
-					<form role="form">
-						<div id="signup-first-name">
-							<input type="name" class="form-control" id="first-name" placeholder="First Name">
-						</div>
-						<div id="signup-last-name">
-							<input type="name" class="form-control" id="last-name" placeholder="Last Name">
-						</div>
-						<div id="signup-email">
-							<input type="email" class="form-control" id="email" placeholder="Email Address">
-						</div>
-						<div id="signup-pwd">
-							<input type="password" class="form-control" id="pwd" placeholder="Password">
-						</div>
-						<div id="signup-confirm-pwd">
-							<input type="password" class="form-control" id="pwd" placeholder="Confirm Password">
-						</div>
-					</form>
-					<div class="checkbox" id="signup-checkbox">
-						<label><input type="checkbox">I agree to the Terms and Conditions</label>
-					</div>
-					<div id="signup-button">
-					<form action="profile.html">
-	    				<button type="submit" id="signup-button">Sign Up</button>
-					</form>
-					</div>
-				</div>
+			  
+		<!-- Replace this header with the MC logo -->
+		<div class="row" id="login-header-row">
+			<div class="col-xs-12" id="login-header-column">
+				<h2 id="login-page-header">Missed Connections</h2>  
 			</div>
 		</div>
-			<!-- Change this from a button to a link down the road, but this will do for now -->
-			<div id="need-help-link">
+		<div class="row" id="login-paragraph-row">
+			<div class="col-xs-12" id="login-paragraph-column">
+				<p id="login-paragraph">More Than A Social Media....It's Social <b>Equality</b></p>  
+			</div>
+		</div>
+			
+		<!-- Start of Login With Facebook Button -->
+		<div class="row" id="login-button-row">
+			<div class="col-xs-12" id="login-button-column">  
+				<a href="thread.html" id="login-button"class="btn btn-info" role="button">Login With Facebook</a>
+			</div>
+		</div>
+		<div class="row" id="need-help-row">
+			<div class="col-xs-12" id="need-help-column">
 				<a href="#">Need Help?</a>
 			</div>
-		</div>
-		
+		</div>	
 		
 		<!-- Footer -->
 		<footer id="login-footer">
@@ -100,12 +55,5 @@
 				<p class="mc-footer">Missed Connections &mdash; A Hive Production</p>
 			</div>
 		</footer>
-		<!--
-		<footer id="login-footer-large">
-			<div id="login-large">
-				<p class="mc-footer">Missed Connections &mdash; A Hive Production</p>
-			</div>
-		</footer>
-		-->
 	</body>
 </html>
