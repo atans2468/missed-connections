@@ -306,14 +306,8 @@ footer#login-footer div#login-small{
 }
 
 /* Thread Page Starts Here */
-	/* Thread, Messages, Notifications and More Header */
+	/* Thread Starts Here */
 body#thread-page{ 
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
-/* Thread Starts Here */
-body#search-page{
-	margin-top: 60px;
 	margin-bottom: 60px;
 }
 
@@ -334,7 +328,6 @@ body div#nav{
 	background: #14a3f5;
 	height: 60px;
 	width: 100%;
-	position: fixed;
 	top: 0 !important;
 	border-bottom: 1px solid #0A60A0;
 	z-index: 999;
@@ -395,14 +388,18 @@ div.write-post-section{
 	background-color: #ffffff;
 	border-top: 1px solid #aaaaaa;
 	border-bottom: 1px solid #aaaaaa;
-	text-align: right;
+	text-align: center;
 	border-radius: 0px;
 	-moz-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
   	box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
-	margin-top: 70px;
+	margin-top: 15px;
     padding: 0;
 	z-index: 100;
+}
+.affix{
+	top: 0 !important;
+	
 }
 div.write-post-section div div textarea#text-area{
 	width: 100%;
@@ -419,7 +416,32 @@ div.write-post-section div div textarea#text-area{
 	border-radius: 0px;
 	z-index: 100;
 }
+div.write-post-section div#write-post-actions{
+	visibility: hidden;
+}
+/* This is the 'Change Location' link */
+div.write-post-section div div#change-post-locaton a{
+	text-decoration: none;
+}
+/* This is the 'Cacel' link */
+div.write-post-section div div#cancel-post a{
+	padding-left: 10px;
+	text-decoration: none;
+}
+/* This is the 'Post' button */
+div.write-post-section div div button#post-button{
+	height: 25px;
+	width: 60px;
+	color: #ffffff;
+	background-color: #0A60A0;
+	border-radius: 5px;
+	text-decoration: none;
+	outline: none;
+}
 /* This is where the "Thread Card" starts */
+div#first-post{
+	margin-top: 30px;
+}
 div.thread-card-section{
 	height: 145px;
 	width: 100%;
