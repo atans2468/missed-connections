@@ -308,6 +308,7 @@ footer#login-footer div#login-small{
 /* Thread Page Starts Here */
 	/* Thread Starts Here */
 body#thread-page{ 
+	margin-top: 60px;
 	margin-bottom: 60px;
 }
 
@@ -328,6 +329,7 @@ body div#nav{
 	background: #14a3f5;
 	height: 60px;
 	width: 100%;
+	position: fixed;
 	top: 0 !important;
 	border-bottom: 1px solid #0A60A0;
 	z-index: 999;
@@ -393,13 +395,9 @@ div.write-post-section{
 	-moz-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
   	box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
-	margin-top: 15px;
+	margin-top: 70px;
     padding: 0;
 	z-index: 100;
-}
-.affix{
-	top: 0 !important;
-	
 }
 div.write-post-section div div textarea#text-area{
 	width: 100%;
