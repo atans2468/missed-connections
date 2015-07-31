@@ -5,17 +5,17 @@ html{
 .ui-page {
 	-webkit-backface-visibility:hidden;
 	backface-visibility: hidden;
-	background: #000;
+	background: #000000;
 }
 .ui-mobile{
 	-webkit-backface-visibility:hidden;
 	backface-visibility: hidden;
-	background: #000;
+	background: #000000;
 }
 .ui-mobile-viewport{
 	-webkit-backface-visibility:hidden;
 	backface-visibility: hidden;
-	background: #000;
+	background: #000000;
 }
 .x-panel {
 	-webkit-perspective: 1000;
@@ -325,7 +325,7 @@ body header#top div#main-header-small {
 	z-index: 1000;
 }
 /* Header bottom with Search Bar */
-body div#nav{
+body header#nav{
 	background: #14a3f5;
 	height: 60px;
 	width: 100%;
@@ -335,7 +335,7 @@ body div#nav{
 	z-index: 999;
 }
 /* Beginning of search bar */
-div#nav #search input[type="text"] {
+header#nav #search input[type="text"] {
     background: no-repeat 10px 6px #444;
     border: 0 none;
     font: bold 12px Arial,Helvetica,Sans-serif;
@@ -350,7 +350,7 @@ div#nav #search input[type="text"] {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    }
+}
 
 #search input[type="text"]:focus {
     background: no-repeat 10px 6px #fcfcfc;
@@ -360,7 +360,7 @@ div#nav #search input[type="text"] {
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    }
+}
 /* enable absolute positioning for top search bar */
 .inner-addon { 
     position: relative; 
@@ -398,6 +398,7 @@ div.write-post-section{
 	margin-top: 70px;
     padding: 0;
 	z-index: 100;
+	overflow: hidden;
 }
 div.write-post-section div div textarea#text-area{
 	width: 100%;
@@ -439,6 +440,7 @@ div.write-post-section div div button#post-button{
 /* This is where the "Thread Card" starts */
 div#first-post{
 	margin-top: 30px;
+	overflow: hidden;
 }
 div.thread-card-section{
 	height: 145px;
@@ -452,6 +454,7 @@ div.thread-card-section{
 	-moz-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
   	-webkit-box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
   	box-shadow: 2px 3px 2px rgba(0,0,0,0.4);
+	overflow: hidden;
 }
 
 div.thread-card-section div div textarea#text-area{

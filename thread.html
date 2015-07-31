@@ -23,13 +23,22 @@
 				<div id="main-header-small">
 				</div>
 		</header>
-		<div class="nav-down" id="nav">
+		<header class="nav-down" id="nav">
 				<form class="inner-addon left-addon" method="get" action="/search" id="search">
 					<i class="glyphicon glyphicon-search"></i>
 					<input name="q" type="text" size="40" placeholder="Search...">
 				</form>
-		</div>
-		
+		</header>
+		<script>
+			$("body").on("tap",function(){
+			  $(HTMLTextAreaElement).close();
+			});
+		</script>
+		<script>
+			$("body").on("tap",function(){
+			  $(HTMLInputElement).close();
+			});
+		</script>
 		<!-- This is the beginning of the Thread Contents -->
 			<!-- This is the Write a post Section -->
 			<div class="write-post-section" id="write-post-section">
