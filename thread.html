@@ -14,21 +14,6 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
 		<![endif]-->
-		
-		<script>
-			// Workaround for buggy header/footer fixed position when virtual keyboard is on/off
-			$('input, textarea')
-			.on('focus', function (e) {
-			    $('header, #bottom-navbar').css('position', 'absolute');
-			})
-			.on('blur', function (e) {
-			    $('header, #bottom-navbar').css('position', 'fixed');
-			    //force page redraw to fix incorrectly positioned fixed elements
-			    setTimeout( function() {
-			        window.scrollTo( $.mobile.window.scrollLeft(), $.mobile.window.scrollTop() );
-			    }, 20 );
-			});
-		</script>
 	</head>
 		
 	<!-- This is the beginning of the body -->
@@ -41,7 +26,7 @@
 		<header class="nav-down" id="nav">
 				<form class="inner-addon left-addon" method="get" action="/search" id="search">
 					<i class="glyphicon glyphicon-search"></i>
-					<input name="q" type="text" size="40" placeholder="Search..." id="search-bar">
+					<input name="q" type="text" size="40" placeholder="Search..." onfocus="document.getElementById('nav','bottom-navbar').style.position = 'absolute'">
 				</form>
 		</header>
 		<!-- This is the beginning of the Thread Contents -->
@@ -52,7 +37,7 @@
 						<div class="col-xs-12" id="write-post-textarea">
 							<form action="#" method="#">
 								<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft" onclick="document.getElementById('write-post-section').style.height = '95px';
-									document.getElementById('write-post-actions').style.visibility = 'visible'"></textarea>
+									document.getElementById('write-post-actions').style.visibility = 'visible'" onfocus="document.getElementById('nav','bottom-navbar').style.position = 'absolute'"></textarea>
 							</form>
 						</div>
 					</div>
