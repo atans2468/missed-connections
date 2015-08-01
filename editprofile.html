@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
@@ -64,46 +65,68 @@
 			</div>
 		</div>
 		
-			<!-- This is the About Section -->
-				<div id="edit-about-section">	
-					<div id="about-label-row">
-						<div id="edit-about-label">About:</div>
-						<div id="edit-occupation-button">
-							<button id="occupation" type="button" class="btn btn-default btn-block">Occupation:
-								<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-							<button id="occupation" type="button" class="btn btn-default btn-block">Relationship:
-								<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-							<button id="occupation" type="button" class="btn btn-default btn-block">Location:
-								<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-							<button id="occupation" type="button" class="btn btn-default btn-block">Education:
-								<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-							<button id="occupation" type="button" class="btn btn-default btn-block">Gender:
-								<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-							<button id="occupation" type="button" class="btn btn-default btn-block">Birthday:
-								<span class="glyphicon glyphicon-chevron-right"" id="chevron-glyph"></span></button></a>
-							<button id="occupation" type="button" class="btn btn-default btn-block">Favorite Quotes:
-								<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button></a>
-						</div>
+		<!-- This is the About Section -->
+			<div id="edit-about-section">	
+				<div id="about-label-row">
+					<div id="edit-about-label">
+						About:
+					</div>
+					<div class="edit-profile-button">
+						<button id="edit-occupation-button" type="button" class="btn btn-default btn-block button-button" onclick="document.getElementById('edit-occupation-form').styling.visibility = 'visible'; document.getElementById('edit-occupation-form').styling.height = '100px'; document.getElementById('about-label-row').styling.height = '450px' ">Occupation:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+								<div id="edit-occupation-section">
+									<div class="row" id="edit-occupation-row">	
+										<div class="col-xs-12" id="edit-occupation-column">
+											<form action="#" name="edit-occupation" method="#" class="edit-profile-form" id="edit-occupation-form">
+												<label for="spam-scam"> Company: </label>
+												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+												<br>
+												<label for="spam-scam"> Position: </label>
+												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+												<br>
+												<label for="spam-scam"> City: </label>
+												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+												<br>
+												<label for="spam-scam"> Start Date: </label>
+												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+												<br>
+											</form>
+										</div>
+									</div>
+								</div>
+						<button id="edit-relationship-button" type="button" class="btn btn-default btn-block">Relationship:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+						<button id="edit-location-button" type="button" class="btn btn-default btn-block">Location:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+						<button id="edit-education-button" type="button" class="btn btn-default btn-block">Education:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+						<button id="edit-gender-button" type="button" class="btn btn-default btn-block">Gender:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+						<button id="edit-birthday-button" type="button" class="btn btn-default btn-block">Birthday:
+							<span class="glyphicon glyphicon-chevron-right"" id="chevron-glyph"></span></button>
+						<button id="edit-quote-button" type="button" class="btn btn-default btn-block">Favorite Quotes:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
 					</div>
 				</div>
+			</div>
 				
-				<!-- This is the Edit Bio Section -->
-				<div id="edit-bio-section">	
-					<div class="row" id="bio-label-row">
-						<div class="col-xs-9" id="edit-bio-label">Bio:</div>
-						<div class="col-xs-3" id="edit-bio-button"><button type="button" class="btn btn-default btn-xs">Edit</button>
-					</div>
-					<div class="row" id="bio-textarea-row">
-						<div class="col-xs-12" id="edit-bio-textarea">
-							<form role="form">
-								<div class="form-group">
-							    	<textarea class="text-left" name="#" placeholder="Tell us about you..." wrap="soft"></textarea>
-							  			<button type="button" class="btn btn-success btn-sm">Submit</button>
-								  </div>
-							</form>
-						</div>
+			<!-- This is the Edit Bio Section -->
+			<div id="edit-bio-section">	
+				<div class="row" id="bio-label-row">
+					<div class="col-xs-9" id="edit-bio-label">Bio:</div>
+					<div class="col-xs-3" id="edit-bio-button"><button type="button" class="btn btn-default btn-xs">Edit</button>
+				</div>
+				<div class="row" id="bio-textarea-row">
+					<div class="col-xs-12" id="edit-bio-textarea">
+						<form role="form">
+							<div class="form-group">
+						    	<textarea class="text-left" name="#" placeholder="Tell us about you..." wrap="soft"></textarea>
+						  			<button type="button" class="btn btn-success btn-sm">Submit</button>
+							  </div>
+						</form>
 					</div>
 				</div>
+			</div>
 			<!-- Bottom Nav Bar -->
 			<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
 				<div class="row" id="footer-row">	

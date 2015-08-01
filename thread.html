@@ -26,7 +26,7 @@
 		<header class="nav-down" id="nav">
 				<form class="inner-addon left-addon" method="get" action="/search" id="search">
 					<i class="glyphicon glyphicon-search"></i>
-					<input name="q" type="text" size="40" placeholder="Search..." onfocus="document.getElementById('nav').style.position = 'absolute'; document.getElementById('bottom-navbar').style.position = 'absolute' .style.bottom = '0'; document.getElementById('main-header-small').style.position = 'absolute' .style.top = '0'">
+					<input name="q" type="text" size="40" placeholder="Search..." onfocus="document.getElementById('nav').style.position = 'absolute'; document.getElementById('footer-row').style.position = 'fixed'; document.getElementById('main-header-small').style.position = 'fixed !important'">
 				</form>
 		</header>
 		<!-- This is the beginning of the Thread Contents -->
@@ -36,8 +36,7 @@
 					<div class="row" id="write-post-row">
 						<div class="col-xs-12" id="write-post-textarea">
 							<form action="#" method="#">
-								<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft" onclick="document.getElementById('write-post-section').style.height = '95px';
-									document.getElementById('write-post-actions').style.visibility = 'visible'" onfocus="document.getElementById('nav').style.position = 'absolute'; document.getElementById('bottom-navbar').style.position = 'absolute' .style.bottom = '0'; document.getElementById('main-header-small').style.position = 'absolute' .style.top = '0'"></textarea>
+								<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft" onclick="document.getElementById('write-post-section').style.height = '95px'; document.getElementById('write-post-actions').style.visibility = 'visible'" onfocus="document.getElementById('nav').style.position = 'absolute'; document.getElementById('bottom-navbar').style.position = 'fixed'; document.getElementById('main-header-small').style.position = 'fixed !important'"></textarea>
 							</form>
 						</div>
 					</div>
@@ -124,7 +123,7 @@
 							</div>
 						</form>
 						<div class="col-xs-2" id="cancel-post">
-							<a href="#" id="cacel-link" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'">Cancel</a>
+							<input href="#" type="reset" id="cacel-link" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'" value="Cancel">
 						</div>
 						<div class="col-xs-4" id="post-post">
 							<button href="#" type="submit" id="post-button" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'">Post</button>
@@ -132,6 +131,7 @@
 					</div>
 				</div>		
 			</form>
+			
 			<!-- This is the Thread Card Section -->
 			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
@@ -167,11 +167,11 @@
 											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
 											<label for="hate-speach">Contains Hate Speech</label>
 											<br>
-											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<input type="radio" name="report" value="Promotes Violence/Hateful Actions" id="promotes-violence">
 											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
 											<br>
-											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
-											<label for="duplicate-fake">Duplicate or fake</label>
+											<input type="radio" name="report" value="Duplicate or Fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or Fake</label>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
