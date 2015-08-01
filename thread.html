@@ -8,12 +8,27 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+		<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 		
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
 		<![endif]-->
+		
+		<script>
+			// Workaround for buggy header/footer fixed position when virtual keyboard is on/off
+			$('input, textarea')
+			.on('focus', function (e) {
+			    $('header, #bottom-navbar').css('position', 'absolute');
+			})
+			.on('blur', function (e) {
+			    $('header, #bottom-navbar').css('position', 'fixed');
+			    //force page redraw to fix incorrectly positioned fixed elements
+			    setTimeout( function() {
+			        window.scrollTo( $.mobile.window.scrollLeft(), $.mobile.window.scrollTop() );
+			    }, 20 );
+			});
+		</script>
 	</head>
 		
 	<!-- This is the beginning of the body -->
@@ -26,7 +41,7 @@
 		<header class="nav-down" id="nav">
 				<form class="inner-addon left-addon" method="get" action="/search" id="search">
 					<i class="glyphicon glyphicon-search"></i>
-					<input name="q" type="text" size="40" placeholder="Search...">
+					<input name="q" type="text" size="40" placeholder="Search..." id="search-bar">
 				</form>
 		</header>
 		<!-- This is the beginning of the Thread Contents -->
