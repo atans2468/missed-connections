@@ -19,45 +19,76 @@
 			  
 			<!-- This is the Test Area
 		THIS PAGE IS FOR TEST PURPOSES ONLY -->	  
-		<div class="col-xs-4" id="report-post">
-			<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
-		</div>
-		<form action="#" name="report-post" method="#">	
-			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h4 class="modal-title" id="myModal2Label">Report This Post:</h4>
-						</div>
-						<div class="modal-body">
-							<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
-								<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
-								<label for="spam-scam">Spam or Scam</label>
-								<br>
-								<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
-								<label for="hate-speach">Contains Hate Speech</label>
-								<br>
-								<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
-								<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
-								<br>
-								<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
-								<label for="duplicate-fake">Duplicate or fake</label>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="submit" class="btn btn-primary">Save changes</button>
-						</div>
+		<div id="edit-about-section">	
+				<div id="search-about-label-row">
+					<div id="edit-about-label">
+						About:
+					</div>
+					<div class="edit-profile-button">
+						<button id="edit-occupation-button" type="button" class="btn btn-default btn-block" onclick="document.getElementById('search-edit-occupation-form').styling.height = '100px'">Occupation:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+								<div id="edit-occupation-section">
+									<div class="row" id="edit-occupation-row">	
+										<div class="col-xs-12" id="edit-occupation-column">
+											<form action="#" name="edit-occupation" method="#" class="edit-profile-form" id="search-edit-occupation-form">
+												<label for="spam-scam"> Company: </label>
+												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+												<br>
+												<label for="spam-scam"> Position: </label>
+												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+												<br>
+												<label for="spam-scam"> City: </label>
+												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+												<br>
+												<label for="spam-scam"> Start Date: </label>
+												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+												<br>
+											</form>
+										</div>
+									</div>
+								</div>
+						<button id="edit-relationship-button" type="button" class="btn btn-default btn-block">Relationship:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+						<button id="edit-location-button" type="button" class="btn btn-default btn-block">Location:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+						<button id="edit-education-button" type="button" class="btn btn-default btn-block">Education:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+						<button id="edit-gender-button" type="button" class="btn btn-default btn-block">Gender:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+						<button id="edit-birthday-button" type="button" class="btn btn-default btn-block">Birthday:
+							<span class="glyphicon glyphicon-chevron-right"" id="chevron-glyph"></span></button>
+						<button id="edit-quote-button" type="button" class="btn btn-default btn-block">Favorite Quotes:
+							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
 					</div>
 				</div>
 			</div>
-		</form>
-		
-		<!-- Footer -->
-		<footer id="login-footer">
-			<div id="login-small">
-				<p class="mc-footer">Missed Connections &mdash; A Hive Production</p>
+			<!-- This is the Edit Bio Section -->
+			<div id="edit-bio-section">	
+				<div class="row" id="bio-label-row">
+					<div class="col-xs-9" id="edit-bio-label">Bio:</div>
+					<div class="col-xs-3" id="edit-bio-button"><button type="button" class="btn btn-default btn-xs">Edit</button>
+				</div>
+				<div class="row" id="bio-textarea-row">
+					<div class="col-xs-12" id="edit-bio-textarea">
+						<form role="form">
+							<div class="form-group">
+						    	<textarea class="text-left" name="#" placeholder="Tell us about you..." wrap="soft"></textarea>
+						  			<button type="button" class="btn btn-success btn-sm">Submit</button>
+							  </div>
+						</form>
+					</div>
+				</div>
 			</div>
-		</footer>
+			<!-- Bottom Nav Bar -->
+			<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
+				<div class="row" id="footer-row">	
+	    				<div class="col-xs-3" id="footer-thread-link"><a href="thread.html"><span class="glyphicon glyphicon-edit"></span><br>Thread</a></div>
+	    				<div class="col-xs-3" id="footer-messages-link"><a href="messages.html"><span class="glyphicon glyphicon-comment"></span><br>Messages</a></div>
+						<div class="col-xs-3" id="footer-notifications-link"><a href="notifications.html"><span class="glyphicon glyphicon-bell"></span><br>Notifications</a></div>
+						<div class="col-xs-3" id="footer-notifications-link"><a class="active" href="more.html"><span class="active glyphicon glyphicon-cog"></span><br>More</a></div>
+					</div>
+				</div>
+			</nav>
+			<!-- End of Bottom Nav Bar -->
 	</body>
 </html>
