@@ -56,7 +56,8 @@
 							      	</div>
 							      	<div class="modal-body">
 									<select name="state" size="1" required>
-										<option selected="selected" value="select" disabled>Select State</option>
+										<!-- make sure to apply some java code to make sure user has selected something other than 'Select State' option -->
+										<option selected="" value="select">Select State</option>
 										<option value="AK">AK</option>
 										<option value="AL">AL</option>
 										<option value="AR">AR</option>
@@ -110,7 +111,8 @@
 									  	<option value="WY">WY</option>
 									</select>
 									<select name="city" size="1" required>
-										<option selected="selected" value="select" disabled>Select City</option>
+										<!-- make sure to apply some java code to make sure user has selected something other than 'Select City' option also make sure to cross reference city list with state so that only cities in that state show up -->
+										<option selected="" value="select">Select City</option>
 									</select>
 							      </div>
 							      <div class="modal-footer">

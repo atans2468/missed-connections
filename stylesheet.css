@@ -225,6 +225,9 @@ div.write-post-section div div#change-post-locaton a{
 div.modal-body select option{
 	text-align: center;
 }
+div.write-post-section div div#myModal{
+	margin-top: 15px;
+}
 /* This is the 'Cacel' link */
 div.write-post-section div div#cancel-post a{
 	padding-left: 10px;
@@ -279,13 +282,19 @@ div.thread-card-section div div textarea#text-area{
 }
 div#thread-card-actions div#accept-post a{
 	color: #008000;
+	outline: none;
 }
 div#thread-card-actions div#tag-friend a{
 	color: #0A60A0;
+	outline: none;
 }
 /* This is the Report A Post section */
+div div#thread-card-actions div#myModal2{
+	margin-top: 15px;
+}
 div#thread-card-actions div#report-post a{
 	color: #ff0000;
+	outline: none;
 }
 
 /* The next two segments of code remove the underline and
