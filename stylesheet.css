@@ -118,7 +118,7 @@ body header#top div#main-header-small {
 	width: 100%;
 	height: 20px;
 	top: 0 !important;
-	position: fixed;
+	position: fixed !important;
 	border-bottom: 0px;
 	color: #ffffff;
 	opacity: initial;
@@ -134,11 +134,7 @@ body header#nav{
 	z-index: 999;
 }
 /* Fixing header and footer from moving when input is selected */
-#fixfixed #main-header-small,
-#fixfixed #nav, 
-#fixfixed #bottom-navbar { 
-    position: absolute; 
-} 
+
 /* Beginning of search bar */
 header#nav #search input[type="text"] {
     background: no-repeat 10px 6px #444;
