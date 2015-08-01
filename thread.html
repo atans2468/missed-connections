@@ -26,7 +26,7 @@
 		<header class="nav-down" id="nav">
 				<form class="inner-addon left-addon" method="get" action="/search" id="search">
 					<i class="glyphicon glyphicon-search"></i>
-					<input name="q" type="text" size="40" placeholder="Search..." onfocus="document.getElementById('nav').style.position = 'absolute'; document.getElementById('footer-row').style.position = 'fixed'; document.getElementById('main-header-small').style.position = 'fixed !important'">
+					<input name="q" type="text" size="40" placeholder="Search..." onfocus="document.getElementById('nav').style.position = 'absolute'" onblur="document.getElementById('nav').style.position = 'fixed'; document.getElementById('main-header-small').style.position = 'fixed'">
 				</form>
 		</header>
 		<!-- This is the beginning of the Thread Contents -->
@@ -36,7 +36,7 @@
 					<div class="row" id="write-post-row">
 						<div class="col-xs-12" id="write-post-textarea">
 							<form action="#" method="#">
-								<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft" onclick="document.getElementById('write-post-section').style.height = '95px'; document.getElementById('write-post-actions').style.visibility = 'visible'" onfocus="document.getElementById('nav').style.position = 'absolute'; document.getElementById('bottom-navbar').style.position = 'fixed'; document.getElementById('main-header-small').style.position = 'fixed !important'"></textarea>
+								<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft" onclick="document.getElementById('write-post-section').style.height = '95px'; document.getElementById('write-post-actions').style.visibility = 'visible'" onfocus="document.getElementById('nav').style.position = 'absolute'" onblur="document.getElementById('nav').style.position = 'fixed'; document.getElementById('main-header-small').style.position = 'fixed'"></textarea>
 							</form>
 						</div>
 					</div>
