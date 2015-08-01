@@ -15,39 +15,43 @@
 	</head>	
 	
 	<!-- This is the beginning of the body -->
-	<body class="background" id="login-page">
-			<!-- Header -->	
-		<header id="top">	
-				<div id="main-header-small">
-				</div>
-		</header>
-		<header class="nav-down" id="login-nav">
-		</header>
-	  	<div class="container">	
+	<body class="background" id="search-page">
 			  
-		<!-- Replace this header with the MC logo -->
-		<div class="row" id="login-header-row">
-			<div class="col-xs-12" id="login-header-column">
-				<h2 id="login-page-header">Missed Connections</h2>  
-			</div>
+			<!-- This is the Test Area
+		THIS PAGE IS FOR TEST PURPOSES ONLY -->	  
+		<div class="col-xs-4" id="report-post">
+			<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 		</div>
-		<div class="row" id="login-paragraph-row">
-			<div class="col-xs-12" id="login-paragraph-column">
-				<p id="login-paragraph">Providing Equality In Social Media</p>  
+		<form action="#" name="report-post" method="#">	
+			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModal2Label">Report This Post:</h4>
+						</div>
+						<div class="modal-body">
+							<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+								<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+								<label for="spam-scam">Spam or Scam</label>
+								<br>
+								<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+								<label for="hate-speach">Contains Hate Speech</label>
+								<br>
+								<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+								<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+								<br>
+								<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+								<label for="duplicate-fake">Duplicate or fake</label>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-			
-		<!-- Start of Login With Facebook Button -->
-		<div class="row" id="login-button-row">
-			<div class="col-xs-12" id="login-button-column">  
-				<a href="thread.html" id="login-button"class="btn btn-info" role="button">Login With Facebook</a>
-			</div>
-		</div>
-		<div class="row" id="need-help-row">
-			<div class="col-xs-12" id="need-help-column">
-				<a href="#">Need Help?</a>
-			</div>
-		</div>	
+		</form>
 		
 		<!-- Footer -->
 		<footer id="login-footer">

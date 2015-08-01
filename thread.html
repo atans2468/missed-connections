@@ -31,28 +31,105 @@
 		</header>
 		<!-- This is the beginning of the Thread Contents -->
 			<!-- This is the Write a post Section -->
-			<div class="write-post-section" id="write-post-section">
-				<div class="row" id="write-post-row">
-					<div class="col-xs-12" id="write-post-textarea">
-						<form action="#" method="#">
-							<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft" onclick="document.getElementById('write-post-section').style.height = '95px';
-								document.getElementById('write-post-actions').style.visibility = 'visible'"></textarea>
+			<form action="#" name="write-post" method="#">	
+				<div class="write-post-section" id="write-post-section">
+					<div class="row" id="write-post-row">
+						<div class="col-xs-12" id="write-post-textarea">
+							<form action="#" method="#">
+								<textarea class="text-left" name="post" id="text-area" placeholder="Write a post..." wrap="soft" onclick="document.getElementById('write-post-section').style.height = '95px';
+									document.getElementById('write-post-actions').style.visibility = 'visible'"></textarea>
+							</form>
+						</div>
+					</div>
+					<div class="row" id="write-post-actions">
+						<div class="col-xs-6" id="change-post-location">
+							<a href="#myModal" id="change-location-link" data-toggle="modal">Change Location?</a>
+						</div>
+						<!-- Modal -->
+						<form action="#" name="change-location" method="#">	
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal-dialog" role="document">
+							    	<div class="modal-content">
+							      	<div class="modal-header">
+							        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							        	<h4 class="modal-title" id="myModalLabel">Change Location</h4>
+							      	</div>
+							      	<div class="modal-body">
+									<select name="state" size="1" required>
+										<option selected="selected" value="select" disabled>Select State</option>
+										<option value="AK">AK</option>
+										<option value="AL">AL</option>
+										<option value="AR">AR</option>
+										<option value="AZ">AZ</option>
+										<option value="CA">CA</option>
+										<option value="CO">CO</option>
+										<option value="CT">CT</option>
+										<option value="DC">DC</option>
+										<option value="DE">DE</option>
+										<option value="FL">FL</option>
+										<option value="GA">GA</option>
+										<option value="HI">HI</option>
+										<option value="IA">IA</option>
+										<option value="ID">ID</option>
+										<option value="IL">IL</option>
+										<option value="IN">IN</option>
+										<option value="KS">KS</option>
+										<option value="KY">KY</option>
+										<option value="LA">LA</option>
+										<option value="MA">MA</option>
+										<option value="MD">MD</option>
+										<option value="ME">ME</option>
+										<option value="MI">MI</option>
+										<option value="MN">MN</option>
+										<option value="MO">MO</option>
+										<option value="MS">MS</option>
+										<option value="MT">MT</option>
+										<option value="NC">NC</option>
+										<option value="ND">ND</option>
+										<option value="NE">NE</option>
+										<option value="NH">NH</option>
+										<option value="NJ">NJ</option>
+										<option value="NM">NM</option>
+										<option value="NV">NV</option>
+										<option value="NY">NY</option>
+									 	<option value="OH">OH</option>
+									 	<option value="OK">OK</option>
+									  	<option value="OR">OR</option>
+									  	<option value="PA">PA</option>
+									  	<option value="RI">RI</option>
+									  	<option value="SC">SC</option>
+									  	<option value="SD">SD</option>
+									  	<option value="TN">TN</option>
+									  	<option value="TX">TX</option>
+									  	<option value="UT">UT</option>
+									  	<option value="VA">VA</option>
+									  	<option value="VT">VT</option>
+									  	<option value="WA">WA</option>
+									  	<option value="WI">WI</option>
+									  	<option value="WV">WV</option>
+									  	<option value="WY">WY</option>
+									</select>
+									<select name="city" size="1" required>
+										<option selected="selected" value="select" disabled>Select City</option>
+									</select>
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							        <button type="submit" class="btn btn-primary">Change</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
 						</form>
+						<div class="col-xs-2" id="cancel-post">
+							<a href="#" id="cacel-link" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'">Cancel</a>
+						</div>
+						<div class="col-xs-4" id="post-post">
+							<button href="#" type="submit" id="post-button" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'">Post</button>
+						</div>
 					</div>
-				</div>
-				<div class="row" id="write-post-actions">
-					<div class="col-xs-6" id="change-post-location">
-						<a href="#" id="accept-link">Change Location?</a>
-					</div>
-					<div class="col-xs-2" id="cancel-post">
-						<a href="#" id="cacel-link" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'">Cancel</a>
-					</div>
-					<div class="col-xs-4" id="post-post">
-						<button href="#" id="post-button" onclick="document.getElementById('write-post-section').style.height = '60px';document.getElementById('write-post-actions').style.visibility = 'hidden'">Post</button>
-					</div>
-				</div>
-			</div>		
-			
+				</div>		
+			</form>
 			<!-- This is the Thread Card Section -->
 			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
@@ -70,12 +147,42 @@
 						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
 					</div>
 					<div class="col-xs-4" id="report-post">
-						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			
-			<div class="thread-card-section">
+			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
 					<div class="col-xs-12" id="post-textarea">
 						<form action="#" method="#">
@@ -91,12 +198,42 @@
 						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
 					</div>
 					<div class="col-xs-4" id="report-post">
-						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			
-			<div class="thread-card-section">
+			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
 					<div class="col-xs-12" id="post-textarea">
 						<form action="#" method="#">
@@ -112,12 +249,42 @@
 						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
 					</div>
 					<div class="col-xs-4" id="report-post">
-						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			
-			<div class="thread-card-section">
+			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
 					<div class="col-xs-12" id="post-textarea">
 						<form action="#" method="#">
@@ -133,12 +300,42 @@
 						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
 					</div>
 					<div class="col-xs-4" id="report-post">
-						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			
-			<div class="thread-card-section">
+			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
 					<div class="col-xs-12" id="post-textarea">
 						<form action="#" method="#">
@@ -154,12 +351,42 @@
 						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
 					</div>
 					<div class="col-xs-4" id="report-post">
-						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			
-			<div class="thread-card-section">
+			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
 					<div class="col-xs-12" id="post-textarea">
 						<form action="#" method="#">
@@ -175,12 +402,42 @@
 						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
 					</div>
 					<div class="col-xs-4" id="report-post">
-						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			
-			<div class="thread-card-section">
+			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
 					<div class="col-xs-12" id="post-textarea">
 						<form action="#" method="#">
@@ -196,12 +453,42 @@
 						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
 					</div>
 					<div class="col-xs-4" id="report-post">
-						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			
-			<div class="thread-card-section">
+			<div class="thread-card-section" id="first-post">
 				<div class="row" id="post-row">
 					<div class="col-xs-12" id="post-textarea">
 						<form action="#" method="#">
@@ -217,8 +504,446 @@
 						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
 					</div>
 					<div class="col-xs-4" id="report-post">
-						<a href="#" id="report-link"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
 					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="thread-card-section" id="first-post">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="thread-card-section" id="first-post">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="thread-card-section" id="first-post">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="thread-card-section" id="first-post">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="thread-card-section" id="first-post">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="thread-card-section" id="first-post">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="thread-card-section" id="first-post">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="thread-card-section" id="first-post">
+				<div class="row" id="post-row">
+					<div class="col-xs-12" id="post-textarea">
+						<form action="#" method="#">
+							<textarea class="text-left" name="post" id="text-area" placeholder="This is a sample post..." wrap="soft" disabled></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="thread-card-actions">
+					<div class="col-xs-4" id="accept-post">
+						<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+					</div>
+					<div class="col-xs-4" id="tag-friend">
+						<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
+					</div>
+					<div class="col-xs-4" id="report-post">
+						<a href="#myModal2" id="report-link" data-toggle="modal"><span class="glyphicon glyphicon-exclamation-sign" id="report-glyph"></span>Report</a>
+					</div>
+					<form action="#" name="report-post" method="#">	
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModal2Label" style="text-align: left">Report This Post:</h4>
+									</div>
+									<div class="modal-body" style="text-align: left">
+										<p>We're sorry you had a poor experience on our page! Here at Missed Connections we do everything we can to keep your thread clean! Please help us by clarifying why you are reporting this post.</p>
+											<input type="radio" name="report" value="Spam or Scam" id="spam-scam">
+											<label for="spam-scam">Spam or Scam</label>
+											<br>
+											<input type="radio" name="report" value="Contains Hate Speech" id="hate-speach">
+											<label for="hate-speach">Contains Hate Speech</label>
+											<br>
+											<input type="radio" name="report" value="Promotes Violence" id="promotes-violence">
+											<label for="promotes-violence">Promotes Violence/Hateful Actions</label>
+											<br>
+											<input type="radio" name="report" value="Duplicate or fake" id="duplicate-fake">
+											<label for="duplicate-fake">Duplicate or fake</label>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Report</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 				

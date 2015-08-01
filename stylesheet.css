@@ -222,6 +222,9 @@ div.write-post-section div#write-post-actions{
 div.write-post-section div div#change-post-locaton a{
 	text-decoration: none;
 }
+div.modal-body select option{
+	text-align: center;
+}
 /* This is the 'Cacel' link */
 div.write-post-section div div#cancel-post a{
 	padding-left: 10px;
@@ -280,6 +283,7 @@ div#thread-card-actions div#accept-post a{
 div#thread-card-actions div#tag-friend a{
 	color: #0A60A0;
 }
+/* This is the Report A Post section */
 div#thread-card-actions div#report-post a{
 	color: #ff0000;
 }
