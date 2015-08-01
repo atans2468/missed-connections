@@ -11,6 +11,10 @@ html{
 	-webkit-backface-visibility:hidden;
 	backface-visibility: hidden;
 	background: #000000;
+	min-height: 100% !important;
+}
+.ui-mobile .ui-page {
+    min-height: 100% !important;
 }
 .ui-mobile-viewport{
 	-webkit-backface-visibility:hidden;
