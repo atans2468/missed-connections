@@ -1131,3 +1131,43 @@ div#search-edit-about-section button#search-save-button{
 	outline: none;
 	float: right;
 }
+
+
+/* Privacy Page Starts Here */
+body#privacy-page{
+	margin-top: 60px;
+	padding-bottom: 100px;
+}
+
+/* This is styling for the Tutorial Modal */
+div#myModal{
+	margin-top: 15px;
+}
+div.modal-content div.modal-body{
+	height: 300px;
+}
+/* This is styling for the Carousel Body Contents */
+div.modal-content div.modal-body div.carousel-inner div.row{
+	height: 260px;
+	font-size: 13px;
+}
+
+/* This is styling for the Carousel Indicators */
+div.modal-content div.modal-body div#indicator-column{
+	margin-top: 30px !important;
+}
+div.modal-content div.modal-body ol{
+	margin-bottom: 0 !important;
+}
+div.modal-content div.modal-body ol li{
+	border-color: #009161;
+}
+/* This is styling for the Carousel 'Previous' and 'Next' buttons */
+div.modal-content div.modal-body span.glyphicon{
+	font-size: 20px;
+}
+
+/* This is styling for the Modal Footer */
+div.modal-content div.modal-footer{
+	height: 55px;
+}
