@@ -9,10 +9,23 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+		<script src="http://www.netcu.de/templates/netcu/js/jquery.touchwipe.1.1.1.js"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 		</script>
 		<![endif]-->
+		<script type="text/javascript"> // <! [CDATA [
+		$(document) .ready (function(){
+			$("#myCarousel").touchwipe({
+				wipeLeft: function() { $("#myCarousel").carousel('next'); },
+				wipeRight: function() { $("#myCarousel").carousel('prev'); },
+				min_move_x: 20,
+				preventDefaultEvents: false
+			});
+		});
+		//]]>
+		</script>
+	
 	</head>
 	
 	<body class="background" class="scroll" id="edit-profile-page">
@@ -63,7 +76,7 @@
 				  </a>
 				</div>
 			</div>
-		</div>
+		</div>	
 		
 		<!-- This is the About Section -->
 			<div id="edit-about-section">	
