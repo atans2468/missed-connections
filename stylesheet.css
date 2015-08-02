@@ -311,7 +311,7 @@ div#thread-card-actions div#report-post a{
 visual of pressing the link -- This is still for all main pages
 
 header div.main-header p#thread-logo a:hover {
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
 header div.main-header p#thread-logo a{
@@ -382,9 +382,13 @@ div#messages-section div button#messages-button{
 	border-top: 0;
 	border-bottom: 1px solid #ebebeb
 }
+/* This is the message thread button's glyph */
+div#messages-section div button#messages-button span{
+	margin-right: 10px;
+}
 
 
-/* The Messages Page Starts Here */
+/* The Notifications Page Starts Here */
 body#notifications-page{
 	margin-top: 60px;
 	margin-bottom: 60px;
@@ -395,7 +399,7 @@ div#notifications-section div a{
 	text-decoration: none;
 	width: 100%;
 }
-/* This is the message thread Button */
+/* This is the Notifications Button */
 div#notifications-section div button#notifications-button{
 	width: 100%;
 	height: 50px;
@@ -404,6 +408,10 @@ div#notifications-section div button#notifications-button{
 	border-top: 0;
 	border-bottom: 1px solid #ebebeb;
 	outline: none;
+}
+/* This is the notifications button chevron-right */
+div#notifications-section div button#notifications-button span{
+	margin-right: 10px;
 }
 
 
@@ -429,10 +437,11 @@ body#more-page{
   button#profile span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
   a#profile-link:hover{
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
   a#profile-link{
@@ -458,10 +467,11 @@ body#more-page{
   button#general span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
   a#general-link:hover{
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
   a#general-link{
@@ -487,10 +497,11 @@ body#more-page{
   button#security span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
   a#security-link:hover{
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
   a#security-link{
@@ -516,10 +527,11 @@ button#privacy span#privacy-glyph{
 button#privacy span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
 a#privacy-link:hover{
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
 a#privacy-link{
@@ -540,15 +552,16 @@ button#location{
 }
 button#location span#location-glyph{
 	margin-right: 5px;
-	color: #14a3f5;
+	color: #009161;
 }
 button#location span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
 a#location-link:hover{
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
 a#location-link{
@@ -574,10 +587,11 @@ button#blocking span#blocking-glyph{
 button#blocking span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
 a#blocking-link:hover{
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
 a#blocking-link{
@@ -601,10 +615,11 @@ button#terms span#terms-glyph{
 button#terms span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
 a#terms-link:hover{
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
 a#terms-link{
@@ -630,10 +645,11 @@ button#logout span#logout-glyph{
 button#logout span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
 a#logout-link:hover{
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
 a#logout-link{
@@ -677,7 +693,7 @@ div.container-fluid form#name-container input#first-name span#profile-edit-glyph
 	float: right;
 }
 div.container-fluid form#name-container input#first-name a:hover {
-	background-color: #14a3f5;
+	background-color: #009161;
 	border-radius: 4px 4px 0 0;
 }
 div.container-fluid form#name-container input#first-name a{
@@ -869,48 +885,24 @@ body#new-messages-page{
 	margin-top: 60px;
 	padding-bottom: 100px;
 }
-header.nav-down nav#fixed-header div#thread-name div#button-holder{
-	border: 0;
-	margin-top: -5px;
-	margin-left: -15px;
-	margin-right: -15px;
+/* This is the custom header element style's for !this page only! */
+header#nav div div span{
+	margin-top: 30px;
+	margin-left: 5px;
 }
-/* This is the 'Recent' button */	
-header.nav-down nav#fixed-header div#thread-name div#button-holder button#recent-button{
-	float: left;
-	border: 0;
+/* This is the Recent button */
+header#nav div div input{
 	background-color: transparent;
-	height: 35px;
-	margin-top: -5px;
-	border-style: none;
-	text-decoration: none;
-	color: #ffffff;
-}
-/* This is the 'Recent' button when active */
-header.nav-down nav#fixed-header div#thread-name div#button-holder button#recent-button:active{
-	border: none;
-	border-style: none;
 	outline: none;
-}
-/* This is the chevron pointing left */
-header.nav-down nav#fixed-header div#thread-name div#button-holder span#chevron-left{
-	float: left;
-	text-align: right;
-	color: #ffffff;
-	z-index: 1;
-	margin-top: 1.5px;
-	margin-bottom: 0px;
+	border: none;
+	text-decoration: none;
 	padding-left: 0px;
 }
-/* This is the Name within the header */
-header.nav-down nav#fixed-header div#thread-name div#button-holder textarea#users-name{
-	border: 0;
-	top: 0;
-	margin-top: 0px;
-	margin-left: 1em;
-	width: 100px;
-	color: #ffffff;
+/* This is the column around the search bar */
+header#nav div div#thread-name-column p{
+	margin-top: 30px;
 }
+
 /* This is the bottom text area that pulls up the keyboard */
 div#message-text-form textarea#message-textarea{
 	width: 100%;
@@ -936,6 +928,45 @@ body#edit-profile-page{
 	margin-top: 60px;
 	padding-bottom: 100px;
 }
+/* This is column for the progress label */
+div#progress-meter-row div{
+	text-align: center;
+	margin-top: 10px;
+}
+/* Progress Meter Label */
+div#progress-meter-row div label{
+	margin-left: 5px;
+}
+/* Progress Meter Column */
+div#progress-meter-row div#progress-meter-column{
+	margin-top: 14px;
+}
+/* Progress Meter Style's for all browswers */
+div#progress-meter-row div progress {
+    width: 85%;
+	height: 15px;
+	background-color: #aaaaaa;
+	border-radius: 5px;
+}
+progress::-webkit-progress-bar {
+    width: 85%;
+	height: 15px;
+	background-color:#aaaaaa;
+	border-radius: 5px;
+}
+progress::-webkit-progress-value {
+    width: 85%;
+	height: 15px;
+	background-color: #009161;
+	border-radius: 4px 0 0 4px;
+}
+progress::-moz-progress-bar {
+    width: 85%;
+	height: 15px;
+	background-color:#aaaaaa;
+	border-radius: 5px;
+}
+/* This is the begining of the edit profile pic row */
 div#edit-profilepic-section div#profilepic-label-row{
 	width: 97%;
 	margin: 15px auto;
@@ -1035,7 +1066,7 @@ div#edit-about-section div div.edit-profile-button button{
 button.btn span.glyphicon-chevron-right{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
 }
 /* This is the Edit Occupation Form styling */
 div#edit-about-section div form#edit-occupation-form{
@@ -1086,7 +1117,8 @@ div#search-edit-about-section div button{
 button#search-edit-occupation-button span#chevron-glyph{
 	float: right;
 	text-align: right;
-	color: #14a3f5;
+	color: #009161;
+	margin-right: 10px;
 }
 /* This is the Edit Occupation Form styling */
 div#search-edit-about-section div form#search-edit-occupation-form{
@@ -1134,6 +1166,7 @@ div#search-edit-about-section button#search-save-button{
 
 
 /* Privacy Page Starts Here */
+/* This is the Initial Tutorial Modal */
 body#privacy-page{
 	margin-top: 60px;
 	padding-bottom: 100px;
