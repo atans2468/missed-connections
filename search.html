@@ -16,30 +16,20 @@
 	
 	<!-- This is the beginning of the body -->
 	<body class="background" id="search-page">
-	<!-- This is the Facebook SDK for Commenting...This should stay right below the body tag
-  	<script>
-	  window.fbAsyncInit = function() {
-	    FB.init({
-	      appId      : '1477409375890153',
-	      xfbml      : true,
-	      version    : 'v2.4'
-	    });
-	  };
-	
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "http://connect.facebook.net/en_US/sdk.js";
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>
-  	-->
-	  
-  	<!-- This is the Facebook Plugin for Comments....Place this wherever you want the plugin to appear on your page.
-	<div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5"></div>		  
-	-->
-      
+		<!-- This is the Facebook SDK for Commenting...This should stay right below the body tag -->
+	  	<!-- Facebook Comments Plugin -->
+	    <div id="fb-root"></div>
+	    <script>
+	    (function (d, s, id) {
+	        var js, fjs = d.getElementsByTagName(s)[0];
+	        if (d.getElementById(id)) return;
+	        js = d.createElement(s); js.id = id;
+	        js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1431808603752180&version=v2.3";
+	        fjs.parentNode.insertBefore(js, fjs);
+	    }(document, 'script', 'facebook-jssdk'));
+	    </script>
+		<!-- This is the Facebook Plugin for Comments....Place this wherever you want the plugin to appear on your page. -->
+	<div class="fb-comments" data-href="http://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1431808603752180&version=v2.3" data-numposts="5"></div>
       <!-- This is the Test Area
 		THIS PAGE IS FOR TEST PURPOSES ONLY -->	  
 		<div id="search-edit-about-section">
@@ -82,6 +72,7 @@
 				</div>
 			</div>
 		</div>
+	
 			<!-- This is the Edit Bio Section -->
 			<div id="edit-bio-section">	
 				<div class="row" id="bio-label-row">
