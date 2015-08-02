@@ -290,10 +290,12 @@ div.thread-card-section div div textarea#text-area{
 div#thread-card-actions div#accept-post a{
 	color: #009161;
 	outline: none;
+	text-decoration: none;
 }
 div#thread-card-actions div#tag-friend a{
 	color: #0A60A0;
 	outline: none;
+	text-decoration: none;
 }
 /* This is the Report A Post section */
 div div#thread-card-actions div#myModal2{
@@ -302,6 +304,7 @@ div div#thread-card-actions div#myModal2{
 div#thread-card-actions div#report-post a{
 	color: #ff0000;
 	outline: none;
+	text-decoration: none;
 }
 
 /* The next two segments of code remove the underline and
@@ -364,135 +367,46 @@ body#messages-page{
 	margin-top: 60px;
 	margin-bottom: 60px;
 }
-/* This is the styling for the divs */
-div#messages-page-container{
-	margin: 0;
-	padding: 0;
+/* This is the Link for the Button */
+div#messages-section div a{
+	outline: none;
+	text-decoration: none;
+	width: 100%;
 }
-div#messages-page-container button#messages{
+/* This is the message thread Button */
+div#messages-section div button#messages-button{
 	width: 100%;
 	height: 50px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
 	text-align: left;
-	border-bottom: 1px solid #ebebeb;
-	border-top: 0;
 	border-radius: 0px;
-	outline: 0;
-	display: inline-block;
-}
-div#messages-page-container button#messages span#messages-glyph{
-	margin-right: 5px;
-	z-index: 0;
-}
-div#messages-page-container button#messages span#chevron-glyph{
-	float: right;
-	text-align: right;
-	color: #14a3f5;
-	z-index: 0;
-}
-div#messages-page-container a#messages-link:hover{
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-div#messages-page-container a#messages-link{
-	margin-top: 10px;
-	color: #ffffff;
-	text-decoration: none;
-}
-/* This is the styling for all message divs except for the top one */
-div#messages-page-container button#more-messages{
-	width: 100%;
-	height: 50px;
-	margin-top: auto;
-	margin-left: 0px;
-	text-align: left;
-	border-bottom: 1px solid #ebebeb;
 	border-top: 0;
-	border-radius: 0px;
-	outline: 0;
-	display: block;
-}
-div#messages-page-container button#more-messages span#more-messages-glyph{
-	margin-right: 5px;
-	z-index: 0;
-}
-div#messages-page-container button#more-messages span#chevron-glyph{
-	float: right;
-	text-align: right;
-	color: #14a3f5;
-	z-index: 0;
-}
-div#messages-page-container a#more-messages-link:hover{
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-div#messages-page-container a#more-messages-link{
-	margin-top: 10px;
-	color: #ffffff;
-	text-decoration: none;
+	border-bottom: 1px solid #ebebeb
 }
 
-/* The Notifications Page Starts Here */
+
+/* The Messages Page Starts Here */
 body#notifications-page{
 	margin-top: 60px;
 	margin-bottom: 60px;
 }
-/* This is the styling for the divs */
-div#notifications-page-container{
-	margin: 0;
-	padding: 0;
+/* This is the Link for the Button */
+div#notifications-section div a{
+	outline: none;
+	text-decoration: none;
+	width: 100%;
 }
-div#notifications-page-container button#notifications{
+/* This is the message thread Button */
+div#notifications-section div button#notifications-button{
 	width: 100%;
 	height: 50px;
-	margin: 0px;
 	text-align: left;
-	border-bottom: 1px solid #ebebeb;
-	border-top: 0;
 	border-radius: 0px;
-	outline: 0;
-	display: inline-block;
-}
-div#notifications-page-container button#notifications span#notifications-glyph{
-	margin-right: 5px;
-}
-div#notifications-page-container a#notifications-link:hover{
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-div#notifications-page-container a#notifications-link{
-	margin-top: 10px;
-	color: #ffffff;
-	text-decoration: none;
-}
-/* This is the styling for all notifications divs except for the top one */
-div#notifications-page-container button#more-notifications{
-	width: 100%;
-	height: 50px;
-	margin-top: auto;
-	margin-left: 0px;
-	text-align: left;
-	border-bottom: 1px solid #ebebeb;
 	border-top: 0;
-	border-radius: 0px;
-	outline: 0;
-	display: block;
+	border-bottom: 1px solid #ebebeb;
+	outline: none;
 }
-div#notifications-page-container button#more-notifications span#more-notifications-glyph{
-	margin-right: 5px;
-}
-div#notifications-page-container a#more-notifications-link:hover{
-	background-color: #14a3f5;
-	border-radius: 4px 4px 0 0;
-}
-div#notifications-page-container a#more-notifications-link{
-	margin-top: 10px;
-	color: #ffffff;
-	text-decoration: none;
-}
+
+
 /* "More" Page Starts Here */
 
 /* Profile Button Starts Here */
@@ -1145,46 +1059,22 @@ body#search-page{
 	margin-top: 60px;
 	padding-bottom: 100px;
 }
-div#edit-bio-section div#bio-textarea-row{
-	margin: 5px auto;
-	height: 80px;
-}
-div#edit-bio-section div#bio-textarea-row div textarea{
-	width: 100%;
-	height: 100px;
-	background-color: #f7f6f6;
-	
-	resize: none;
-	margin: 5px auto;
-	padding-left: 5px;
-	padding-top: 5px;	
-}
-
-/* This is the row containing the 'Submit' button */
-div#edit-bio-section div#bio-textarea-row div button{
-	float: right;
-	margin-right: 0px;
-	margin-bottom: 10px;
-	background-color: #0A60A0;
-	border: 1px solid #000000;
-}
-
-/* This is the Row containing the 'About: ' label */
-div#edit-about-section div#search-about-label-row{
+/* This is the Edit About Section */
+div#search-edit-about-section{
 	width: 97%;
 	height: 350px;
 	margin: 15px auto;
 	border: 1px solid #aaaaaa;
-	background-color: #ffffff;
+	background-color: #45C496;
 	border-radius: 5px;
 }
-div#edit-about-section div#edit-about-label{
+div#search-edit-about-section label#search-edit-about-label{
 	margin-top: 5px;
 	margin-left: 5px;
 	margin-bottom: 5px;
 }
 /* This is the CSS for all the edit-profile-buttons and the chevrons*/
-div#edit-about-section div div.edit-profile-button button{
+div#search-edit-about-section div button{
 	width: 100%;
 	height: 40px;
 	border-radius: 0 !important;
@@ -1193,13 +1083,51 @@ div#edit-about-section div div.edit-profile-button button{
 	outline: none;
 	margin-top: 5px;
 }
-button.btn span.glyphicon-chevron-right{
+button#search-edit-occupation-button span#chevron-glyph{
 	float: right;
 	text-align: right;
 	color: #14a3f5;
 }
 /* This is the Edit Occupation Form styling */
-#search-edit-occupation-form{
-	height: 0px;
-	visibility: none;
+div#search-edit-about-section div form#search-edit-occupation-form{
+	visibility: hidden;
+	text-align: left;
+	background-color: #009161;
+}
+/* This is the Form Label Wrapper */
+div#search-edit-about-section div form#search-edit-occupation-form div.label-wrapper{
+	margin-top: 5px;
+	margin-left: 0px;
+	display: inline-block;
+}
+/* This is the Form Label */
+div#search-edit-about-section div form#search-edit-occupation-form label{
+	margin-left: 5px;
+}
+/* This is the Form Input Box */
+div#search-edit-about-section div form#search-edit-occupation-form input{
+	width: 70%;
+	border: 1px solid #aaaaaa;
+	float: right;
+	margin-top: 5px;
+	margin-right: 5%;
+	border-radius: 5px;
+}
+div#search-edit-about-section input#search-cancel-link{
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+	color: #0A60A0;
+	float: right;
+}
+div#search-edit-about-section button#search-save-button{
+	height: 25px;
+	width: 60px;
+	color: #ffffff;
+	background-color: #009161;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: center;
+	outline: none;
+	float: right;
 }
