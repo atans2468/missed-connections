@@ -16,69 +16,90 @@
 	
 	<!-- This is the beginning of the body -->
 	<body class="background" id="search-page">
-			  
-			<!-- This is the Test Area
+	<!-- This is the Facebook SDK for Commenting...This should stay right below the body tag
+  	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '1477409375890153',
+	      xfbml      : true,
+	      version    : 'v2.4'
+	    });
+	  };
+	
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "http://connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
+  	-->
+	  
+  	<!-- This is the Facebook Plugin for Comments....Place this wherever you want the plugin to appear on your page.
+	<div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5"></div>		  
+	-->
+      
+      <!-- This is the Test Area
 		THIS PAGE IS FOR TEST PURPOSES ONLY -->	  
-		<div id="edit-about-section">	
-				<div id="search-about-label-row">
-					<div id="edit-about-label">
-						About:
-					</div>
-					<div class="edit-profile-button">
-						<button id="edit-occupation-button" type="button" class="btn btn-default btn-block" onclick="document.getElementById('search-edit-occupation-form').styling.height = '100px'">Occupation:
-							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
-								<div id="edit-occupation-section">
-									<div class="row" id="edit-occupation-row">	
-										<div class="col-xs-12" id="edit-occupation-column">
-											<form action="#" name="edit-occupation" method="#" class="edit-profile-form" id="search-edit-occupation-form">
-												<label for="spam-scam"> Company: </label>
-												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
-												<br>
-												<label for="spam-scam"> Position: </label>
-												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
-												<br>
-												<label for="spam-scam"> City: </label>
-												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
-												<br>
-												<label for="spam-scam"> Start Date: </label>
-												<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
-												<br>
-											</form>
-										</div>
-									</div>
-								</div>
-						<button id="edit-relationship-button" type="button" class="btn btn-default btn-block">Relationship:
-							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
-						<button id="edit-location-button" type="button" class="btn btn-default btn-block">Location:
-							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
-						<button id="edit-education-button" type="button" class="btn btn-default btn-block">Education:
-							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
-						<button id="edit-gender-button" type="button" class="btn btn-default btn-block">Gender:
-							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
-						<button id="edit-birthday-button" type="button" class="btn btn-default btn-block">Birthday:
-							<span class="glyphicon glyphicon-chevron-right"" id="chevron-glyph"></span></button>
-						<button id="edit-quote-button" type="button" class="btn btn-default btn-block">Favorite Quotes:
-							<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
-					</div>
+		<div id="search-edit-about-section">
+			<div class="row" id="about-label-row">
+				<div class="col-xs-7" id="about-label-column">
+					<label id="search-edit-about-label"> About: </label>
+				</div>
+				<div class="col-xs-2" id="about-cancel-link-column" style="margin-top: 5px">	
+					<input href="#" type="reset" id="search-cancel-link" style="outline: none" onclick="document.getElementById('search-edit-occupation-form').style.visibility = 'hidden'" value="Cancel" disabled>
+				</div>
+				<div class="col-xs-3" id="about-save-button-column" style="padding-right: 25px">	
+					<button href="#" type="submit" id="search-save-button" onclick="document.getElementById('search-edit-occupation-form').style.visibility = 'hidden'" disabled>Save</button>
+				</div>
+			</div>		
+			<div class="row" id="search-edit-occupation-row">
+				<div class="col-xs-12" id="search-edit-occupation-column">
+					<button id="search-edit-occupation-button" type="button" class="btn btn-default btn-block" onclick="document.getElementById('search-edit-occupation-form').style.visibility = 'visible'; document.getElementById('search-cancel-link').disabled = false; document.getElementById('search-save-button').disabled = false">Occupation:
+					<span class="glyphicon glyphicon-chevron-right" id="chevron-glyph"></span></button>
+					<form action="#" name="edit-occupation" method="#" class="edit-profile-form" id="search-edit-occupation-form">
+						<div class="label-wrapper">	
+							<label> Company: </label>
+						</div>		
+							<input class="edit-profile-input" type="text" name="company" placeholder="Company Name" id="company-name-input">
+							<br>
+						<div class="label-wrapper">		
+							<label> Position: </label>
+						</div>	
+							<input class="edit-profile-input" type="text" name="position" placeholder="Position" id="company-name-input">	
+							<br>
+						<div class="label-wrapper">		
+							<label> City: </label>
+						</div>	
+							<input class="edit-profile-input" type="text" name="city" placeholder="City" id="company-name-input">	
+							<br>
+						<div class="label-wrapper">		
+							<label> Date: </label>
+						</div>
+							<input class="edit-profile-input" type="text" name="startdate" placeholder="Start Date" id="company-name-input">	
+					</form>
 				</div>
 			</div>
+		</div>
 			<!-- This is the Edit Bio Section -->
 			<div id="edit-bio-section">	
 				<div class="row" id="bio-label-row">
 					<div class="col-xs-9" id="edit-bio-label">Bio:</div>
-					<div class="col-xs-3" id="edit-bio-button"><button type="button" class="btn btn-default btn-xs">Edit</button>
+					<div class="col-xs-3" id="edit-bio-button"><button type="button" class="btn btn-default btn-xs" onclick="document.getElementById('search-edit-bio-textarea').disabled = false">Edit</button>
 				</div>
 				<div class="row" id="bio-textarea-row">
 					<div class="col-xs-12" id="edit-bio-textarea">
 						<form role="form">
 							<div class="form-group">
-						    	<textarea class="text-left" name="#" placeholder="Tell us about you..." wrap="soft"></textarea>
+						    	<textarea class="text-left" name="#" placeholder="Tell us about you..." wrap="soft" id="search-edit-bio-textarea" disabled></textarea>
 						  			<button type="button" class="btn btn-success btn-sm">Submit</button>
 							  </div>
 						</form>
 					</div>
 				</div>
 			</div>
+			
 			<!-- Bottom Nav Bar -->
 			<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
 				<div class="row" id="footer-row">	
