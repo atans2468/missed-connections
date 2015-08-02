@@ -16,38 +16,43 @@
 	
 	<body class="background" class="scrolling" id="new-messages-page">
 			
-			<!-- Header -->	
+		<!-- Header -->	
 		<header id="top">	
 				<div id="main-header-small">
 				</div>
 		</header>
 		<header class="nav-down" id="nav">
-				<form class="inner-addon left-addon" method="get" action="/search" id="search">
-					<i class="glyphicon glyphicon-search"></i>
-					<input name="q" type="text" size="40" placeholder="Search...">
-				</form>
+			<div class="row" id="header-row">
+				<div class="col-xs-5" id="recent-chevron-column">
+					<span class="glyphicon glyphicon-chevron-left" id="recent-chevron"></span>
+					<input action="action" type="button" value="Recent" onclick="history.go(-1);" />
+				</div>
+				<div class="col-xs-6" id="thread-name-column">	
+					<p id="thread-name"><b>Name</b></p>
+				</div>
+			</div>
 		</header>
 			
-			<!-- Page Contents -->	
-				<div class="container-fluid" id="new-message-page-container">
-					<div id="background-text">
-						<form action="#" id="#"></form>
-						<textarea class="text-left" type="submit" id="background-placeholder-text" placeholder="Type a message to start a conversation..." disabled></textarea>
-					</div>
-				</div>
-			<!-- Bottom Nav Bar -->
-			<div id="message-text-form">
-				<textarea class="text-left" id="message-textarea" placeholder="Type here..."></textarea>
+		<!-- Page Contents -->	
+		<div class="container-fluid" id="new-message-page-container">
+			<div id="background-text">
+				<form action="#" id="#"></form>
+				<textarea class="text-left" type="submit" id="background-placeholder-text" placeholder="Type a message to start a conversation..." disabled></textarea>
 			</div>
-			<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
-				<div class="row" id="footer-row">	
-	    				<div class="col-xs-3" id="footer-thread-link"><a href="thread.html"><span class="glyphicon glyphicon-edit"></span><br>Thread</a></div>
-	    				<div class="col-xs-3" id="footer-messages-link"><a class="active" href="messages.html"><span class="active glyphicon glyphicon-comment"></span><br>Messages</a></div>
-						<div class="col-xs-3" id="footer-notifications-link"><a href="notifications.html"><span class="glyphicon glyphicon-bell"></span><br>Notifications</a></div>
-						<div class="col-xs-3" id="footer-notifications-link"><a href="more.html"><span class="glyphicon glyphicon-cog"></span><br>More</a></div>
-					</div>
+		</div>
+		<!-- Bottom Nav Bar -->
+		<div id="message-text-form">
+			<textarea class="text-left" id="message-textarea" placeholder="Type here..."></textarea>
+		</div>
+		<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
+			<div class="row" id="footer-row">	
+    				<div class="col-xs-3" id="footer-thread-link"><a href="thread.html"><span class="glyphicon glyphicon-edit"></span><br>Thread</a></div>
+    				<div class="col-xs-3" id="footer-messages-link"><a class="active" href="messages.html"><span class="active glyphicon glyphicon-comment"></span><br>Messages</a></div>
+					<div class="col-xs-3" id="footer-notifications-link"><a href="notifications.html"><span class="glyphicon glyphicon-bell"></span><br>Notifications</a></div>
+					<div class="col-xs-3" id="footer-notifications-link"><a href="more.html"><span class="glyphicon glyphicon-cog"></span><br>More</a></div>
 				</div>
-			</nav>
-			<!-- End of Bottom Nav Bar -->
+			</div>
+		</nav>
+		<!-- End of Bottom Nav Bar -->
 	</body>
 </html>
