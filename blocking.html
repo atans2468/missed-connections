@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Missed Connections</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+	<script>
+		$(document).delegate('#page-one', 'swipeleft', function () {
+	    //next page
+	    $.mobile.changePage($('#page-two'));
+	}).delegate('#page-two', 'swipeleft', function () {
+	    //next page
+	    $.mobile.changePage($('#page-three'));
+	}).delegate('#page-two', 'swiperight', function () {
+	    //prev page
+	    $.mobile.changePage($('#page-one'), { reverse : true });
+	}).delegate('#page-three', 'swiperight', function () {
+	    //prev page
+	    $.mobile.changePage($('#page-two'), { reverse: true });
+	});
+	</script>
+	</head>
+
+	<body class="background" id="blocking-page">
+			
+	
+		<!-- Page Contents -->
+		<div data-role="page" id="page-one">
+		    <div data-role="header">
+		        <h1>Page One</h1>
+		    </div>
+		    <div data-role="content">
+		        <p>Swipe to Navigate</p>
+		    </div>
+		</div>
+		
+		<div data-role="page" id="page-two">
+		    <div data-role="header">
+		        <h1>Page Two</h1>
+		    </div>
+		    <div data-role="content">
+		        <p>Swipe to Navigate</p>
+		    </div>
+		</div>
+		
+		<div data-role="page" id="page-three">
+		    <div data-role="header">
+		        <h1>Page Three</h1>
+		    </div>
+		    <div data-role="content">
+		        <p>Swipe to Navigate</p>
+		    </div>
+		</div>
+		<!-- Bottom Nav Bar -->
+		<nav class="nav navbar-fixed-bottom" id="bottom-navbar">
+			<div class="row" id="footer-row">	
+    				<div class="col-xs-3" id="footer-thread-link"><a href="thread.html"><span class="glyphicon glyphicon-edit"></span><br>Thread</a></div>
+    				<div class="col-xs-3" id="footer-messages-link"><a class="active" href="messages.html"><span class="active glyphicon glyphicon-comment"></span><br>Messages</a></div>
+					<div class="col-xs-3" id="footer-notifications-link"><a href="notifications.html"><span class="glyphicon glyphicon-bell"></span><br>Notifications</a></div>
+					<div class="col-xs-3" id="footer-notifications-link"><a href="more.html"><span class="glyphicon glyphicon-cog"></span><br>More</a></div>
+				</div>
+			</div>
+		</nav>
+		<!-- End of Bottom Nav Bar -->
+	</body>
+</html>
