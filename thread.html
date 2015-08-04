@@ -162,6 +162,7 @@
 					<div class="row" id="thread-card-actions">
 						<div class="col-xs-4" id="accept-post">
 							<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<a href="#" id="accepted-link" style="display: none;"><span class="glyphicon glyphicon-ok" id="accept-glyph" style="display: none;"></span>Accepted</a>
 						</div>
 						<div class="col-xs-4" id="tag-friend">
 							<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
@@ -213,6 +214,7 @@
 					<div class="row" id="thread-card-actions">
 						<div class="col-xs-4" id="accept-post">
 							<a href="#" id="accept-link"><span class="glyphicon glyphicon-ok" id="accept-glyph"></span>Accept</a>
+							<a href="#" id="accepted-link" style="display: none;"><span class="glyphicon glyphicon-ok" id="accept-glyph" style="display: none;"></span>Accepted</a>
 						</div>
 						<div class="col-xs-4" id="tag-friend">
 							<a href="#" id="tag-link"><span class="glyphicon glyphicon-tag" id="tag-glyph"></span>Tag</a>
@@ -980,5 +982,17 @@
 			</nav>
 				<!-- End of Bottom Nav Bar -->
 		</div>
+		
+		<!-- code to change 'Accept' to 'Accepted' --> 
+		<script>
+		$('#accept-link').on('click',function(){
+		    if($('#accept-link').css('display')!='none'){
+		    $('#accepted-link').html('Accepted').show().siblings('a').hide();
+		    }else if($('#accepted-link').css('display')!='none'){
+		        $('#accept-link').show().siblings('a').hide();
+		    }
+		});
+		</script>
+
 	</body>
 </html>
