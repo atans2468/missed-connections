@@ -171,7 +171,7 @@ header#nav #search input[type="text"] {
 .inner-addon .glyphicon {
 	color: #ebebeb;
 	position: absolute;
-	padding-top: 30px;
+	padding-top: 5px;
 	padding-left: 10px;
 	pointer-events: none;
 }
@@ -366,6 +366,7 @@ nav#bottom-navbar div#footer-row div a span.active{
 body#messages-page{
 	margin-top: 60px;
 	margin-bottom: 60px;
+	overflow-x: hidden;
 }
 /* This is the Link for the Button */
 div#messages-section div a{
@@ -380,7 +381,7 @@ div#messages-section div button#messages-button{
 	text-align: left;
 	border-radius: 0px;
 	border-top: 0;
-	border-bottom: 1px solid #ebebeb
+	border-bottom: 1px solid #ebebeb;
 }
 /* This is the message thread button's glyph */
 div#messages-section div button#messages-button span{
@@ -392,6 +393,7 @@ div#messages-section div button#messages-button span{
 body#notifications-page{
 	margin-top: 60px;
 	margin-bottom: 60px;
+	overflow-x: hidden;
 }
 /* This is the Link for the Button */
 div#notifications-section div a{
@@ -927,6 +929,7 @@ div.container-fluid div#background-text textarea#background-placeholder-text{
 body#edit-profile-page{
 	margin-top: 60px;
 	padding-bottom: 100px;
+	overflow-x: hidden;
 }
 /* This is column for the progress label */
 div#progress-meter-row div{
@@ -1203,4 +1206,12 @@ div.modal-content div.modal-body span.glyphicon{
 /* This is styling for the Modal Footer */
 div.modal-content div.modal-footer{
 	height: 55px;
+}
+
+
+/* this is the location page */
+#test-header{
+	height: 30px;
+	width: 100%;
+	background-color: #009161;
 }
