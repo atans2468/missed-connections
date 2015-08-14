@@ -373,6 +373,7 @@ div#messages-section div a{
 	outline: none;
 	text-decoration: none;
 	width: 100%;
+	overflow-x: hidden;
 }
 /* This is the message thread Button */
 div#messages-section div button#messages-button{
@@ -382,10 +383,12 @@ div#messages-section div button#messages-button{
 	border-radius: 0px;
 	border-top: 0;
 	border-bottom: 1px solid #ebebeb;
+	overflow-x: hidden;
 }
 /* This is the message thread button's glyph */
 div#messages-section div button#messages-button span{
 	margin-right: 10px;
+	overflow-x: hidden;
 }
 
 
@@ -400,6 +403,7 @@ div#notifications-section div a{
 	outline: none;
 	text-decoration: none;
 	width: 100%;
+	overflow: hidden;
 }
 /* This is the Notifications Button */
 div#notifications-section div button#notifications-button{
@@ -410,10 +414,12 @@ div#notifications-section div button#notifications-button{
 	border-top: 0;
 	border-bottom: 1px solid #ebebeb;
 	outline: none;
+	overflow: hidden;
 }
 /* This is the notifications button chevron-right */
 div#notifications-section div button#notifications-button span{
 	margin-right: 10px;
+	overflow: hidden;
 }
 
 
